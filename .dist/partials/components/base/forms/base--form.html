@@ -1,0 +1,124 @@
+<p class="info">A sample form full of inputs, buttons, selects, radio, checkboxes, and textareas.</p>
+
+<form class="base--FORM">
+  <fieldset>
+
+    <legend><h3>Your Experience with Texas Exes</h3></legend>
+    <fieldset>
+      <label>You mainly use Texas Exes for:</label>
+      <input type="radio" name="optionsRadios" id="business" value="option1">
+      <label class="radio" for="business">Business</label>
+
+      <input type="radio" name="optionsRadios" id="personal" value="option2">
+      <label class="radio" for="personal">Personal Use</label>
+
+      <input type="radio" name="optionsRadios" id="other" value="option3">
+      <label class="radio" for="other">Other</label>
+    </fieldset>
+
+    <fieldset>
+      <label for="discover">How did you discover Texas Exes?</label>
+      <select name="discover">
+        <option value="Search Engine" selected="selected">Search Engine</option>
+        <option value="Referred by Existing Customer">Referred by Existing Customer</option>
+        <option value="Online Advertising">Online Advertising</option>
+        <option value="Offline Advertising">Offline Advertising</option>
+        <option value="Other">Other</option>
+      </select>
+    </fieldset>
+
+    <fieldset>
+      <label>How often do you use Texas Exes?</label>
+      
+      <input type="radio" value="Every Day" name="optionsRadios2" id="everyDay">
+      <label class="radio" for="everyDay" >Every Day</label>
+      
+      <input type="radio" value="Once a Week" name="optionsRadios2" id="onceWeek">
+      <label class="radio" for="onceWeek">Once a Week</label>  
+      
+      <input type="radio" value="Less Than Once a Week" name="optionsRadios2" id="lessOnceWeek">
+      <label class="radio" for="lessOnceWeek">Less Than Once a Week</label>
+    </fieldset>
+
+    <fieldset>
+      <label>How would you rate your experience with Texas Exes?</label>
+      <input type="radio" value="Good" name="optionsRadios3" id="good">
+      <label class="radio" for="good">Good</label>
+
+      <input type="radio" value="Average" name="optionsRadios3" id="average" >
+      <label class="radio" for="average">Average</label>
+      
+      <input type="radio" value="Bad" name="optionsRadios3" id="bad">
+      <label class="radio" for="bad">Bad</label>
+    </fieldset>
+
+    <fieldset>
+      <label for="timeUsed">How long have you been using Texas Exes?</label>
+      <select name="timeUsed">
+        <option value="I'm only using XYZ for a few days" selected="selected">I'm only using XYZ for a few days</option>
+        <option value="I'm using XYZ for about a week">I'm using XYZ for about a week</option>
+        <option value="I'm using XYZ for a month or more">I'm using XYZ for a month or more</option>
+        <option value="I'm not using XYZ yet, but I will in the future">I'm not using XYZ yet, but I will in the future</option>
+        <option value="I'm not using XYZ and have no plans to use it">I'm not using XYZ and have no plans to use it</option>
+      </select>
+    </fieldset>
+
+    <fieldset>
+      <label for="favoriteFeature">What is your favorite feature?</label>
+      <textarea required name="favoriteFeature" cols="60" rows="10"></textarea>
+    </fieldset>
+  </fieldset>
+
+  <fieldset>
+    <fieldset>
+      <legend><h3>About Yourself</h3></legend>
+        <div class="form-item">
+          <label for="firstName">First Name</label>
+          <input required type="text" name="firstName">
+        </div>
+        <div class="form-item">
+          <label for="lastName">Last Name</label>
+          <input required type="text" name="lastName">
+        </div>
+        <div class="form-item">
+          <label for="email">Email</label>
+          <input required type="email" name="email">
+        </div>
+        <div class="form-item">
+          <label for="dob">Date of Birth</label>
+          <input type="date" name="dob">
+        </div>
+        <div class="form-item">
+          <label for="website">Website</label>
+          <input type="url" name="website">
+        </div>
+    </fieldset>
+  </fieldset>
+
+  <fieldset>
+    <fieldset>
+      <label for="followUp">Would You Like Us To Follow Up with You?</label>
+      <div class="form-item">
+        <input type="checkbox" class="checkbox" id="more-info-checkbox">
+        <label class="checkbox" for="more-info-checkbox">Yes, please contact me to discuss my needs</label>
+      </div>
+      <div class="form-item">
+        <input type="checkbox" class="checkbox" id="newsletter-checkbox">
+        <label class="checkbox" for="newsletter-checkbox">Subscribe to Texas Exes newsletter</label>
+      </div>
+    </fieldset>
+    <fieldset>
+      <div class="form-item">
+        <label for="commments">Any additional comments?</label>
+        <textarea name="comments" cols="60" rows="10"></textarea>
+      </div>
+    </fieldset>
+  </fieldset>
+
+  <fieldset>
+    <input required type="checkbox" class="checkbox required" id="terms">
+    <label class="checkbox required" for="terms">I agree to the <a href="#">terms and conditions</a></label>
+    <input type="submit">
+  </fieldset>
+
+</form>
