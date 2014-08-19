@@ -1,0 +1,18 @@
+//////////////////////////////
+// Link styles
+//
+//////////////////////////////
+
+a,
+a:visited {
+  color: $blue;
+  &:hover {
+    color:lighten($blue, 10%);
+    text-decoration: none;
+  }
+}
+p {
+  a {
+    font-weight: 700;
+  }
+}

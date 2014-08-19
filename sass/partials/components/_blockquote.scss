@@ -1,0 +1,37 @@
+//////////////////////////////
+// Blockquote Components
+//
+// The partial and folder structure for this components should be as follows:
+// _blockquote.scss
+// blockquote (folder)
+//   _extends.scss
+//   _mixins.scss
+//   _variables.scss
+//
+// Automatic Sass parsing is done through special comment blocks
+//  - Start styling block for base components: @{components}
+//  - End styling block for base components:   {components}@
+//
+//  - Start styling block for specific components aspect: @{components--aspect}
+//  - End styling block for specific components aspect:   {components--aspect}@
+//////////////////////////////
+
+@import "blockquote/variables";
+@import "blockquote/mixins";
+@import "blockquote/extends";
+
+//////////////////////////////
+// @{blockquote}
+// Styling for Blockquote Components
+blockquote {
+  border-left: em(15) solid $orange-lt2;
+  margin: em(15) 0 em(10);
+  padding-left: em(20);
+  max-width: 380px;
+}
+cite {
+  margin-left: em(30);
+  padding-left: em(20);
+}
+// {blockquote}@
+//////////////////////////////

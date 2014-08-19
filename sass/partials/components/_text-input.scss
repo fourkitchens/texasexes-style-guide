@@ -1,0 +1,74 @@
+//////////////////////////////
+// Text-Input Components
+//
+// The partial and folder structure for this components should be as follows:
+// _text-input.scss
+// All general input and form styles
+//////////////////////////////
+// @{text-input}
+// Styling for Form Components
+form {
+  @include grid-span(16,1);
+}
+fieldset {
+  border: none;
+  margin-top: $space-tb;
+  margin-bottom: $space-all;
+  padding: 0;
+  @include clearfix;
+  @include grid-span(16,1);
+  fieldset {
+    margin-top: $space-tb;
+    margin-bottom: $space-tb;
+  }
+  .form-item {
+    margin: $space-tb 0;   
+    @include grid-span(16,1); 
+  }
+}
+legend {
+  display: block;
+}
+label {
+  display: block;
+  cursor: default;
+}
+input,
+textarea {
+  padding: $space-all;
+  border:em(4) solid $gray-lt2;
+  background-color: lighten($gray-lt2, 30%);
+  &:focus {
+    border-color: $green;
+    outline-color: $green-dk;
+    background-color: $white;
+  }
+  &.required {
+    border-color: $red;
+    &:focus {
+      border-color: $green;
+      outline-color: $green-dk;
+      background-color: $white;
+    }
+  }
+}
+
+input[type="text"],
+textarea {
+  @include breakpoint($forms-medium) {
+    @include grid-span(10,1, $output-style:"float");
+  }
+  @include breakpoint($forms-full) {
+    @include grid-span(16,1);
+  }
+}
+
+// PROTOTYPE ONLY - Delete once in Drupal
+[data-sp-class="navigation--search"] {
+  padding: $space-all/3;
+  font-size: em(14);
+}
+
+
+// {text-input}@
+//////////////////////////////

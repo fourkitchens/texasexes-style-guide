@@ -1,0 +1,59 @@
+//////////////////////////////
+// Button Components
+//
+// The partial and folder structure for this components should be as follows:
+// _button.scss
+// button (folder)
+//   _extends.scss
+//   _mixins.scss
+//   _variables.scss
+//
+// Automatic Sass parsing is done through special comment blocks
+//  - Start styling block for base components: @{components}
+//  - End styling block for base components:   {components}@
+//
+//  - Start styling block for specific components aspect: @{components--aspect}
+//  - End styling block for specific components aspect:   {components--aspect}@
+//////////////////////////////
+
+@import "button/variables";
+@import "button/mixins";
+@import "button/extends";
+
+//////////////////////////////
+// @{button}
+// Styling for Button Components
+.button,
+button,
+input[type="submit"] {
+  @include button($blue, $white);
+
+  &.primary {
+    @include button($blue, $white);
+    &.active {
+      @include button($blue, $white);
+    }  
+  }
+  &.secondary {
+    @include button($gray-lt, $white);
+    &.active {
+      @include button($gray-lt2, $white);
+    }      
+  }  
+  &.required {
+    @include button($red, $white);
+    &.active {
+      @include button($red, $white);
+    }      
+  }      
+  margin-bottom: em(15);
+  border-radius: em(3)
+}
+input[type="reset"] {
+  @include button($gray-lt, $white);
+  &.required {
+    @include button($red, $white);
+  }    
+}
+// {button}@
+//////////////////////////////

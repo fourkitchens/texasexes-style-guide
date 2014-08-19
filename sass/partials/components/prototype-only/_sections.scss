@@ -1,0 +1,13 @@
+//////////////////////////////
+// Prototype-Only / Sections
+//
+// The partial and folder structure for this components should be as follows:
+// _sections.scss
+// 
+//////////////////////////////
+// @{_sections}
+// Styling for Prototype-Only / Sections
+
+[data-sp-class="section--group"] {
+  @include grid-span (16,1);
+}
