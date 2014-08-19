@@ -3,7 +3,6 @@ bower_components
 ./css
 .tmp
 .www
-.dist
 .sass-cache
 vendor
 export
