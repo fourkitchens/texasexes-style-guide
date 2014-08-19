@@ -1,12 +1,9 @@
-node_modules
-bower_components
-./css
-.tmp
-.www
 .sass-cache
-vendor
-export
-*.gem
+bower_components/
+node_modules/
+vendor/
+.www
+.tmp
 *.sublime-project
 *.sublime-workspace
 .DS_Store
