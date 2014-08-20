@@ -1,0 +1,17 @@
+//////////////////////////////
+// Container Element Styles
+//
+// The partial and folder structure for this components should be as follows:
+// _container.scss
+// main/wrap styles
+//////////////////////////////
+// @{container}
+// Styling for containing elements
+
+main {
+  max-width: 68em;
+  margin: 0 auto;
+  p {
+    max-width: 38em;
+  }
+}

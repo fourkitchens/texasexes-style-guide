@@ -11,3 +11,5 @@ vendor
 export
 *.gem
 .DS_Store
+*.sublime-workspace
+*.sublime-project
