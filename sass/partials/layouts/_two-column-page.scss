@@ -1,0 +1,30 @@
+//////////////////////////////
+// Two-Column-Page Layouts
+//
+// The partial and folder structure for this layouts should be as follows:
+// _two-column-page.scss
+// two-column-page (folder)
+//   _extends.scss
+//   _mixins.scss
+//   _variables.scss
+//
+// Automatic Sass parsing is done through special comment blocks
+//  - Start styling block for base layouts: @{layouts}
+//  - End styling block for base layouts:   {layouts}@
+//
+//  - Start styling block for specific layouts aspect: @{layouts--aspect}
+//  - End styling block for specific layouts aspect:   {layouts--aspect}@
+//////////////////////////////
+
+@import "two-column-page/variables";
+@import "two-column-page/mixins";
+@import "two-column-page/extends";
+
+//////////////////////////////
+// @{two-column-page}
+// Styling for Two-Column-Page Layouts
+.two-column-page {
+
+}
+// {two-column-page}@
+//////////////////////////////
