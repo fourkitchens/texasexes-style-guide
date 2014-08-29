@@ -1,0 +1,23 @@
+//////////////////////////////
+// Paragraph Components
+//
+// The partial and folder structure for this components should be as follows:
+// _paragraph.scss
+//////////////////////////////
+
+main,
+#main {
+  p {
+    @include grid-span(16,1);
+    clear: both;
+
+    @include breakpoint($paragraph-full) {
+      @include grid-span(11,1);
+      clear: both;
+    }
+    @include breakpoint($paragraph-medium) {
+      @include grid-span(9,1);
+      clear: both;
+    }
+  }
+}

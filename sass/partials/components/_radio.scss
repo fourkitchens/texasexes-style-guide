@@ -22,7 +22,7 @@ fieldset:not(#foo) > input[type="radio"]  {
 }
 div:not(#foo) > input[type="radio"] + label,
 fieldset:not(#foo) > input[type="radio"] + label {
-  margin: $space-all/2;
+  margin: $space;
   clear: none;
   @include button(lighten($gray-lt2,40%), $gray-lt);
   &.required {
@@ -47,7 +47,7 @@ span:not(#foo) > input[type="radio"] {
   }
 }
 span:not(#foo) > input[type="radio"] + label {
-  margin: $space-all/2;
+  margin: $space;
   clear: none;
   @include button(lighten($gray-lt2,40%), $gray-lt);
   &.required {

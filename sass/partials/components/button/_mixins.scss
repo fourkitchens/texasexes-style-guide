@@ -10,7 +10,7 @@
   cursor: pointer;
   transition: all .2s ease;
   border: em(4) solid darken($bg, 5%);
-  padding: $space;
+  padding: $space-btn;
   
   &:hover,
   &:focus {
@@ -33,9 +33,9 @@
     outline-color: darken($text, 15%);
   }
   &.large {
-    padding: $space;
+    padding: $space-btn;
   }
   &.small {
-    padding: $space-sm;
+    padding: $space-btn-sm;
   }
 }

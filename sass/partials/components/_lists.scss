@@ -8,10 +8,10 @@ main { // for prototype only
   .base--TEXT {
     ul,
     ol {
-      margin: $space-tb $space-tb*2 $space-tb*2;
+      margin: $space $space-doubled $space-doubled;
       ul,
       ol {
-        margin: $space-tb/2;
+        margin: $space;
       }
     }
     ul {
@@ -30,30 +30,30 @@ main { // for prototype only
 // PROTOTYPE ONLY - Delete once in Drupal
 
 ul.base--ul {
-  margin: $space-tb $space-tb*2 $space-tb*2;
+  margin: $space $space-doubled $space-doubled;
   li {
     list-style-type: disc;        
   }
   ul.base--ul {
-    margin: $space-tb/2 $space-tb $space-tb/2;
+    margin: $space;
     li {
       list-style-type: disc;        
     }
   }
 }
 ol.base--ol {
-  margin: $space-tb $space-tb*2 $space-tb*2;
+  margin: $space $space-doubled $space-doubled;
   li {
     list-style-type: decimal;        
   }
   ol.base--ol {
-    margin: $space-tb/2;
+    margin: $space;
     li {
       list-style-type: decimal;        
     }
   }
   ul.base--ul {
-    margin: $space-tb/2;
+    margin: $space;
     li {
       list-style-type: disc;        
     }

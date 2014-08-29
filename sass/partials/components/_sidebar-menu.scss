@@ -1,0 +1,48 @@
+//////////////////////////////
+// Sidebar Menu styles for Drupal
+//
+// The partial and folder structure for this layouts should be as follows:
+// _sidebar-menu.scss
+
+//////////////////////////////
+
+.sidebar {
+  display: block;
+
+  @include breakpoint($sidebar-full) {
+    display: none;
+  }
+}
+
+.menu {
+  margin: $space-doubled 0 $space;
+  padding: $space $space-doubled;
+  li {
+    margin: $space-half 0;
+  }
+}
+
+// Mobile trigger toggle
+#toggle-label {
+  &:before {
+    
+  }
+}
+#menu-toggle + #toggle-label {
+  display: block;
+
+  @include breakpoint($sidebar-trigger) {
+    display: none;
+  }
+}
+
+#menu-toggle + #toggle-label,
+#menu-toggle:checked + #toggle-label {
+  margin: 0;
+}
+#menu-toggle:checked + #toggle-label + .sidebar {
+  display: block;
+}
+
+
+

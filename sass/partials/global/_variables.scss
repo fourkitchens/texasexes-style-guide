@@ -2,6 +2,7 @@
 // Variables
 //////////////////////////
 
+/////////
 // Type
 $sans: 'Knockout 31 A', 'Knockout 31 B', 'Helvetica Neue', Helvetica, Arial, sans-serif;
 
@@ -19,6 +20,7 @@ $serif: 'Sentinel SSm A', 'Sentinel SSm B', Georgia, serif;
 $ms-base: 1em;
 $ms-ratio: $golden;
 
+/////////
 // Colors
 $white: #fff;
 $black: #000;
@@ -49,13 +51,19 @@ $green-lt2: #a1bf5b;
 
 @include cs-test($orange $orange-dk $gray $gray-lt $gray-lt2 $blue $blue-dk $green $green-dk);
 
+/////////
 // Spacing
-$space: em(12) em(24); // buttons
-$space-sm: em(10) em(20); // small buttons
+$space: em(20);
+$space-doubled: $space*2;
+$space-tripled: $space*3;
 
-$space-tb: em(30);
-$space-all: em(10); 
+$space-half: $space/2;
 
+
+$space-btn: em(12) em(24); // buttons
+$space-btn-sm: em(10) em(20); // small buttons
+
+/////////
 // Singularity variables
 //
 $breakpoint-to-ems: true;
@@ -68,12 +76,24 @@ $breakpoint-to-ems: true;
   @include box-sizing('border-box');
 }
 
-//
+/////////
 // Breakpoints
 //
 
 // Header
 $logo-full:0 500px;
+
+// Sidebar
+$sidebar-full:0 500px;
+$sidebar-trigger:500px;
+$block-title:820px;
+
+// Paragraphs 
+$paragraph-medium: 950px;
+$paragraph-full: 600px;
+
+// Media
+$image-full: 900px;
 
 // Forms
 $forms-medium: 0 830px;

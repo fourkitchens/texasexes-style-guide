@@ -12,17 +12,17 @@ form {
 }
 fieldset {
   border: none;
-  margin-top: $space-tb;
-  margin-bottom: $space-all;
+  margin-top: $space-doubled;
+  margin-bottom: $space;
   padding: 0;
   @include clearfix;
   @include grid-span(16,1);
   fieldset {
-    margin-top: $space-tb;
-    margin-bottom: $space-tb;
+    margin-top: $space-doubled;
+    margin-bottom: $space-doubled;
   }
   .form-item {
-    margin: $space-tb 0;   
+    margin: $space 0 $space-doubled;   
     @include grid-span(16,1); 
   }
 }
@@ -35,7 +35,7 @@ label {
 }
 input,
 textarea {
-  padding: $space-all;
+  padding: $space-half;
   border:em(4) solid $gray-lt2;
   background-color: lighten($gray-lt2, 30%);
   &:focus {
@@ -65,7 +65,7 @@ textarea {
 
 // PROTOTYPE ONLY - Delete once in Drupal
 [data-sp-class="navigation--search"] {
-  padding: $space-all/3;
+  padding: $space/3;
   font-size: em(14);
 }
 

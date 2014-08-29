@@ -1,0 +1,16 @@
+//////////////////////////////
+// Block/Panel styles for Drupal
+//
+// The partial and folder structure for this layouts should be as follows:
+// _blocks.scss
+
+//////////////////////////////
+
+.block-title {
+  border-bottom: em(2) solid $gray-lt2;
+  margin-bottom: 0;
+  padding: 0 $space-doubled;
+  h3 {
+    margin: 0;
+  }
+}

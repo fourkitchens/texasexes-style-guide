@@ -36,7 +36,7 @@
     @include grid-span(6,11, $gutter:2);
     @include breakpoint($media-full) {
       @include grid-span(16,1);
-      padding: $space-tb;
+      padding: $space-doubled;
     }
   }  
 }

@@ -34,7 +34,7 @@ cite {
     color: $gray-lt2; 
   }
 }
-.caption {
+figcaption {
   color: $gray-lt; 
   font-family: $serif;
   font-size:em(18);
@@ -110,6 +110,30 @@ h5 {
 h6 {
   font-size:em(20);  
   color: $gray;
+}
+
+// clear things
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+ul,
+ol {
+  clear: both;
+}
+
+
+// Section-specific font-sizes
+.sidebar {
+  h3 {
+    font-size: em(24);  
+
+    @include breakpoint($block-title) {
+      font-size: em(36);  
+    }
+  }
 }
 
 // Form type

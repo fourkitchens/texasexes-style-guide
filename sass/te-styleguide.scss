@@ -49,17 +49,22 @@ $browser-minimum-versions: (
 // COMPONENTS
 @import "partials/components/base";
 @import "partials/components/blockquote";
+@import "partials/components/blocks";
 @import "partials/components/button";
 @import "partials/components/checkbox";
 @import "partials/components/container";
+@import "partials/components/images";
 @import "partials/components/input-range";
 @import "partials/components/links";
 @import "partials/components/lists";
 @import "partials/components/logo";
+@import "partials/components/paragraph";
 @import "partials/components/radio";
+@import "partials/components/sidebar-menu";
 @import "partials/components/text-input";
 @import "partials/components/video";
 //////////////////////////////
+
 
 //////////////////////////////
 // Style-Prototype Only - don't migrate to Drupal

@@ -24,7 +24,26 @@
 // @{two-column-page}
 // Styling for Two-Column-Page Layouts
 .two-column-page {
+  .sidebar {
+    @include grid-span(6,1);
+    background-color: $gray-lt3;
+    padding: $space-tripled 0 $space;
 
+    @include breakpoint($sidebar-full) {
+      @include grid-span(16,1);
+      padding: $space 0;
+    }
+
+  }
+  .content {
+    @include grid-span(10,7);
+    padding: $space-tripled $space $space;
+
+    @include breakpoint($sidebar-full) {
+      @include grid-span(16,1);
+      padding: $space;
+    }
+  }  
 }
 // {two-column-page}@
 //////////////////////////////

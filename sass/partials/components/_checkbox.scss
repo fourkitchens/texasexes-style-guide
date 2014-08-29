@@ -18,7 +18,7 @@ fieldset:not(#foo) > input[type="checkbox"] {
 }
 div:not(#foo) > input[type="checkbox"] + label,
 fieldset:not(#foo) > input[type="checkbox"] + label  {
-  margin: $space-all/2;
+  margin: $space;
   clear: none;
   @include button(lighten($gray-lt2,40%), $gray-lt);
   &.required {
@@ -46,7 +46,7 @@ span:not(#foo) > input[type="checkbox"] {
   }
 }
 span:not(#foo) > input[type="checkbox"] + label {
-  margin: $space-all/2;
+  margin: $space;
   clear: none;
   @include button(lighten($gray-lt2,40%), $gray-lt);
   &.required {
