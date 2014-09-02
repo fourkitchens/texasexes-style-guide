@@ -1,0 +1,12 @@
+//////////////////////////////
+// Header styles
+// _header.scss
+//////////////////////////////
+
+main,
+.container { // wrapper definition for prototype only
+  header {
+    padding: $space 0 $space-doubled;
+    @include grid-span(16,1);
+  }
+}

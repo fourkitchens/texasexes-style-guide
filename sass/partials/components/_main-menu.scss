@@ -1,0 +1,33 @@
+//////////////////////////////
+// Main Menu Components
+//
+// The partial and folder structure for this components should be as follows:
+// _main-menu.scss
+//////////////////////////////
+
+.main-menu {
+  .menu {
+    a {
+      padding: $space-half;
+      text-decoration: none;
+      svg {
+        fill:$blue;
+      }
+    }
+    li {
+      display: inline;
+      float: left;
+      margin-right: $space;
+      span {
+        display: inline-block;
+      }
+      svg {
+        max-width: 32px;
+        max-height: 32px;
+        display: inline-block;
+        vertical-align: middle;
+      }
+    }
+
+  }
+}

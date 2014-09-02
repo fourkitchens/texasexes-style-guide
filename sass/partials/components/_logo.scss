@@ -24,17 +24,15 @@
 // @{logo}
 // Styling for Logo Components
 .logo {
-  &.header {
-    width: 300px;
+  width: 300px;
+  height: auto;
+
+  @include breakpoint($logo-full) {
+    width: 100%;
     height: auto;
-
-    @include breakpoint($logo-full) {
-      width: 100%;
-      height: auto;
-      clear: both;
-    }
+    clear: both;
   }
-
 }
+
 // {logo}@
 //////////////////////////////

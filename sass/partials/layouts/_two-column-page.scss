@@ -24,6 +24,7 @@
 // @{two-column-page}
 // Styling for Two-Column-Page Layouts
 .two-column-page {
+  @include grid-span(16,1);
   .sidebar {
     @include grid-span(6,1, $gutter:2);
     background-color: $gray-lt3;

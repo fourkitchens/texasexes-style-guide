@@ -10,6 +10,11 @@ a:visited {
     color:lighten($blue, 10%);
     text-decoration: none;
   }
+  &.active {
+    background-color: lighten($gray-lt3, 10%);
+    color:lighten($blue, 10%);
+    text-decoration: none;    
+  }
 }
 p {
   a {

@@ -15,10 +15,15 @@
 }
 
 .menu {
-  margin: $space-doubled 0 $space;
-  padding: $space $space-doubled;
+  margin: 0;
+  padding: $space 0;
   li {
-    margin: $space-half 0;
+    margin:0;
+  }
+  a {
+    padding: $space $space-doubled;
+    display: block;
+    font-weight: 700;
   }
 }
 

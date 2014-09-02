@@ -179,6 +179,14 @@ input[type="submit"] {
   }
 }
 
+// Menus
+.menu {
+  font-size: em(24);
+  line-height: 1.2;
+  font-family: $serif;
+}
+
+
 // Lists 
 main { // for prototype only
   .base--TEXT,
