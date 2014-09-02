@@ -33,7 +33,6 @@
     &.half {
       @include grid-span(16,1);
       clear: both;
-      margin-top: $space;
       margin-bottom: $space-doubled;
 
       @include breakpoint($image-full) {
@@ -44,6 +43,16 @@
       }
     }
   }
+  p {
+    @include breakpoint($paragraph-full) {
+      @include grid-span(11,1);
+      clear: both;
+    }
+    @include breakpoint($paragraph-medium) {
+      @include grid-span(9,1);
+      clear: both;
+    }
+  }  
 }
 // {one-column-page}@
 //////////////////////////////

@@ -25,7 +25,7 @@
 // Styling for Two-Column-Page Layouts
 .two-column-page {
   .sidebar {
-    @include grid-span(6,1);
+    @include grid-span(6,1, $gutter:2);
     background-color: $gray-lt3;
     padding: $space-tripled 0 $space;
 
@@ -36,7 +36,7 @@
 
   }
   .content {
-    @include grid-span(10,7);
+    @include grid-span(10,7, $gutter:2);
     padding: $space-tripled $space $space;
 
     @include breakpoint($sidebar-full) {
@@ -44,6 +44,16 @@
       padding: $space;
     }
   }  
+  p {
+    @include breakpoint($paragraph-full) {
+      @include grid-span(16,1);
+      clear: both;
+    }
+    @include breakpoint($paragraph-medium) {
+      @include grid-span(12,1);
+      clear: both;
+    }
+  }
 }
 // {two-column-page}@
 //////////////////////////////
