@@ -92,14 +92,16 @@ $block-title:820px;
 $paragraph-medium: 950px;
 $paragraph-full: 600px;
 
-// Media
-$image-full: 900px;
+// Menus
+$main-menu: 830px;
+$main-menu-med: 0 560px;
 
 // Forms
 $forms-medium: 0 830px;
 $forms-full: 0 600px;
 
 // Media - Images and Video
+$image-full: 900px;
 $media-full: 0 820px;
 
 // For oldIE compatability, we enable the no-query fallbacks. Each breakpoint

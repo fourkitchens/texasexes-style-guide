@@ -6,28 +6,142 @@
 //////////////////////////////
 
 .main-menu {
-  .menu {
-    a {
-      padding: $space-half;
-      text-decoration: none;
-      svg {
-        fill:$blue;
+  ul {
+    @include grid-span(16,1);
+  }
+  a {
+    padding: $space-half $space;
+    text-decoration: none;
+    color: $gray;
+    border-bottom: em(6) solid $white;
+    text-align: center;
+    @include breakpoint($main-menu) {
+      text-align: left;
+    }
+    @include breakpoint($main-menu-med) {
+      border-bottom: none;
+      text-align: center;
+    }
+    &:hover {
+      color: $blue-lt;
+      border-bottom: em(6) solid $blue-lt;
+      @include breakpoint($main-menu-med) {
+        border-bottom: none;
       }
     }
-    li {
-      display: inline;
-      float: left;
-      margin-right: $space;
-      span {
-        display: inline-block;
-      }
-      svg {
-        max-width: 32px;
-        max-height: 32px;
-        display: inline-block;
-        vertical-align: middle;
+    &.active {
+      color: $blue;
+      border-bottom: em(6) solid $blue;
+      background-color: $white;
+      @include breakpoint($main-menu-med) {
+        background-color: lighten($gray-lt3, 10%);
+        border-bottom: none;
       }
     }
+  }
+  li {
+    display: inline;
+    @include grid-span(4,1, $output-style:"float", $gutter:0);
 
+    @include breakpoint($main-menu) {
+      float: left;
+      width: auto;
+    }
+    @include breakpoint($main-menu-med) {
+      @include grid-span(8,1, $output-style:"float", $gutter:0);
+      text-align: center;
+      margin: $space-half 0;
+    }
+    a {
+      &:before {
+        display: block;
+        width: 28px;
+        height: 28px;
+        margin: 0 auto $space-half;
+        vertical-align: middle;
+        content: "";
+        background-repeat: no-repeat;
+        background-size: cover;
+
+        @include breakpoint($main-menu) {
+          display: inline-block;
+          margin: 0 $space-half 0 0
+        }
+        @include breakpoint($main-menu-med) {
+          width: 34px;
+          height: 34px;
+          display: inline-block;
+          margin: 0 $space-half 0 0
+        }
+      }
+    }
+    &.menu-item-1 { // main menu
+      a {
+        &:before {
+          background-image: url(../images/icons/menu.svg);
+        }
+        &.active {
+          &:before {
+            background-image: url(../images/icons/menu-blue.svg);
+          }
+        } 
+        &:hover {
+          &:before {
+            background-image: url(../images/icons/menu-blue.svg);
+          }
+        }        
+      }     
+    }
+    &.menu-item-2 { // give
+      a {
+        &:before {
+          background-image: url(../images/icons/give.svg);
+        }
+        &:hover {
+          &:before {
+            background-image: url(../images/icons/give-blue.svg);
+          }
+        } 
+        &.active {
+          &:before {
+            background-image: url(../images/icons/give-blue.svg);
+          }
+        }         
+      }
+    }
+    &.menu-item-3 { //store
+      a {
+        &:before {
+          background-image: url(../images/icons/cart.svg);
+        }
+        &:hover {
+          &:before {
+            background-image: url(../images/icons/cart-blue.svg);
+          }
+        }
+        &.active {
+          &:before {
+            background-image: url(../images/icons/cart-blue.svg);
+          }
+        }
+      }
+    }         
+    &.menu-item-4 { // login
+      a {
+        &:before {
+          background-image: url(../images/icons/login.svg);
+        }
+        &:hover {
+          &:before {
+            background-image: url(../images/icons/login-blue.svg);
+          }
+        }  
+        &.active {
+          &:before {
+            background-image: url(../images/icons/login-blue.svg);
+          }
+        }        
+      }
+    }      
   }
 }

@@ -34,11 +34,10 @@
       @include grid-span(16,1);
       padding: $space 0;
     }
-
   }
   .content {
     @include grid-span(10,7, $gutter:2);
-    padding: $space-tripled $space $space;
+    padding: $space-doubled $space $space-tripled;
 
     @include breakpoint($sidebar-full) {
       @include grid-span(16,1);

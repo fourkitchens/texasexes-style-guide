@@ -1,0 +1,24 @@
+//////////////////////////////
+// Footer Menu Components
+//
+// The partial and folder structure for this components should be as follows:
+// _footer-menu.scss
+//////////////////////////////
+
+footer {
+  background-color: $gray;
+  @include grid-span(16, 1);
+  padding:$space-tripled 0;
+  border-top: em(10) solid $gray-lt2;
+  .menu {
+    a {
+      padding: $space-half;
+      text-decoration: none;
+    }
+    li {
+      display: inline;
+      float: left;
+      margin-right: $space;
+    }
+  }
+}

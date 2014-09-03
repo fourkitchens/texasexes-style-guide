@@ -5,7 +5,7 @@
 
 .cover-image {
   @include grid-span(16,1);
-  margin: $space-half 0 $space;
+  margin: $space-half 0 $space-doubled;
 
   img {
     margin: 0 auto;

@@ -90,7 +90,7 @@ h2 {
   font-size:em(42);
   color: $gray-lt;
   text-transform: uppercase;
-  border-bottom: em(2) solid $gray-lt3;
+  border-bottom: em(3) solid $gray-lt3;
 }
 h3 {
   font-size:em(36);  
@@ -183,9 +183,20 @@ input[type="submit"] {
 .menu {
   font-size: em(24);
   line-height: 1.2;
-  font-family: $serif;
+  font-family: $sans; 
+  text-transform: uppercase;
 }
-
+.sidebar {
+  .menu {
+    text-transform: none;
+    font-family: $serif;
+  }
+}
+footer {
+  .menu {
+    font-size: em(22);
+  }
+}
 
 // Lists 
 main { // for prototype only
