@@ -268,6 +268,19 @@
         "path": "components.yml"
       },
       {
+        "title": "Cover Image",
+        "submenu": [
+          {
+            "title": "Cover Image",
+            "href": "#/components?id=cover-image--cover-image"
+          },
+          {
+            "title": "View All",
+            "href": "#/components?group=cover-image"
+          }
+        ]
+      },
+      {
         "title": "Logo",
         "submenu": [
           {

@@ -43,6 +43,13 @@
       "group": "logo"
     },
     {
+      "name": "cover-image",
+      "title": "Cover Image",
+      "id": "cover-image--cover-image",
+      "path": "partials/components/cover-image/cover-image.html",
+      "group": "cover-image"
+    },
+    {
       "name": "buttons-small",
       "title": "Buttons Small",
       "id": "buttons-small--buttons-small",
