@@ -43,6 +43,13 @@
       "group": "logo"
     },
     {
+      "name": "cover-image",
+      "title": "Cover Image",
+      "id": "cover-image--cover-image",
+      "path": "partials/components/cover-image/cover-image.html",
+      "group": "cover-image"
+    },
+    {
       "name": "buttons-small",
       "title": "Buttons Small",
       "id": "buttons-small--buttons-small",
@@ -85,31 +92,10 @@
       "group": "base-forms"
     },
     {
-      "name": "input--color",
-      "title": "Input - Color",
-      "id": "base-forms-inputs--input--color",
-      "path": "partials/components/base/forms/inputs/input--color.html",
-      "group": "base-forms-inputs"
-    },
-    {
       "name": "input--date",
       "title": "Input - Date",
       "id": "base-forms-inputs--input--date",
       "path": "partials/components/base/forms/inputs/input--date.html",
-      "group": "base-forms-inputs"
-    },
-    {
-      "name": "input--datetime-local",
-      "title": "Input - Datetime Local",
-      "id": "base-forms-inputs--input--datetime-local",
-      "path": "partials/components/base/forms/inputs/input--datetime-local.html",
-      "group": "base-forms-inputs"
-    },
-    {
-      "name": "input--datetime",
-      "title": "Input - Datetime",
-      "id": "base-forms-inputs--input--datetime",
-      "path": "partials/components/base/forms/inputs/input--datetime.html",
       "group": "base-forms-inputs"
     },
     {
@@ -124,27 +110,6 @@
       "title": "Input - File",
       "id": "base-forms-inputs--input--file",
       "path": "partials/components/base/forms/inputs/input--file.html",
-      "group": "base-forms-inputs"
-    },
-    {
-      "name": "input--hidden",
-      "title": "Input - Hidden",
-      "id": "base-forms-inputs--input--hidden",
-      "path": "partials/components/base/forms/inputs/input--hidden.html",
-      "group": "base-forms-inputs"
-    },
-    {
-      "name": "input--image",
-      "title": "Input - Image",
-      "id": "base-forms-inputs--input--image",
-      "path": "partials/components/base/forms/inputs/input--image.html",
-      "group": "base-forms-inputs"
-    },
-    {
-      "name": "input--month",
-      "title": "Input - Month",
-      "id": "base-forms-inputs--input--month",
-      "path": "partials/components/base/forms/inputs/input--month.html",
       "group": "base-forms-inputs"
     },
     {
@@ -190,38 +155,10 @@
       "group": "base-forms-inputs"
     },
     {
-      "name": "input--tel",
-      "title": "Input - Tel",
-      "id": "base-forms-inputs--input--tel",
-      "path": "partials/components/base/forms/inputs/input--tel.html",
-      "group": "base-forms-inputs"
-    },
-    {
       "name": "input--text",
       "title": "Input - Text",
       "id": "base-forms-inputs--input--text",
       "path": "partials/components/base/forms/inputs/input--text.html",
-      "group": "base-forms-inputs"
-    },
-    {
-      "name": "input--time",
-      "title": "Input - Time",
-      "id": "base-forms-inputs--input--time",
-      "path": "partials/components/base/forms/inputs/input--time.html",
-      "group": "base-forms-inputs"
-    },
-    {
-      "name": "input--url",
-      "title": "Input - Url",
-      "id": "base-forms-inputs--input--url",
-      "path": "partials/components/base/forms/inputs/input--url.html",
-      "group": "base-forms-inputs"
-    },
-    {
-      "name": "input--week",
-      "title": "Input - Week",
-      "id": "base-forms-inputs--input--week",
-      "path": "partials/components/base/forms/inputs/input--week.html",
       "group": "base-forms-inputs"
     },
     {
@@ -372,6 +309,20 @@
       "id": "video-paragraph--video-paragraph",
       "path": "partials/layouts/video-paragraph/video-paragraph.html",
       "group": "video-paragraph"
+    },
+    {
+      "name": "two-column-page",
+      "title": "Two Column Page",
+      "id": "two-column-page--two-column-page",
+      "path": "partials/layouts/two-column-page/two-column-page.html",
+      "group": "two-column-page"
+    },
+    {
+      "name": "one-column-page",
+      "title": "One Column Page",
+      "id": "one-column-page--one-column-page",
+      "path": "partials/layouts/one-column-page/one-column-page.html",
+      "group": "one-column-page"
     },
     {
       "name": "image-paragraph",

@@ -137,20 +137,8 @@
                 "title": "Inputs",
                 "submenu": [
                   {
-                    "title": "Input - Color",
-                    "href": "#/components?id=base-forms-inputs--input--color"
-                  },
-                  {
                     "title": "Input - Date",
                     "href": "#/components?id=base-forms-inputs--input--date"
-                  },
-                  {
-                    "title": "Input - Datetime Local",
-                    "href": "#/components?id=base-forms-inputs--input--datetime-local"
-                  },
-                  {
-                    "title": "Input - Datetime",
-                    "href": "#/components?id=base-forms-inputs--input--datetime"
                   },
                   {
                     "title": "Input - Email",
@@ -159,18 +147,6 @@
                   {
                     "title": "Input - File",
                     "href": "#/components?id=base-forms-inputs--input--file"
-                  },
-                  {
-                    "title": "Input - Hidden",
-                    "href": "#/components?id=base-forms-inputs--input--hidden"
-                  },
-                  {
-                    "title": "Input - Image",
-                    "href": "#/components?id=base-forms-inputs--input--image"
-                  },
-                  {
-                    "title": "Input - Month",
-                    "href": "#/components?id=base-forms-inputs--input--month"
                   },
                   {
                     "title": "Input - Number",
@@ -197,24 +173,8 @@
                     "href": "#/components?id=base-forms-inputs--input--submit"
                   },
                   {
-                    "title": "Input - Tel",
-                    "href": "#/components?id=base-forms-inputs--input--tel"
-                  },
-                  {
                     "title": "Input - Text",
                     "href": "#/components?id=base-forms-inputs--input--text"
-                  },
-                  {
-                    "title": "Input - Time",
-                    "href": "#/components?id=base-forms-inputs--input--time"
-                  },
-                  {
-                    "title": "Input - Url",
-                    "href": "#/components?id=base-forms-inputs--input--url"
-                  },
-                  {
-                    "title": "Input - Week",
-                    "href": "#/components?id=base-forms-inputs--input--week"
                   },
                   {
                     "title": "Textarea",
@@ -306,6 +266,19 @@
       {
         "skip": true,
         "path": "components.yml"
+      },
+      {
+        "title": "Cover Image",
+        "submenu": [
+          {
+            "title": "Cover Image",
+            "href": "#/components?id=cover-image--cover-image"
+          },
+          {
+            "title": "View All",
+            "href": "#/components?group=cover-image"
+          }
+        ]
       },
       {
         "title": "Logo",
@@ -410,6 +383,32 @@
       {
         "skip": true,
         "path": "layouts.yml"
+      },
+      {
+        "title": "One Column Page",
+        "submenu": [
+          {
+            "title": "One Column Page",
+            "href": "#/layouts?id=one-column-page--one-column-page"
+          },
+          {
+            "title": "View All",
+            "href": "#/layouts?group=one-column-page"
+          }
+        ]
+      },
+      {
+        "title": "Two Column Page",
+        "submenu": [
+          {
+            "title": "Two Column Page",
+            "href": "#/layouts?id=two-column-page--two-column-page"
+          },
+          {
+            "title": "View All",
+            "href": "#/layouts?group=two-column-page"
+          }
+        ]
       },
       {
         "title": "Video Paragraph",
