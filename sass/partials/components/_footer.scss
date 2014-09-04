@@ -1,0 +1,70 @@
+//////////////////////////////
+// Footer Components
+//
+// The partial and folder structure for this components should be as follows:
+// _footer-menu.scss
+//////////////////////////////
+
+footer {
+  background-color: $gray;
+  @include grid-span(16, 1);
+  padding:$space-tripled 0;
+  border-top: em(10) solid $gray-lt2;
+
+  .wrap {
+    @include grid-span(16,1);
+    border-top: em(3) solid $gray-lt; 
+    margin-top: $space;
+    padding: $space;
+  }
+  .copyright {
+    @include grid-span(14,1, $output-style:"float");
+    padding: $space $space 0;
+    clear: left;
+
+    @include breakpoint($footer-full) {
+      @include grid-span(7,1);
+      padding: $space-tripled 0;
+    }
+     @include breakpoint($footer-med) {    
+      @include grid-span(16,1);
+      padding: $space;
+      clear: both;
+    }     
+  }
+  .seal {
+    @include grid-span(2,15);
+    padding: $space-half $space-half 0 0;
+    clear: none;
+
+    @include breakpoint($footer-full) {
+      @include grid-span(2,8);
+      padding-top: $space;
+    }
+    @include breakpoint($footer-med) {    
+      @include grid-span(4,7);
+      clear: both;
+      padding: $space 0;
+    }  
+    img {
+      width: 100%;
+      height: auto;
+    }
+  }
+  .contact {
+    @include grid-span(14,1, $output-style:"float");
+    padding: $space;
+    clear: left;
+
+    @include breakpoint($footer-full) {    
+      @include grid-span(7,10);
+      text-align: right;
+      padding: $space-tripled 0;
+    }
+    @include breakpoint($footer-med) {    
+      @include grid-span(16,1);
+      padding: 0 $space;
+      clear: both;
+    }    
+  }  
+}

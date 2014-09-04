@@ -6,6 +6,7 @@
 a,
 a:visited {
   color: $blue;
+  @include transition(all .4s ease);
   &:hover {
     color:lighten($blue, 10%);
     text-decoration: none;

@@ -12,28 +12,39 @@
   @include breakpoint($sidebar-full) {
     display: none;
   }
-}
-
-.menu {
-  margin: 0;
-  padding: $space 0;
-  li {
-    margin:0;
-  }
-  a {
-    padding: $space $space-doubled;
-    display: block;
-    font-weight: 700;
+  .menu {
+    margin: 0;
+    padding: $space 0;
+    li {
+      margin:0;
+    }
+    a {
+      padding: $space $space-doubled;
+      display: block;
+      font-weight: 700;
+    }
   }
 }
 
 // Mobile trigger toggle
 #toggle-label {
+  text-align: center;
+
   &:before {
-    
+    display: inline-block;
+    width: 24px;
+    height: 24px;
+    margin: 0 $space-half 0 0;
+    vertical-align: middle;
+    text-align: center;
+    content: "";
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-image: url(../images/icons/sidemenu-white.svg);
   }
 }
 #menu-toggle + #toggle-label {
+  @include button($blue, $white);
   display: block;
 
   @include breakpoint($sidebar-trigger) {
@@ -43,7 +54,19 @@
 
 #menu-toggle + #toggle-label,
 #menu-toggle:checked + #toggle-label {
-  margin: 0;
+  margin: 0; 
+}
+#menu-toggle:checked + #toggle-label {
+  @include button($gray-lt3, $blue);
+  display: block;
+  &:before {
+    background-image: url(../images/icons/x-blue.svg);
+  }
+  &:hover {
+    &:before {
+      background-image: url(../images/icons/x.svg);
+    }
+  }
 }
 #menu-toggle:checked + #toggle-label + .sidebar {
   display: block;

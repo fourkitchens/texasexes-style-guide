@@ -104,6 +104,10 @@ $forms-full: 0 600px;
 $image-full: 900px;
 $media-full: 0 820px;
 
+// Footer 
+$footer-full: 1112px;
+$footer-med: 0 680px;
+
 // For oldIE compatability, we enable the no-query fallbacks. Each breakpoint
 // will be followed by the same set of arguments since we have a single
 // conditional class to indicate that a browser can't cut the mustard.

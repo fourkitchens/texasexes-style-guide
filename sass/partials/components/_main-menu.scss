@@ -53,6 +53,7 @@
       margin: $space-half 0;
     }
     a {
+      display: block;
       &:before {
         display: block;
         width: 28px;
@@ -131,7 +132,7 @@
         &:before {
           background-image: url(../images/icons/login.svg);
         }
-        &:hover {
+        &.active {
           &:before {
             background-image: url(../images/icons/login-blue.svg);
           }

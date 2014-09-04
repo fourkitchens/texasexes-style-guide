@@ -6,19 +6,50 @@
 //////////////////////////////
 
 footer {
-  background-color: $gray;
-  @include grid-span(16, 1);
-  padding:$space-tripled 0;
-  border-top: em(10) solid $gray-lt2;
+  a {
+    color: $gray-lt2;
+    &:hover {
+      color: $white;
+    }
+  }
   .menu {
+    @include grid-span(16,1);
     a {
-      padding: $space-half;
       text-decoration: none;
+      padding: $space-half $space;
+      text-align: center;
+      float: left;
+      color: $gray-lt2;
+      &:hover {
+        color: $white;
+      }
+      @include breakpoint($main-menu) {
+        text-align: left;
+      }
+      @include breakpoint($main-menu-med) {
+        border-bottom: none;
+        text-align: center;
+      }          
+      &:hover {
+        color: $white;
+      }
+      &.active {
+        color: $white;
+      }
     }
     li {
       display: inline;
-      float: left;
-      margin-right: $space;
+      @include grid-span(4,1, $output-style:"float", $gutter:0);
+
+      @include breakpoint($main-menu) {
+        float: left;
+        width: auto;
+      }
+      @include breakpoint($main-menu-med) {
+        @include grid-span(8,1, $output-style:"float", $gutter:0);
+        text-align: center;
+        margin: $space-half 0;
+      }
     }
   }
 }

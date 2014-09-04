@@ -9,5 +9,14 @@
 // Styling for Prototype-Only / Sections
 
 [data-sp-class="section--group"] {
-  @include grid-span (16,1);
+  padding: 0 $space;
+  margin: 0 auto;
+  clear: both;
+  display: block;
+  width: 100%;
+}
+ul[data-sp-class],
+[data-sp-class="section--header"] {
+  padding: $space;
+  margin: 0 auto;
 }

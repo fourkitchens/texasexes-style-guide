@@ -3,13 +3,15 @@
 //
 //////////////////////////////
 
+
+// Basic elements
 p {
   font-family: $serif;
   font-weight: 500;
   font-size: em(20);
   line-height: 1.5;
   color: $gray;
-  margin-bottom: em(40);
+  margin-bottom: $space-doubled;
 }
 em {
   font-style: italic;
@@ -47,6 +49,8 @@ figcaption {
     letter-spacing: em(1);
   }
 }
+
+// Heading font family, weight, and margin
 h1 {
   font-family: $sans49;
   line-height: 1.5;
@@ -87,13 +91,13 @@ h1 {
   color: $gray-dk;
 }
 h2 {
-  font-size:em(42);
+  font-size:em(38);
   color: $gray-lt;
   text-transform: uppercase;
   border-bottom: em(3) solid $gray-lt3;
 }
 h3 {
-  font-size:em(36);  
+  font-size:em(32);  
   color: $gray-lt;
 }
 h4 {
@@ -125,13 +129,28 @@ ol {
 }
 
 
-// Section-specific font-sizes
+// Section-specific type
 .sidebar {
   h3 {
     font-size: em(24);  
 
     @include breakpoint($block-title) {
       font-size: em(36);  
+    }
+  }
+}
+
+footer {
+  p {
+    font-size: em(21);
+    font-family: $sans49;
+    font-weight: 400;
+    color: $gray-lt2;
+    letter-spacing: em(1);
+    margin:0;
+    text-transform: uppercase;
+    @include breakpoint($footer-med) {    
+      text-align: center;
     }
   }
 }
@@ -173,9 +192,11 @@ input[type="submit"] {
   font-family: $sans;
   font-weight: 400;
   letter-spacing: em(1);
-  font-size: em(22);  
+  font-size: em(22);
+  line-height: 1.8; 
   &.small {
     font-size: em(20);
+    line-height: 1.2; 
   }
 }
 
@@ -183,13 +204,17 @@ input[type="submit"] {
 .menu {
   font-size: em(24);
   line-height: 1.2;
-  font-family: $sans; 
+  font-family: $sans;
   text-transform: uppercase;
 }
 .sidebar {
   .menu {
     text-transform: none;
     font-family: $serif;
+    font-size: em(20);
+    @include breakpoint($sidebar-full) {
+      font-size: em(18);
+    }
   }
 }
 footer {
