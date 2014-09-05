@@ -5,10 +5,18 @@
 
 .cover-image {
   @include grid-span(16,1);
-  margin: $space-half 0 $space-doubled;
+  margin: $space 0;
 
+  @include breakpoint($cover-photo-full) {
+    margin: $space 0 $space-negative;
+  }
   img {
     margin: 0 auto;
     width: 100%;
+  }
+  .floatingHeader {
+    position: fixed;
+    top: 0;
+    visibility: hidden;
   }
 }

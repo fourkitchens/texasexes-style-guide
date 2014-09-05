@@ -9,14 +9,44 @@
 // Styling for Prototype-Only / Sections
 
 [data-sp-class="section--group"] {
-  padding: 0 $space;
+  padding: 0;
   margin: 0 auto;
   clear: both;
   display: block;
   width: 100%;
 }
+li[data-sp-class="section--group"] {
+  margin: 0 0 $space-tripled;
+  float: left;
+}
 ul[data-sp-class],
 [data-sp-class="section--header"] {
   padding: $space;
   margin: 0 auto;
+}
+p.info,
+.base--TEXT,
+.base--em,
+.base--img,
+.base--link,
+.base--a,
+.base--p,
+.base--strong,
+.base--h1,
+.base--h2,
+.base--h3,
+.base--h4,
+.base--h5,
+.base--h6,
+.base--mixed-list,
+.size-info,
+.base--ol,
+.base--ul,
+.base--FORM,
+fieldset.ng-scope {
+  padding: 0 $space;
+}
+.base--button,
+.base--select {
+  margin-left: $space;
 }

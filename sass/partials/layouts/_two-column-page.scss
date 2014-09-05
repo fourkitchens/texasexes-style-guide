@@ -36,8 +36,9 @@
     }
   }
   .content {
-    @include grid-span(10,7, $gutter:2);
-    padding: $space-doubled $space $space-tripled;
+    @include grid-span(10,7, $gutter:1);
+    background-color: rgba($white, .88);
+    padding: $space-doubled $space-doubled $space-tripled;
 
     @include breakpoint($sidebar-full) {
       @include grid-span(16,1);

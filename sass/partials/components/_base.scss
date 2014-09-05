@@ -34,7 +34,26 @@
 // @{base--text}
 // Text styling for Base Component
 .base--TEXT {
-
+  p {
+    @include breakpoint($paragraph-full) {
+      @include grid-span(11,1);
+      clear: both;
+    }
+    @include breakpoint($paragraph-medium) {
+      @include grid-span(9,1);
+      clear: both;
+    }
+  }
+}
+p.base--p {
+  @include breakpoint($paragraph-full) {
+    @include grid-span(11,1);
+    clear: both;
+  }
+  @include breakpoint($paragraph-medium) {
+    @include grid-span(9,1);
+    clear: both;
+  }  
 }
 // {base--text}@
 //////////////////////////////

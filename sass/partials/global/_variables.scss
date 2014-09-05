@@ -16,9 +16,6 @@ $sans90: 'Knockout 90 A', 'Knockout 90 B', 'Helvetica Neue', Helvetica, Arial, s
 $serif: 'Sentinel SSm A', 'Sentinel SSm B', Georgia, serif;
 // Weights 500,700,800
 
-// Modular scale settings
-$ms-base: 1em;
-$ms-ratio: $golden;
 
 /////////
 // Colors
@@ -59,6 +56,8 @@ $space-tripled: $space*3;
 
 $space-half: $space/2;
 
+$space-negative: -8em; // only used for cover image
+
 
 $space-btn: em(12) em(24); // buttons
 $space-btn-sm: em(10) em(20); // small buttons
@@ -91,6 +90,9 @@ $block-title:820px;
 // Paragraphs 
 $paragraph-medium: 950px;
 $paragraph-full: 600px;
+
+// Cover Photo
+$cover-photo-full: 780px;
 
 // Menus
 $main-menu: 830px;

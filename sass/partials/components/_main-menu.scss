@@ -10,7 +10,7 @@
     @include grid-span(16,1);
   }
   a {
-    padding: $space-half $space;
+    padding: $space;
     text-decoration: none;
     color: $gray;
     border-bottom: em(6) solid $white;
@@ -132,7 +132,7 @@
         &:before {
           background-image: url(../images/icons/login.svg);
         }
-        &.active {
+        &:hover {
           &:before {
             background-image: url(../images/icons/login-blue.svg);
           }

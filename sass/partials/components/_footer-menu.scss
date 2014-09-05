@@ -29,6 +29,8 @@ footer {
       @include breakpoint($main-menu-med) {
         border-bottom: none;
         text-align: center;
+        display: block;
+        float: none;
       }          
       &:hover {
         color: $white;
@@ -46,7 +48,7 @@ footer {
         width: auto;
       }
       @include breakpoint($main-menu-med) {
-        @include grid-span(8,1, $output-style:"float", $gutter:0);
+        @include grid-span(16,1);
         text-align: center;
         margin: $space-half 0;
       }
