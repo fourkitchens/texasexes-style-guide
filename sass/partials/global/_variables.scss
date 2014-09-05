@@ -57,6 +57,7 @@ $space-tripled: $space*3;
 $space-half: $space/2;
 
 $space-negative: -8em; // only used for cover image
+$space-double-negative: -16em; // only used for cover image
 
 
 $space-btn: em(12) em(24); // buttons
@@ -93,6 +94,7 @@ $paragraph-full: 600px;
 
 // Cover Photo
 $cover-photo-full: 780px;
+$cover-photo-huge: 1400px;
 
 // Menus
 $main-menu: 830px;

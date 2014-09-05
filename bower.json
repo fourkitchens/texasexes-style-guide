@@ -20,7 +20,6 @@
     "north": "0.x.x"
   },
   "devDependencies": {
-    "style-prototype": "2.x.x",
-    "jquery": "~2.1.1"
+    "style-prototype": "2.x.x"
   }
 }

@@ -10,6 +10,11 @@
   @include breakpoint($cover-photo-full) {
     margin: $space 0 $space-negative;
   }
+
+  @include breakpoint($cover-photo-huge) {
+    margin: $space 0 $space-double-negative;
+  }
+  
   img {
     margin: 0 auto;
     width: 100%;
