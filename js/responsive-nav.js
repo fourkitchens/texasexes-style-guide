@@ -1,5 +1,8 @@
+/* globals jQuery */
+
 // Small handheld collpased navigation
 jQuery.noConflict();
+
 (function ($) {
     'use strict';
     $(document).ready(function () {

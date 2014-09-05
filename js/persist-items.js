@@ -1,9 +1,8 @@
+/* globals jQuery */
+
 jQuery.noConflict();
 (function ($) {
     'use strict';
-
-    // DOM Ready      
-    $(document).ready(function () {
 
     function UpdateTableHeaders() {
        $('.persist-area').each(function() {
@@ -24,7 +23,8 @@ jQuery.noConflict();
            }
        });
     }
-
+    // DOM Ready      
+    $(document).ready(function () {
        var clonedHeaderRow;
 
        $('.persist-area').each(function() {
