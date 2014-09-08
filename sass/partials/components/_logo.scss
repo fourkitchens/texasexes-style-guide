@@ -24,13 +24,15 @@
 // @{logo}
 // Styling for Logo Components
 .logo {
-  width: 300px;
-  height: auto;
-
-  @include breakpoint($logo-full) {
-    width: 100%;
+  img {
+    width: 300px;
     height: auto;
-    clear: both;
+
+    @include breakpoint($logo-full) {
+      width: 100%;
+      height: auto;
+      clear: both;
+    }
   }
 }
 

@@ -6,8 +6,10 @@ jQuery.noConflict();
 (function ($) {
     'use strict';
     $(document).ready(function () {
+      $('.main-menu').css('display','none');
+
     var pullNav                   = $('.pull-nav'),
-        menu                      = $('.navigation'), 
+        menu                      = $('.menu'), 
         pullSearch                = $('.pull-search'),
         search                    = $('.search'),
         toggler                   = function(a){

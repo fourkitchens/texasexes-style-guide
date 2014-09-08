@@ -209,14 +209,20 @@ input[type="submit"] {
   line-height: 1.2;
   font-family: $sans;
   text-transform: uppercase;
+  ul {
+    text-transform: none;
+    font-size: em(18);
+    line-height: 1.2;
+    font-family: $serif;
+  }
 }
 .sidebar {
-  .menu {
+  a {
     text-transform: none;
     font-family: $serif;
-    font-size: em(20);
+    font-size: em(18);
     @include breakpoint($sidebar-full) {
-      font-size: em(18);
+      font-size: em(16);
     }
   }
 }

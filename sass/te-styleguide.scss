@@ -65,6 +65,7 @@ $browser-minimum-versions: (
 @import "partials/components/main-menu";
 @import "partials/components/paragraph";
 @import "partials/components/radio";
+@import "partials/components/search";
 @import "partials/components/sidebar-menu";
 @import "partials/components/text-input";
 @import "partials/components/video";
@@ -83,4 +84,5 @@ $browser-minimum-versions: (
 @import "partials/layouts/image-paragraph";
 @import "partials/layouts/one-column-page";
 @import "partials/layouts/two-column-page";
+@import "partials/layouts/three-column-page";
 //////////////////////////////

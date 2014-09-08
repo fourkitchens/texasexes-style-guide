@@ -8,11 +8,33 @@
 .main-menu {
   ul {
     @include grid-span(16,1);
+    position: relative;
+    ul {
+      @include grid-span(8,1);
+      position: absolute;
+      padding: $space;
+      background-color: $white;
+      border-top: em(6) solid $blue-lt;
+
+      a { // second level icons
+        padding: $space-half;
+        border-bottom: none;
+        text-align: left;
+        &:before {
+          display: none;
+        }
+        &:hover,
+        &.active {
+          border-bottom: none;
+        }
+      }
+    }
   }
   a {
     padding: $space;
     text-decoration: none;
     color: $gray;
+    display: block;
     border-bottom: em(6) solid $white;
     text-align: center;
     @include breakpoint($main-menu) {
@@ -52,8 +74,11 @@
       text-align: center;
       margin: $space-half 0;
     }
-    a {
+    li {
       display: block;
+      width: 100%;
+    }
+    a { // top level icons
       &:before {
         display: block;
         width: 28px;
@@ -83,15 +108,20 @@
         }
         &.active {
           &:before {
-            background-image: url(../images/icons/menu-blue.svg);
+            background-image: url(../images/icons/x-blue.svg);
+          }
+          &:hover {
+            &:before {
+              background-image: url(../images/icons/x-blue.svg);
+            }
           }
         } 
         &:hover {
           &:before {
             background-image: url(../images/icons/menu-blue.svg);
           }
-        }        
-      }     
+        }          
+      }            
     }
     &.menu-item-2 { // give
       a {

@@ -1,0 +1,20 @@
+//////////////////////////////
+// Search styles
+// _search.scss
+//////////////////////////////
+.search {
+  button {
+    @include grid-span(5,12);
+    padding: $space-btn-search;
+  }
+  input[type="search"] {
+    @include grid-span(11,1);
+    border:em(4) solid $gray-lt2;
+    background-color: lighten($gray-lt2, 30%);
+    &:focus {
+      border-color: $green;
+      outline-color: $green-dk;
+      background-color: $white;
+    }
+  }
+}

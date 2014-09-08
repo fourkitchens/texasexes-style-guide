@@ -8,5 +8,31 @@ main,
   header {
     padding: $space 0 $space-doubled;
     @include grid-span(16,1);
+    .logo {
+      @include grid-span(8,1);
+
+      @include breakpoint($search-med) {
+        @include grid-span(10,1);
+      }
+      @include breakpoint($search-full) {
+        @include grid-span(16,1);
+      }      
+    }
+    .search {
+      @include grid-span(8,9);
+      padding-top: $space-doubled;
+
+      @include breakpoint($search-med) {
+        @include grid-span(6,11);
+      }
+      @include breakpoint($search-full) {
+        @include grid-span(16,1);
+        padding: $space $space-doubled;
+      }          
+    }    
+    .main-menu {
+      @include grid-span(16,1);
+      clear: both;
+    }
   }
 }
