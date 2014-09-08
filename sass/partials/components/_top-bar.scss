@@ -1,0 +1,24 @@
+//////////////////////////////
+// Top bar styles
+// _top-bar.scss
+//////////////////////////////
+
+main,
+.container { // wrapper definition for prototype only
+  .top-bar {
+    background-color: lighten($gray-lt3, 10%);
+    padding-top: $space;
+    @include grid-span(16,1);
+    .entities {
+      @include grid-span(12,1);
+    }
+    .search {
+      @include grid-span(4,13);
+
+      @include breakpoint($search-full) {
+        @include grid-span(16,1);
+        padding: $space $space-doubled;
+      }          
+    }   
+  }
+}

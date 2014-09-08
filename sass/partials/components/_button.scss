@@ -40,6 +40,9 @@ input[type="submit"] {
       @include button($gray-lt2, $white);
     }      
   }  
+  &.search {
+    @include button($gray-lt3, $gray);      
+  }    
   &.required {
     @include button($red, $white);
     &.active {

@@ -7,13 +7,21 @@
 
 .main-menu {
   ul {
-    @include grid-span(16,1);
+    float: right;   
     position: relative;
+    @include breakpoint($main-menu) {
+      margin-top: $space;
+    }    
+    @include breakpoint($navigation-full) {
+      @include grid-span(16,1);
+      clear: both;
+    }     
     // .active {
     //   ul {
     //     display: block;
     //   } 
-    // }    
+    // }  
+
     ul {
       // display: none;
       @include grid-span(8,1);
@@ -21,6 +29,7 @@
       padding: $space;
       z-index: 2;
       background-color: $white;
+      margin-top: 0;
       border-top: em(6) solid $blue-lt;
       @include breakpoint($main-menu-med) {
         @include grid-span(16,1);
@@ -69,6 +78,10 @@
         background-color: lighten($gray-lt3, 10%);
         border-bottom: none;
       }
+      &:hover {
+        color: $blue;
+        border-bottom: em(6) solid $gray-lt2;   
+      }      
     }
   }
   li {
@@ -82,7 +95,7 @@
     @include breakpoint($main-menu-med) {
       @include grid-span(8,1, $output-style:"float", $gutter:0);
       text-align: center;
-      margin: $space-half 0;
+      margin: 0;
     }
     li {
       display: block;
@@ -187,7 +200,7 @@
   }
 }
 
-// Delete for Drupal
+// PROTOTYPE ONLY - Delete for Drupal
 
 
 // Mobile trigger toggle
@@ -243,7 +256,10 @@
     border-bottom: em(6) solid $blue-lt;
     border-top: none;
     border-right: none;
-    border-left: none;    
+    border-left: none; 
+    &:before {
+      background-image: url(../images/icons/menu-blue.svg);
+    }       
     @include breakpoint($main-menu-med) {
       border-bottom: none;
       text-align: center;
@@ -282,8 +298,10 @@
     }
   }
   &:hover {
+    color: $blue;
+    border-bottom: em(6) solid $blue;   
     &:before {
-      background-image: url(../images/icons/x.svg);
+      background-image: url(../images/icons/x-blue.svg);
     }
   }
 }

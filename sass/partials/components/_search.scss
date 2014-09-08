@@ -4,17 +4,18 @@
 //////////////////////////////
 .search {
   button {
-    @include grid-span(5,12);
+    @include grid-span(5,12, $gutter:0);
     padding: $space-btn-search;
+    margin-bottom: 0;
   }
   input[type="search"] {
-    @include grid-span(11,1);
-    border:em(4) solid $gray-lt2;
-    background-color: lighten($gray-lt2, 30%);
+    @include grid-span(11,1, $gutter:0);
+    border:em(6) solid $gray-lt3;
+    background-color:lighten($gray-lt3, 8%);
     &:focus {
-      border-color: $green;
       outline-color: $green-dk;
       background-color: $white;
+      border-color:$gray-lt2;
     }
   }
 }

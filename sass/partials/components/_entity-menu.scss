@@ -1,0 +1,137 @@
+//////////////////////////////
+// Entity Menu Components
+//
+// The partial and folder structure for this components should be as follows:
+// _entity-menu.scss
+//////////////////////////////
+
+.entities {       
+  a {
+    padding: $space-half $space;
+    text-decoration: none;
+    color: $gray;
+    display: block;
+    border-bottom: em(6) solid $gray-lt3;
+    text-align: center;
+    &:hover {
+      color: $gray-lt;
+      border-bottom: em(6) solid $gray-lt2;
+      @include breakpoint($main-menu-med) {
+        border-bottom: none;
+      }
+    }
+    &.active {
+      color: $gray-lt2;
+      border-bottom: em(6) solid $gray-lt2;
+      @include breakpoint($main-menu-med) {
+        background-color: lighten($gray-lt3, 10%);
+        border-bottom: none;
+      }
+      &:hover {
+      color: $gray-lt2;
+        border-bottom: em(6) solid $gray-lt2;   
+      }
+    }
+  }
+  li {
+    display: inline;
+    float: left;
+    a { // top level icons
+      &:before {
+        display: block;
+        width: 28px;
+        height: 28px;
+        margin: 0 auto $space-half;
+        vertical-align: middle;
+        content: "";
+        background-repeat: no-repeat;
+        background-size: cover;
+
+        @include breakpoint($main-menu) {
+          display: inline-block;
+          margin: 0 $space-half 0 0
+        }
+        @include breakpoint($main-menu-med) {
+          width: 34px;
+          height: 34px;
+          display: inline-block;
+          margin: 0 $space-half 0 0
+        }
+      }
+    }
+    &.menu-item-1 { // main menu
+      a {
+        &:before {
+          background-image: url(../images/icons/menu.svg);
+        }
+        &.active {
+          &:before {
+            background-image: url(../images/icons/x-blue.svg);
+          }
+          &:hover {
+            &:before {
+              background-image: url(../images/icons/x-blue.svg);
+            }
+          }
+        } 
+        &:hover {
+          &:before {
+            background-image: url(../images/icons/menu-blue.svg);
+          }
+        }          
+      }            
+    }
+    &.menu-item-2 { // give
+      a {
+        &:before {
+          background-image: url(../images/icons/give.svg);
+        }
+        &:hover {
+          &:before {
+            background-image: url(../images/icons/give-blue.svg);
+          }
+        } 
+        &.active {
+          &:before {
+            background-image: url(../images/icons/give-blue.svg);
+          }
+        }         
+      }
+    }
+    &.menu-item-3 { //store
+      a {
+        &:before {
+          background-image: url(../images/icons/cart.svg);
+        }
+        &:hover {
+          &:before {
+            background-image: url(../images/icons/cart-blue.svg);
+          }
+        }
+        &.active {
+          &:before {
+            background-image: url(../images/icons/cart-blue.svg);
+          }
+        }
+      }
+    }         
+    &.menu-item-4 { // login
+      a {
+        &:before {
+          background-image: url(../images/icons/login.svg);
+        }
+        &:hover {
+          &:before {
+            background-image: url(../images/icons/login-blue.svg);
+          }
+        }  
+        &.active {
+          &:before {
+            background-image: url(../images/icons/login-blue.svg);
+          }
+        }        
+      }
+    }      
+  }
+}
+

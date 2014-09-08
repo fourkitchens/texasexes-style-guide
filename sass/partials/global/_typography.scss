@@ -184,6 +184,7 @@ label {
 input,
 textarea {
   font-size: em(24);
+  line-height: 1.2;
   font-family: $serif;
 }
 
@@ -201,8 +202,14 @@ input[type="submit"] {
     font-size: em(20);
     line-height: 1.2; 
   }
+  &.search {
+    line-height: 1.1; 
+  }
 }
 
+input[type="search"] {
+  line-height: 1.1; 
+}
 // Menus
 .menu {
   font-size: em(24);
@@ -214,6 +221,11 @@ input[type="submit"] {
     font-size: em(18);
     line-height: 1.2;
     font-family: $serif;
+  }
+  &.entities {
+    text-transform: none;
+    font-size: em(21);
+    line-height: 1.2;    
   }
 }
 .sidebar {
@@ -233,7 +245,7 @@ footer {
 }
 
 // Lists 
-main { // for prototype only
+main { // main wrapper defined for prototype only
   .base--TEXT,
   .base--ul,
   .base--ol {
@@ -246,14 +258,12 @@ main { // for prototype only
   }
 }
 
-// PROTOTYPE ONLY
+// PROTOTYPE ONLY below
 
 #main-toggle-label {
   font-size: em(20);
-  line-height: 1.4;
+  line-height: 1.2;
   font-family: $sans;
   text-transform: uppercase;
   letter-spacing: normal;
 }
-
-
