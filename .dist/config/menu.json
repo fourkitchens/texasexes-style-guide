@@ -281,6 +281,19 @@
         ]
       },
       {
+        "title": "Footer",
+        "submenu": [
+          {
+            "title": "Footer",
+            "href": "#/components?id=footer--footer"
+          },
+          {
+            "title": "View All",
+            "href": "#/components?group=footer"
+          }
+        ]
+      },
+      {
         "title": "Logo",
         "submenu": [
           {
@@ -394,6 +407,19 @@
           {
             "title": "View All",
             "href": "#/layouts?group=one-column-page"
+          }
+        ]
+      },
+      {
+        "title": "Three Column Page",
+        "submenu": [
+          {
+            "title": "Three Column Page",
+            "href": "#/layouts?id=three-column-page--three-column-page"
+          },
+          {
+            "title": "View All",
+            "href": "#/layouts?group=three-column-page"
           }
         ]
       },
