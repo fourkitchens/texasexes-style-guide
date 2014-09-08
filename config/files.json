@@ -43,6 +43,13 @@
       "group": "logo"
     },
     {
+      "name": "footer",
+      "title": "Footer",
+      "id": "footer--footer",
+      "path": "partials/components/footer/footer.html",
+      "group": "footer"
+    },
+    {
       "name": "cover-image",
       "title": "Cover Image",
       "id": "cover-image--cover-image",
@@ -316,6 +323,13 @@
       "id": "two-column-page--two-column-page",
       "path": "partials/layouts/two-column-page/two-column-page.html",
       "group": "two-column-page"
+    },
+    {
+      "name": "three-column-page",
+      "title": "Three Column Page",
+      "id": "three-column-page--three-column-page",
+      "path": "partials/layouts/three-column-page/three-column-page.html",
+      "group": "three-column-page"
     },
     {
       "name": "one-column-page",
