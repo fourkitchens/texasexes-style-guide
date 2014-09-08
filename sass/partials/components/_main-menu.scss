@@ -9,12 +9,22 @@
   ul {
     @include grid-span(16,1);
     position: relative;
+    // .active {
+    //   ul {
+    //     display: block;
+    //   } 
+    // }    
     ul {
+      // display: none;
       @include grid-span(8,1);
       position: absolute;
       padding: $space;
+      z-index: 2;
       background-color: $white;
       border-top: em(6) solid $blue-lt;
+      @include breakpoint($main-menu-med) {
+        @include grid-span(16,1);
+      }
 
       a { // second level icons
         padding: $space-half;
@@ -27,7 +37,7 @@
         &.active {
           border-bottom: none;
         }
-      }
+      }      
     }
   }
   a {
@@ -175,4 +185,111 @@
       }
     }      
   }
+}
+
+// Delete for Drupal
+
+
+// Mobile trigger toggle
+#main-toggle-label {
+  text-align: center;
+  @include breakpoint($main-menu) {
+    text-align: left;
+  }
+  @include breakpoint($main-menu-med) {
+    border-bottom: none;
+    text-align: center;
+  }  
+  &:before {
+    display: block;
+    width: 28px;
+    height: 28px;
+    margin: 0 auto $space-half;
+    vertical-align: middle;
+    content: "";
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-image: url(../images/icons/menu.svg);
+
+    @include breakpoint($main-menu) {
+      display: inline-block;
+      margin: 0 $space-half 0 0
+    }
+    @include breakpoint($main-menu-med) {
+      width: 34px;
+      height: 34px;
+      display: inline-block;
+      margin: 0 $space-half 0 0
+    }
+  }
+}
+#main-menu-toggle + #main-toggle-label {
+  background-color: #fff;
+  padding: $space;
+  text-decoration: none;
+  color: $gray;
+  display: block;
+  border-top: none;
+  border-right: none;
+  border-left: none;
+  border-bottom: em(6) solid $white;
+  text-align: center;
+  @include breakpoint($main-menu-med) {
+    border-bottom: none;
+    text-align: center;
+  }  
+  &:hover {
+    color: $blue-lt;
+    border-bottom: em(6) solid $blue-lt;
+    border-top: none;
+    border-right: none;
+    border-left: none;    
+    @include breakpoint($main-menu-med) {
+      border-bottom: none;
+      text-align: center;
+    } 
+  }
+}
+
+#main-menu-toggle + #main-toggle-label,
+#main-menu-toggle:checked + #main-toggle-label {
+  margin: 0; 
+
+}
+#main-menu-toggle:checked + #main-toggle-label {
+  @include button($white, $blue);
+  padding: $space;
+  display: block;
+  border-top: none;
+  border-right: none;
+  border-left: none; 
+  border-bottom: em(6) solid $blue;
+  @include breakpoint($main-menu-med) {
+    border-bottom: none;
+    text-align: center;
+  } 
+  &:before {
+    background-image: url(../images/icons/x-blue.svg);
+    @include breakpoint($main-menu) {
+      display: inline-block;
+      margin: 0 $space-half 0 0
+    }
+    @include breakpoint($main-menu-med) {
+      width: 34px;
+      height: 34px;
+      display: inline-block;
+      margin: 0 $space-half 0 0
+    }
+  }
+  &:hover {
+    &:before {
+      background-image: url(../images/icons/x.svg);
+    }
+  }
+}
+#main-toggle-label + ul{
+  display: none;
+}
+#main-menu-toggle:checked + #main-toggle-label + ul {
+  display: block;
 }

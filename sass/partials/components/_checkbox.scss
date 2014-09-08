@@ -35,7 +35,8 @@ fieldset:not(#foo) > input[type="checkbox"]:checked + label {
 }
 
  // PROTOTYPE ONLY - Delete once in Drupal
-span:not(#foo) > input[type="checkbox"] {
+span:not(#foo) > input[type="checkbox"],
+li:not(#foo) > input[type="checkbox"] {
   opacity: 0;
   float: left;
   width: 1px;
@@ -45,7 +46,8 @@ span:not(#foo) > input[type="checkbox"] {
     border-color: $red;
   }
 }
-span:not(#foo) > input[type="checkbox"] + label {
+span:not(#foo) > input[type="checkbox"] + label,
+li:not(#foo) > input[type="checkbox"] + label {
   margin: $space;
   clear: none;
   @include button(lighten($gray-lt2,40%), $gray-lt);
@@ -54,7 +56,8 @@ span:not(#foo) > input[type="checkbox"] + label {
     color: $red;
   }  
 }
-span:not(#foo) > input[type='checkbox']:checked + label {
+span:not(#foo) > input[type='checkbox']:checked + label,
+li:not(#foo) > input[type='checkbox']:checked + label {
   @include button($green, $white);
   a {
     color: $white;
