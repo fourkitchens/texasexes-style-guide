@@ -62,7 +62,7 @@ $space-double-negative: -16em; // only used for cover image
 
 $space-btn: em(12) em(24); // buttons
 $space-btn-sm: em(10) em(20); // small buttons
-$space-btn-search: em(14) em(20); // search buttons space
+$space-btn-search: em(9) em(20); // search buttons space
 
 /////////
 // Singularity variables
@@ -83,12 +83,13 @@ $breakpoint-to-ems: true;
 
 // Header
 $logo-full:0 500px;
+
 $search-full: 0 400px;
 $search-med: 858px;
 
 // Sidebar
-$sidebar-full:0 580px;
-$sidebar-trigger:580px;
+$sidebar-full:0 660px;
+$sidebar-trigger:660px;
 $sidebar-right:990px;
 $content-right:0 990px;
 

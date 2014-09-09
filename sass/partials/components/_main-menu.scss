@@ -24,7 +24,7 @@
 
     ul {
       // display: none;
-      @include grid-span(8,1);
+      @include grid-span(10,1);
       position: absolute;
       padding: $space;
       z-index: 2;

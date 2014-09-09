@@ -9,7 +9,7 @@
   a {
     padding: $space-half $space;
     text-decoration: none;
-    color: $gray;
+    color: $gray-lt2;
     display: block;
     border-bottom: em(6) solid $gray-lt3;
     text-align: center;
@@ -21,7 +21,7 @@
       }
     }
     &.active {
-      color: $gray-lt2;
+      color: $gray-lt;
       border-bottom: em(6) solid $gray-lt2;
       @include breakpoint($main-menu-med) {
         background-color: lighten($gray-lt3, 10%);
@@ -39,8 +39,8 @@
     a { // top level icons
       &:before {
         display: block;
-        width: 28px;
-        height: 28px;
+        width: 24px;
+        height: 24px;
         margin: 0 auto $space-half;
         vertical-align: middle;
         content: "";
@@ -59,79 +59,81 @@
         }
       }
     }
-    &.menu-item-1 { // main menu
-      a {
-        &:before {
-          background-image: url(../images/icons/menu.svg);
-        }
-        &.active {
-          &:before {
-            background-image: url(../images/icons/x-blue.svg);
-          }
-          &:hover {
-            &:before {
-              background-image: url(../images/icons/x-blue.svg);
-            }
-          }
-        } 
-        &:hover {
-          &:before {
-            background-image: url(../images/icons/menu-blue.svg);
-          }
-        }          
-      }            
-    }
-    &.menu-item-2 { // give
-      a {
-        &:before {
-          background-image: url(../images/icons/give.svg);
-        }
-        &:hover {
-          &:before {
-            background-image: url(../images/icons/give-blue.svg);
-          }
-        } 
-        &.active {
-          &:before {
-            background-image: url(../images/icons/give-blue.svg);
-          }
-        }         
+    .texas-exes { // 1. entity bar - texas exes
+      &:before {
+        background-image: url(../images/logos/seal-logo-black.svg);
       }
-    }
-    &.menu-item-3 { //store
-      a {
+      &:hover {
         &:before {
-          background-image: url(../images/icons/cart.svg);
+          background-image: url(../images/logos/seal-logo-blue.svg);
         }
-        &:hover {
-          &:before {
-            background-image: url(../images/icons/cart-blue.svg);
-          }
+      }  
+      &.active {
+        &:before {
+          background-image: url(../images/logos/seal-logo.svg);
         }
-        &.active {
-          &:before {
-            background-image: url(../images/icons/cart-blue.svg);
-          }
-        }
+      }              
+    }
+    .alcalde { // 2. entity bar - alcalde
+      &:before {
+        background-image: url(../images/logos/alcalde.svg);
       }
+      &:hover {
+        &:before {
+          background-image: url(../images/logos/alcalde.svg);
+        }
+      }  
+      &.active {
+        &:before {
+          background-image: url(../images/logos/alcalde.svg);
+        }
+      } 
+    }
+    .scholarships { // 3. entity bar - scholarships
+      &:before {
+        background-image: url(../images/logos/scholarships.svg);
+      }
+      &:hover {
+        &:before {
+          background-image: url(../images/logos/scholarships.svg);
+        }
+      }  
+      &.active {
+        &:before {
+          background-image: url(../images/logos/scholarships.svg);
+        }
+      } 
     }         
-    &.menu-item-4 { // login
-      a {
-        &:before {
-          background-image: url(../images/icons/login.svg);
-        }
-        &:hover {
-          &:before {
-            background-image: url(../images/icons/login-blue.svg);
-          }
-        }  
-        &.active {
-          &:before {
-            background-image: url(../images/icons/login-blue.svg);
-          }
-        }        
+    .gameday { // 4. entity bar - gameday
+      &:before {
+        background-image: url(../images/logos/longhorn.svg);
       }
-    }      
+      &:hover {
+        &:before {
+          background-image: url(../images/logos/longhorn.svg);
+        }
+      }  
+      &.active {
+        &:before {
+          background-image: url(../images/logos/longhorn.svg);
+        }
+      }   
+    } 
+    .the-hook { // 5. entity bar - the hook
+      &:before {
+        background-image: url(../images/logos/hook.svg);
+      }
+      &:hover {
+        &:before {
+          background-image: url(../images/logos/hook.svg);
+        }
+      }  
+      &.active {
+        &:before {
+          background-image: url(../images/logos/hook.svg);
+        }
+      }       
+    }          
   }
 }
 

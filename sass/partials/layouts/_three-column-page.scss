@@ -27,8 +27,8 @@
   @include grid-span(16,1);
 
   .sidebar {
-    @include grid-span(5,1, $gutter:0);
-    background-color: $gray-lt3;
+    @include grid-span(4,1, $gutter:0);
+    background-color: lighten($gray-lt3, 6%);
     padding: $space-tripled 0 $space;
 
     @include breakpoint($sidebar-full) {
@@ -48,28 +48,18 @@
     }
   }
   .content {
-    @include grid-span(7,6, $gutter:0);
+    @include grid-span(8,5, $gutter:0);
     background-color: rgba($white, .88);
     padding: $space-doubled $space-doubled $space-tripled;
   
     @include breakpoint($content-right) {
-      @include grid-span(11,6, $gutter:0);
+      @include grid-span(12,5, $gutter:0);
     }  
     @include breakpoint($sidebar-full) {
       @include grid-span(16,1);
       padding: $space;
     }
   }  
-  p {
-    @include breakpoint($paragraph-full) {
-      @include grid-span(16,1);
-      clear: both;
-    }
-    @include breakpoint($paragraph-medium) {
-      @include grid-span(12,1);
-      clear: both;
-    }
-  }
 }
 // {three-column-page}@
 //////////////////////////////

@@ -13,12 +13,14 @@ main,
       @include grid-span(12,1);
     }
     .search {
-      @include grid-span(4,13);
+      @include grid-span(16,1);
+      clear: both;
+      padding: $space $space-doubled;
 
-      @include breakpoint($search-full) {
-        @include grid-span(16,1);
-        padding: $space $space-doubled;
-      }          
+      @include breakpoint($search-med) {
+        @include grid-span(4,13);
+        padding: 0;
+      }        
     }   
   }
 }
