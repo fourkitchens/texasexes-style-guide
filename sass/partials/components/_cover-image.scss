@@ -4,7 +4,6 @@
 //////////////////////////////
 
 .cover-image {
-  @include grid-span(16,1);
   margin: em(2) 0 $space 0;
 
   @include breakpoint($cover-photo-full) {

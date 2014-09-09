@@ -8,7 +8,6 @@
 // @{text-input}
 // Styling for Form Components
 form {
-  @include grid-span(16,1);
 }
 fieldset {
   border: none;
@@ -16,14 +15,12 @@ fieldset {
   margin-bottom: $space;
   padding: 0;
   @include clearfix;
-  @include grid-span(16,1);
   fieldset {
     margin-top: $space-doubled;
     margin-bottom: $space-doubled;
   }
   .form-item {
     margin: $space 0 $space-doubled;   
-    @include grid-span(16,1); 
   }
 }
 legend {
@@ -60,7 +57,6 @@ textarea {
     @include grid-span(10,1, $output-style:"float");
   }
   @include breakpoint($forms-full) {
-    @include grid-span(16,1);
   }
 }
 

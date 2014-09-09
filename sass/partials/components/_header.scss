@@ -8,20 +8,17 @@ main,
   header {
     padding: $space 0;
     @include box-shadow(0 2px 4px rgba($gray, .5));
-    @include grid-span(16,1);
     .logo {
       @include grid-span(6,1);
       text-align: left;
 
       @include breakpoint($logo-full) {
-        @include grid-span(16,1);
         text-align: center;
       } 
     } 
     .main-menu {
       @include grid-span(10,7);
       @include breakpoint($navigation-full) {
-        @include grid-span(16,1);
         clear: both;
       }          
     }

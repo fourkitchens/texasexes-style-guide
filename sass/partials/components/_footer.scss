@@ -12,7 +12,6 @@ footer {
   border-top: em(10) solid $gray-lt2;
 
   .wrap {
-    @include grid-span(16,1);
     border-top: em(3) solid $gray-lt; 
     margin-top: $space;
     padding: $space;
@@ -27,7 +26,6 @@ footer {
       padding: $space-tripled 0;
     }
      @include breakpoint($footer-med) {    
-      @include grid-span(16,1);
       padding: $space;
       clear: both;
     }     
@@ -62,7 +60,6 @@ footer {
       padding: $space-tripled 0;
     }
     @include breakpoint($footer-med) {    
-      @include grid-span(16,1);
       padding: 0 $space;
       clear: both;
     }    
