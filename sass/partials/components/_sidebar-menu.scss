@@ -38,6 +38,16 @@
       @include grid-span(16,1);
       clear: both;
       padding: $space $space-doubled;
+
+      @include breakpoint($sidebar-right-med) {
+        @include layout(3) {
+          @include grid-span(1,1, $output-style:"float", $gutter:0);
+          padding: $space;
+        }
+      }
+      @include breakpoint($sidebar-right) {
+        @include grid-span(16,1);
+      }      
     }
     .featured-image {
       @include grid-span(5,1);

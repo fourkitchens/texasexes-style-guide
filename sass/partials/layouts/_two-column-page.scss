@@ -51,7 +51,7 @@
       clear: both;
     }
     @include breakpoint($paragraph-medium) {
-      @include grid-span(12,1);
+      @include grid-span(13,1);
       clear: both;
     }
   }
