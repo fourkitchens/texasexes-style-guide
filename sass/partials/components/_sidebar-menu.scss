@@ -30,6 +30,8 @@
   .list {
     margin: 0;
     padding: $space 0;
+    @include grid-span(16,1);
+
     li {
       margin:0 0 $space;
       border-bottom: em(2) solid darken($gray-lt3, 5%);
@@ -43,7 +45,7 @@
         @include grid-span(3,1);
       }
     }
-    a {
+    .teaser {
       @include grid-span(11,6);
       padding: 0 $space;
       display: block;

@@ -142,7 +142,7 @@ ol {
     text-transform: none;
     text-decoration: none;
     font-family: $serif;
-    font-size: em(16);
+    font-size: em(18);
     font-weight: 400;
     &:hover {
       text-decoration: underline;
@@ -152,7 +152,12 @@ ol {
     }
   }  
 }
-
+.teaser {
+  p {
+    font-size: em(16);
+    margin-top: $space;
+  }
+}
 footer {
   p {
     font-size: em(21);
