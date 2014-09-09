@@ -24,14 +24,30 @@
 // @{blockquote}
 // Styling for Blockquote Components
 blockquote {
-  border-left: em(15) solid $orange-lt2;
-  margin: em(15) 0 em(10);
-  padding-left: em(20);
-  max-width: 380px;
+  border-left: $space solid $orange-lt2;
+  margin: $space 0;
+  padding-left: $space;
+
+  @include grid-span(16,1);
+  clear: both;
+
+  @include breakpoint($quotes-full) {
+    @include grid-span(6,1);
+    clear: both;
+  }
 }
 cite {
-  margin-left: em(30);
-  padding-left: em(20);
+  padding-left:$space-doubled;
+  margin: 0 0 $space-doubled $space-doubled;
+
+  @include grid-span(16,1);
+  clear: both;
+
+  @include breakpoint($quotes-full) {
+    @include grid-span(6,1);
+    clear: both;
+  }
+
 }
 // {blockquote}@
 //////////////////////////////

@@ -1,0 +1,14 @@
+//////////////////////////////
+// Page Layouts
+//
+// The partial and folder structure for this layouts should be as follows:
+// _pages.scss
+
+//////////////////////////////
+.page {
+  padding: 0 $space;
+  @include grid-span(16,1);
+  &.one-column-page {
+    padding: $space-quad $space $space-tripled;
+  }
+}

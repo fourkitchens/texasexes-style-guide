@@ -237,8 +237,12 @@ input[type="search"] {
   }
   &.entities {
     text-transform: none;
-    font-size: em(21);
-    line-height: 1.2;    
+    font-size: em(18);
+    line-height: 1;    
+    @include breakpoint($entity-full) {
+      font-size: em(21);
+      line-height: 1.2;   
+    }
   }
 }
 

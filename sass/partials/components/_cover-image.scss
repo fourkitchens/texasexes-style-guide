@@ -5,14 +5,14 @@
 
 .cover-image {
   @include grid-span(16,1);
-  margin: $space 0;
+  margin: em(2) 0 $space 0;
 
   @include breakpoint($cover-photo-full) {
-    margin: $space 0 $space-negative;
+    margin-bottom: $space-negative;
   }
 
   @include breakpoint($cover-photo-huge) {
-    margin: $space 0 $space-double-negative;
+    margin-bottom: $space-double-negative;
   }
   
   img {

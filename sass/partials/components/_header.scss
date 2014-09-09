@@ -6,17 +6,17 @@
 main,
 .container { // wrapper definition for prototype only
   header {
-    padding: $space 0 $space-doubled;
+    padding: $space 0;
+    @include box-shadow(0 2px 4px rgba($gray, .5));
     @include grid-span(16,1);
     .logo {
       @include grid-span(6,1);
+      text-align: left;
 
-      @include breakpoint($search-med) {
-        @include grid-span(10,1);
-      }
-      @include breakpoint($search-full) {
+      @include breakpoint($logo-full) {
         @include grid-span(16,1);
-      }      
+        text-align: center;
+      } 
     } 
     .main-menu {
       @include grid-span(10,7);

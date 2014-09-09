@@ -53,6 +53,7 @@ $green-lt2: #a1bf5b;
 $space: em(20);
 $space-doubled: $space*2;
 $space-tripled: $space*3;
+$space-quad: $space*4;
 
 $space-half: $space/2;
 
@@ -81,11 +82,15 @@ $breakpoint-to-ems: true;
 // Breakpoints
 //
 
-// Header
-$logo-full:0 500px;
+// Top Bar
+$entity-full:986px;
+$entity-show:680px;
 
-$search-full: 0 400px;
-$search-med: 858px;
+// Header
+$logo-full:0 680px;
+$logo-med:0 680px;
+
+$search-med: 986px;
 
 // Sidebar
 $sidebar-full:0 660px;
@@ -98,6 +103,9 @@ $block-title:820px;
 // Paragraphs 
 $paragraph-medium: 950px;
 $paragraph-full: 600px;
+
+// blockquotes
+$quotes-full: 825px;
 
 // Cover Photo
 $cover-photo-full: 780px;
