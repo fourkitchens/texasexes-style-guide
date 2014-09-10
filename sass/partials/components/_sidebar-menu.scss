@@ -30,12 +30,10 @@
   .list {
     margin: 0;
     padding: $space 0;
-    @include grid-span(16,1);
 
     li {
       margin:0 0 $space;
       border-bottom: em(2) solid darken($gray-lt3, 5%);
-      @include grid-span(16,1);
       clear: both;
       padding: $space $space-doubled;
 

@@ -12,7 +12,6 @@ footer {
   border-top: em(10) solid $gray-lt2;
 
   .wrap {
-    @include grid-span(16,1);
     border-top: em(3) solid $gray-lt; 
     margin-top: $space;
     padding: $space;
@@ -27,7 +26,6 @@ footer {
       padding: $space-tripled 0;
     }
      @include breakpoint($footer-med) {    
-      @include grid-span(16,1);
       padding: $space;
       clear: both;
     }     
@@ -46,9 +44,18 @@ footer {
       clear: both;
       padding: $space 0;
     }  
-    img {
+    .seal-image {
+      display: block;
+      background: transparent image-url('logos/seal-logo.svg') center center no-repeat;
+      background-size: contain;
       width: 100%;
-      height: auto;
+      height: 0;
+      margin: 0;
+      padding-bottom: 100%;
+
+      text-indent: 100%;
+      white-space: nowrap;
+      overflow: hidden;
     }
   }
   .contact {
@@ -62,7 +69,6 @@ footer {
       padding: $space-tripled 0;
     }
     @include breakpoint($footer-med) {    
-      @include grid-span(16,1);
       padding: 0 $space;
       clear: both;
     }    

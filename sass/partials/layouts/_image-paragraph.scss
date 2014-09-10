@@ -24,18 +24,15 @@
 // @{image-paragraph}
 // Styling for Image-Paragraph Layouts
 .image-paragraph {
-  @include grid-span(16,1);
   .image {
     @include grid-span(10,1, $gutter:2);
 
     @include breakpoint($media-full) {
-      @include grid-span(16,1);
     }
   }
   .image-content {
     @include grid-span(6,11, $gutter:2);
     @include breakpoint($media-full) {
-      @include grid-span(16,1);
       padding: $space-doubled;
     }
   }  

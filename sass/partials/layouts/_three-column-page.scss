@@ -24,7 +24,6 @@
 // @{three-column-page}
 // Styling for Three-Column-Page Layouts
 .three-column-page {
-  @include grid-span(16,1);
 
   .sidebar {
     @include grid-span(4,1, $gutter:0);
@@ -32,11 +31,9 @@
     padding: $space-tripled 0 $space;
 
     @include breakpoint($sidebar-full) {
-      @include grid-span(16,1);
       padding: $space 0;
     }
     &.right {
-      @include grid-span(16,1);
       padding: $space-doubled 0 $space;
       background-color: lighten($gray-lt3, 12%);
       clear: both;
@@ -56,7 +53,6 @@
       @include grid-span(12,5, $gutter:0);
     }  
     @include breakpoint($sidebar-full) {
-      @include grid-span(16,1);
       padding: $space;
     }
   }  

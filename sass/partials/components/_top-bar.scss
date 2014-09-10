@@ -7,7 +7,6 @@ main,
 .container { // wrapper definition for prototype only
   .top-bar {
     background-color: lighten($gray-lt3, 10%);
-    @include grid-span(16,1);
     
     @include breakpoint($entity-show) {
       padding-top: $space;
@@ -17,14 +16,12 @@ main,
         display: block;
       }
       display: none;
-      @include grid-span(16,1);
 
       @include breakpoint($entity-full) {
         @include grid-span(12,1);
       }
     }
     .search {
-      @include grid-span(16,1);
       clear: both;
       padding: $space $space-doubled;
 
