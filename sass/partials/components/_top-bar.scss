@@ -13,10 +13,6 @@ main,
       padding-top: $space;
     }
     .entities {
-      @include breakpoint($entity-show) {
-        display: block;
-      }
-      display: none;
       @include grid-span(16,1);
 
       @include breakpoint($entity-full) {
@@ -26,7 +22,7 @@ main,
     .search {
       @include grid-span(16,1);
       clear: both;
-      padding: $space $space-doubled;
+      padding: $space $space-tripled;
 
       @include breakpoint($search-med) {
         @include grid-span(4,13);

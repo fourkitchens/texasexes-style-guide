@@ -5,7 +5,13 @@
 // _blocks.scss
 
 //////////////////////////////
-
+.block + .block {
+  margin: $space-doubled 0 0;
+}
+.block {
+  width: 100%;
+  clear: both;
+}
 .block-title {
   border-bottom: em(6) solid lighten($gray-lt2, 20%);
   margin-bottom: 0;

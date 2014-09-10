@@ -44,7 +44,7 @@
     }
     a { // top level icons
       &:before {
-        display: block;
+        display: none;
         width: 24px;
         height: 24px;
         margin: 0 auto $space-half;
@@ -52,14 +52,10 @@
         content: "";
         background-repeat: no-repeat;
         background-size: cover;
-
-        @include breakpoint($main-menu) {
-          display: inline-block;
-          margin: 0 $space-half 0 0
+        @include breakpoint($entity-show) {
+          display: block;
         }
-        @include breakpoint($main-menu-med) {
-          width: 34px;
-          height: 34px;
+        @include breakpoint($main-menu) {
           display: inline-block;
           margin: 0 $space-half 0 0
         }

@@ -50,3 +50,16 @@ fieldset.ng-scope {
 .base--select {
   margin-left: $space;
 }
+
+// clear things
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+ul,
+ol {
+  clear: both;
+}
+

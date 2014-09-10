@@ -116,20 +116,14 @@ h6 {
   color: $gray;
 }
 
-// clear things
-h1,
-h2,
-h3,
-h4,
-h5,
-h6,
-ul,
-ol {
-  clear: both;
-}
 
 
 // Section-specific type
+.cta {
+  h4 {
+    color: $white;
+  }
+}
 .sidebar {
   h3 {
     font-size: em(22);  
