@@ -84,11 +84,11 @@ $breakpoint-to-ems: true;
 
 // Top Bar
 $entity-full:986px;
-$entity-show:680px;
+$entity-show:680px; // show or hide entity icons
+$entity-sm-text: 0 661px;
 
 // Header
-$logo-full:0 680px;
-$logo-med:0 680px;
+$logo-full:0 680px;// show or hide entity icons
 
 $search-med: 986px;
 
@@ -97,7 +97,7 @@ $sidebar-full:0 660px;
 $sidebar-trigger:660px;
 $sidebar-right:990px;
 $sidebar-right-med:660px;
-$content-right:0 990px;
+$content-right:0 989px;
 
 $block-title:820px;
 

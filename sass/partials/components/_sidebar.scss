@@ -1,0 +1,18 @@
+//////////////////////////////
+// Sidebar styles for Drupal
+//
+// The partial and folder structure for this layouts should be as follows:
+// _sidebar.scss
+
+//////////////////////////////
+
+.sidebar {
+  display: block;
+
+  @include breakpoint($sidebar-full) {
+    display: none;
+    &.right {
+      display: block;
+    }
+  }
+}

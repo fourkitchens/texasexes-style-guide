@@ -7,14 +7,6 @@
 //////////////////////////////
 
 .sidebar {
-  display: block;
-
-  @include breakpoint($sidebar-full) {
-    display: none;
-    &.right {
-      display: block;
-    }
-  }
   .menu {
     margin: 0;
     padding: $space 0;
@@ -27,44 +19,6 @@
       font-weight: 700;
     }
   }
-  .list {
-    margin: 0;
-    padding: $space 0;
-    @include grid-span(16,1);
-
-    li {
-      margin:0 0 $space;
-      border-bottom: em(2) solid darken($gray-lt3, 5%);
-      @include grid-span(16,1);
-      clear: both;
-      padding: $space $space-doubled;
-
-      @include breakpoint($sidebar-right-med) {
-        @include layout(3) {
-          @include grid-span(1,1, $output-style:"float", $gutter:0);
-          padding: $space;
-        }
-      }
-      @include breakpoint($sidebar-right) {
-        @include grid-span(16,1);
-      }      
-    }
-    .featured-image {
-      @include grid-span(5,1);
-      @include breakpoint($content-right) {
-        @include grid-span(3,1);
-      }
-    }
-    .teaser {
-      @include grid-span(11,6);
-      padding: 0 $space;
-      display: block;
-      font-weight: 700;
-      @include breakpoint($content-right) {
-        @include grid-span(13,4);
-      }      
-    }
-  }  
 }
 
 // Mobile trigger toggle

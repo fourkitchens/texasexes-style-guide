@@ -7,7 +7,7 @@
 
 .entities {       
   a {
-    padding: $space-half $space .8em;
+    padding: $space;
     text-decoration: none;
     color: $gray-lt2;
     display: block;
@@ -25,7 +25,6 @@
       border-bottom: em(6) solid $gray-lt2;
       @include breakpoint($main-menu-med) {
         background-color: lighten($gray-lt3, 10%);
-        border-bottom: none;
       }
       &:hover {
       color: $gray-lt2;

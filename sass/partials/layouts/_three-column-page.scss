@@ -43,7 +43,7 @@
 
       @include breakpoint($sidebar-right) {
         @include grid-span(4,13, $gutter:0);
-        padding: $space-tripled 0 $space;
+        padding: 0 0 $space;
       }  
     }
   }

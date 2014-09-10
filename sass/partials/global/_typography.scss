@@ -123,6 +123,10 @@ h6 {
   h4 {
     color: $white;
   }
+  p {
+    color: $gray-lt3;
+    font-size: em(18);  
+  }
 }
 .sidebar {
   h3 {
@@ -241,6 +245,10 @@ input[type="search"] {
     @include breakpoint($entity-full) {
       font-size: em(21);
       line-height: 1.2;   
+    }
+    @include breakpoint($entity-sm-text) {
+      font-size: em(16);
+      line-height: 1;        
     }
   }
 }
