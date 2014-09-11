@@ -21,13 +21,21 @@
 // @{logo}
 // Styling for Logo Components
 .logo {
-  img {
+  a { 
+    background-image:url(/images/logos/logo.svg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: left;
+    margin: 0;
+    display: block;
+    text-indent: -9999em;
     width: 300px;
     height: auto;
-    margin: 0 auto;
-
     @include breakpoint($logo-full) {
       clear: both;
+      background-position: center;   
+      background-size: contain;
+      margin: 0 auto;
     }
   }
 }

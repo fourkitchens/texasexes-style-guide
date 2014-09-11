@@ -3,10 +3,10 @@
 // _header.scss
 //////////////////////////////
 
-main,
-.container { // wrapper definition for prototype only
+main, // wrapper definition for prototype only
+.container {
   header {
-    padding: $space 0;
+    padding: $space-doubled 0;
     @include box-shadow(0 2px 4px rgba($gray, .5));
     @include grid-span(16,1);
     .logo {
