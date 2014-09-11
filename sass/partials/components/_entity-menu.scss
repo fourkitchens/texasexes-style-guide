@@ -38,9 +38,14 @@
       float: left;
       width: auto;
     }
+    @include breakpoint($entity-collapse) {
+      width: 100%;
+      float: left;
+      display: block;
+    }
     a { // top level icons
       &:before {
-        display: none;
+        display: block;
         width: 24px;
         height: 24px;
         margin: 0 auto $space-half;
@@ -48,9 +53,6 @@
         content: "";
         background-repeat: no-repeat;
         background-size: cover;
-        @include breakpoint($entity-show) {
-          display: block;
-        }
         @include breakpoint($main-menu) {
           display: inline-block;
           margin: 0 $space-half 0 0
@@ -134,4 +136,3 @@
     }          
   }
 }
-

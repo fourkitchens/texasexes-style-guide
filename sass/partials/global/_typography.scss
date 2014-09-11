@@ -246,10 +246,6 @@ input[type="search"] {
       font-size: em(21);
       line-height: 1.2;   
     }
-    @include breakpoint($entity-sm-text) {
-      font-size: em(16);
-      line-height: 1;        
-    }
   }
 }
 

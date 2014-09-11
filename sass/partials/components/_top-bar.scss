@@ -22,12 +22,64 @@ main,
     .search {
       @include grid-span(16,1);
       clear: both;
-      padding: $space $space-tripled;
+      padding: $space;
 
       @include breakpoint($search-med) {
         @include grid-span(4,13);
         padding: 0;
       }        
-    }   
+    }
+    @include breakpoint($entity-collapse) {
+      display: none;
+    }       
   }
+}
+
+
+// Top bar mobile toggle for entity bar and search
+
+#entity-toggle-label {
+  text-align: center;
+
+  &:before {
+    display: inline-block;
+    width: 24px;
+    height: 24px;
+    margin: 0 $space-half 0 0;
+    vertical-align: middle;
+    text-align: center;
+    content: "";
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-image: url(../images/icons/plus.svg);
+  }
+}
+#entity-toggle + #entity-toggle-label {
+  @include button(lighten($gray-lt3, 15%), $gray-lt);
+  display: none;
+
+  @include breakpoint($entity-collapse) {
+    display: block;
+  }
+}
+
+#entity-toggle + #entity-toggle-label,
+#entity-toggle:checked + #entity-toggle-label {
+  margin: 0 $space; 
+}
+#entity-toggle:checked + #entity-toggle-label {
+  @include button($gray, $gray-lt2);
+
+  display: block;
+  &:before {
+    background-image: url(../images/icons/x-circle-white.svg);
+  }
+  &:hover {
+    &:before {
+      background-image: url(../images/icons/x-circle-white.svg);
+    }
+  }
+}
+#entity-toggle:checked + #entity-toggle-label + .top-bar {
+  display: block;
 }

@@ -55,11 +55,11 @@
   @include button($gray-lt3, $blue);
   display: block;
   &:before {
-    background-image: url(../images/icons/x-blue.svg);
+    background-image: url(../images/icons/x-circle-blue.svg);
   }
   &:hover {
     &:before {
-      background-image: url(../images/icons/x.svg);
+      background-image: url(../images/icons/x-circle.svg);
     }
   }
 }

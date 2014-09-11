@@ -72,11 +72,6 @@ $breakpoint-to-ems: true;
 @include add-grid(16);
 @include add-gutter(1/3);
 
-*,
-*:before,
-*:after {
-  @include box-sizing('border-box');
-}
 
 /////////
 // Breakpoints
@@ -85,7 +80,7 @@ $breakpoint-to-ems: true;
 // Top Bar
 $entity-full:986px;
 $entity-show:680px; // show or hide entity icons
-$entity-sm-text: 0 661px;
+$entity-collapse: 0 661px;
 
 // Header
 $logo-full:0 680px;// show or hide entity icons
