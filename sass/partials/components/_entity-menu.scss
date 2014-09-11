@@ -16,9 +16,6 @@
     &:hover {
       color: $gray-lt;
       border-bottom: em(6) solid $gray-lt2;
-      @include breakpoint($main-menu-med) {
-        border-bottom: none;
-      }
     }
     &.active {
       color: $gray-lt;

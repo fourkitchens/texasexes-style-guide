@@ -11,6 +11,7 @@
 .block {
   width: 100%;
   clear: both;
+  @include clearfix;
 }
 .block-title {
   border-bottom: em(6) solid lighten($gray-lt2, 20%);

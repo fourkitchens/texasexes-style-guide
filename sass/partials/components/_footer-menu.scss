@@ -41,14 +41,18 @@ footer {
     }
     li {
       display: inline;
-      @include grid-span(4,1, $output-style:"float", $gutter:0);
+      @include layout(5) {
+        @include grid-span(1,1, $output-style:"float", $gutter:0);     
+      }
 
       @include breakpoint($main-menu) {
         float: left;
         width: auto;
       }
       @include breakpoint($main-menu-med) {
-        @include grid-span(16,1);
+        width: 100%;
+        float: left;
+        clear: both;
         text-align: center;
         margin: $space-half 0;
       }
