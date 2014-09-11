@@ -223,9 +223,18 @@ input[type="submit"] {
   }
 }
 
-input[type="search"] {
-  line-height: 1.1; 
+// Label buttons for toggling
+#main-toggle-label,
+#toggle-label,
+#entity-toggle-label {
+  font-size: em(20);
+  line-height: 1.2;
+  font-family: $sans;
+  text-transform: uppercase;
+  letter-spacing: normal;
 }
+
+
 // Menus
 .menu {
   font-size: em(24);
@@ -248,33 +257,9 @@ input[type="search"] {
     }
   }
 }
-
 footer {
   .menu {
     font-size: em(22);
   }
 }
 
-// Lists 
-main { // main wrapper defined for prototype only
-  .base--TEXT,
-  .base--ul,
-  .base--ol {
-    li {
-      font-size: em(20); 
-      line-height: 1.8;
-      font-family: $serif;
-      color:$gray-lt;
-    }
-  }
-}
-
-// PROTOTYPE ONLY below
-
-#main-toggle-label {
-  font-size: em(20);
-  line-height: 1.2;
-  font-family: $sans;
-  text-transform: uppercase;
-  letter-spacing: normal;
-}

@@ -63,3 +63,16 @@ ol {
   clear: both;
 }
 
+// Lists 
+main { // main wrapper defined for prototype only
+  .base--TEXT,
+  .base--ul,
+  .base--ol {
+    li {
+      font-size: em(20); 
+      line-height: 1.8;
+      font-family: $serif;
+      color:$gray-lt;
+    }
+  }
+}

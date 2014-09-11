@@ -12,6 +12,11 @@ main,
     @include breakpoint($entity-show) {
       padding-top: $space;
     }
+    @include breakpoint($entity-collapse) {
+      display: none;
+      padding: 0 $space-doubled;
+
+    }      
     .entities {
       @include grid-span(16,1);
 
@@ -28,10 +33,7 @@ main,
         @include grid-span(4,13);
         padding: 0;
       }        
-    }
-    @include breakpoint($entity-collapse) {
-      display: none;
-    }       
+    }     
   }
 }
 

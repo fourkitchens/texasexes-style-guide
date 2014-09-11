@@ -300,7 +300,10 @@
   }
   &:hover {
     color: $blue;
-    border-bottom: em(6) solid $blue;   
+    border-bottom: em(6) solid $blue;
+    @include breakpoint($main-menu-med) {
+      border-bottom:none;
+    }   
     &:before {
       background-image: url(../images/icons/x-blue.svg);
     }
