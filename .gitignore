@@ -3,6 +3,7 @@ bower_components
 ./css
 .tmp
 .www
+.dist
 .sass-cache
 .compass/lib
 .compass/stylesheets
