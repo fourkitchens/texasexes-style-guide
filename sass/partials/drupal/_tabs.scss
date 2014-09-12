@@ -15,7 +15,8 @@ ul.primary {
   a {
     padding:$space-half $space-doubled;
     background-color: lighten($gray-lt3, 10%);
-    border-bottom: em(6) solid $gray-lt3;    
+    border-bottom: em(6) solid $gray-lt3;  
+    display: block;  
     &:hover {
       color: $gray;
       background-color: $gray-lt3;
