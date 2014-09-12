@@ -67,7 +67,7 @@ main,
 
 #entity-toggle + #entity-toggle-label,
 #entity-toggle:checked + #entity-toggle-label {
-  margin: 0 $space; 
+  margin: 0; 
 }
 #entity-toggle:checked + #entity-toggle-label {
   @include button($gray, $gray-lt2);
