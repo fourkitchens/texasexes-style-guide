@@ -281,6 +281,31 @@
         ]
       },
       {
+        "title": "Drupal",
+        "submenu": [
+          {
+            "title": "Breadcrumbs",
+            "href": "#/components?id=drupal--breadcrumbs"
+          },
+          {
+            "title": "Messages",
+            "href": "#/components?id=drupal--messages"
+          },
+          {
+            "title": "Pager",
+            "href": "#/components?id=drupal--pager"
+          },
+          {
+            "title": "Tabs",
+            "href": "#/components?id=drupal--tabs"
+          },
+          {
+            "title": "View All",
+            "href": "#/components?group=drupal"
+          }
+        ]
+      },
+      {
         "title": "Footer",
         "submenu": [
           {

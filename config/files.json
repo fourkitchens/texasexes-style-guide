@@ -50,6 +50,34 @@
       "group": "footer"
     },
     {
+      "name": "breadcrumbs",
+      "title": "Breadcrumbs",
+      "id": "drupal--breadcrumbs",
+      "path": "partials/components/drupal/breadcrumbs.html",
+      "group": "drupal"
+    },
+    {
+      "name": "messages",
+      "title": "Messages",
+      "id": "drupal--messages",
+      "path": "partials/components/drupal/messages.html",
+      "group": "drupal"
+    },
+    {
+      "name": "pager",
+      "title": "Pager",
+      "id": "drupal--pager",
+      "path": "partials/components/drupal/pager.html",
+      "group": "drupal"
+    },
+    {
+      "name": "tabs",
+      "title": "Tabs",
+      "id": "drupal--tabs",
+      "path": "partials/components/drupal/tabs.html",
+      "group": "drupal"
+    },
+    {
       "name": "cover-image",
       "title": "Cover Image",
       "id": "cover-image--cover-image",
