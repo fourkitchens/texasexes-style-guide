@@ -3,23 +3,10 @@
 //
 // The partial and folder structure for this layouts should be as follows:
 // _one-column-page.scss
-// one-column-page (folder)
-//   _extends.scss
-//   _mixins.scss
-//   _variables.scss
 //
-// Automatic Sass parsing is done through special comment blocks
-//  - Start styling block for base layouts: @{layouts}
-//  - End styling block for base layouts:   {layouts}@
+// ***** @TODO: *****
+// ----> Change for Drupal markup/panels
 //
-//  - Start styling block for specific layouts aspect: @{layouts--aspect}
-//  - End styling block for specific layouts aspect:   {layouts--aspect}@
-//////////////////////////////
-
-@import "one-column-page/variables";
-@import "one-column-page/mixins";
-@import "one-column-page/extends";
-
 //////////////////////////////
 // @{one-column-page}
 // Styling for One-Column-Page Layouts
@@ -42,17 +29,7 @@
         
       }
     }
-  }
-  p {
-    @include breakpoint($paragraph-full) {
-      @include grid-span(11,1);
-      clear: both;
-    }
-    @include breakpoint($paragraph-medium) {
-      @include grid-span(9,1);
-      clear: both;
-    }
-  }  
+  } 
 }
 // {one-column-page}@
 //////////////////////////////

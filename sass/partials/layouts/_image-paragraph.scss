@@ -3,22 +3,6 @@
 //
 // The partial and folder structure for this layouts should be as follows:
 // _image-paragraph.scss
-// image-paragraph (folder)
-//   _extends.scss
-//   _mixins.scss
-//   _variables.scss
-//
-// Automatic Sass parsing is done through special comment blocks
-//  - Start styling block for base layouts: @{layouts}
-//  - End styling block for base layouts:   {layouts}@
-//
-//  - Start styling block for specific layouts aspect: @{layouts--aspect}
-//  - End styling block for specific layouts aspect:   {layouts--aspect}@
-//////////////////////////////
-
-@import "image-paragraph/variables";
-@import "image-paragraph/mixins";
-@import "image-paragraph/extends";
 
 //////////////////////////////
 // @{image-paragraph}

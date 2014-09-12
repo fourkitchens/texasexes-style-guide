@@ -21,7 +21,6 @@ $serif: 'Sentinel SSm A', 'Sentinel SSm B', Georgia, serif;
 // Colors
 $white: #fff;
 $black: #000;
-$red: #cb2015;
 
 $orange: #cb6015;
 $orange-dk: #b25412;
@@ -39,31 +38,44 @@ $blue: #227178;
 $blue-dk:#144347;
 $blue-lt:#2a8e97;
 
-// Active states
+// Form active states and system messages
 $green: #6f853c;
 $green-dk: #5f7233;
 $green-lt: #839c47;
 $green-lt2: #a1bf5b;
+$red: #cb2015;
+$red-lt: #ec584f;
+$red-dk: #78120c;
+$yellow:#cbc915;
+$yellow-lt:#eeed61;
+$yellow-dk:#93920f;
 
 
 @include cs-test($orange $orange-dk $gray $gray-lt $gray-lt2 $blue $blue-dk $green $green-dk);
 
-/////////
-// Spacing
+///////////
+// Spacing - see _functions.scss for calculator function
+//
+// Based on EM calculator: http://viljamis.com/blog/2013/prototyping-responsive-typography
+// Browser context is set to 20 as a global value.
+
+///////////
+// Why are we doing this?
+//
+// The idea behind the $space variable is similar to using the EM calculator in that it allows for
+// fine tuning the site's vertical rhytem through altering one value. This way we don't have arbitrary values
+// littering our Sass partials. 
+
 $space: em(20);
 $space-doubled: $space*2;
 $space-tripled: $space*3;
-$space-quad: $space*4;
+$space-quadrupled: $space*4;
 
 $space-half: $space/2;
+$space-one-third: $space/3;
 
 $space-negative: -8em; // only used for cover image
 $space-double-negative: -16em; // only used for cover image
-
-
-$space-btn: em(12) em(24); // buttons
-$space-btn-sm: em(10) em(20); // small buttons
-$space-btn-search: em(9) em(20); // search buttons space
 
 /////////
 // Singularity variables
@@ -76,6 +88,10 @@ $breakpoint-to-ems: true;
 /////////
 // Breakpoints
 //
+// ***** @TODO: *****
+// ----> Add no-query fallbacks options for IE8
+// Client-identified browser requirement is 
+// to provide basic support for IE back to version 8
 
 // Top Bar
 $entity-full:986px;
@@ -116,6 +132,12 @@ $main-menu-med: 0 560px;
 
 $navigation-full: 0 680px;
 
+// Pager
+$pager-full: 815px;
+$pager-medium: 645px 1108px;
+$pager-small: 0 644px;
+
+
 // Forms
 $forms-medium: 0 830px;
 $forms-full: 0 600px;
@@ -128,6 +150,3 @@ $media-full: 0 820px;
 $footer-full: 1112px;
 $footer-med: 0 680px;
 
-// For oldIE compatability, we enable the no-query fallbacks. Each breakpoint
-// will be followed by the same set of arguments since we have a single
-// conditional class to indicate that a browser can't cut the mustard.

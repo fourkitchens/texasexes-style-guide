@@ -4,6 +4,9 @@
 //////////////////////////////
 // @{lists}
 // Styling for List-Ordered Components
+// ***** @TODO: *****
+// ----> Change for Drupal markup
+
 main { // for prototype only
   .base--TEXT {
     ul,
@@ -27,37 +30,6 @@ main { // for prototype only
   }
 }
 
-// PROTOTYPE ONLY - Delete once in Drupal
 
-ul.base--ul {
-  margin: $space $space-doubled $space-doubled;
-  li {
-    list-style-type: disc;        
-  }
-  ul.base--ul {
-    margin: $space;
-    li {
-      list-style-type: disc;        
-    }
-  }
-}
-ol.base--ol {
-  margin: $space $space-doubled $space-doubled;
-  li {
-    list-style-type: decimal;        
-  }
-  ol.base--ol {
-    margin: $space;
-    li {
-      list-style-type: decimal;        
-    }
-  }
-  ul.base--ul {
-    margin: $space;
-    li {
-      list-style-type: disc;        
-    }
-  }  
-}
 // {list-ordered}@
 //////////////////////////////

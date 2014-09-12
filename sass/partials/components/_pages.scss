@@ -9,6 +9,6 @@
   padding: 0 $space;
   @include grid-span(16,1);
   &.one-column-page {
-    padding: $space-quad $space $space-tripled;
+    padding: $space-quadrupled $space $space-tripled;
   }
 }

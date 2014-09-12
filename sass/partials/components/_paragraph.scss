@@ -8,7 +8,7 @@
 main,
 #main {
   p {
-    @include grid-span(16,1);
+    width: 100%;
     clear: both;
   }
 }

@@ -15,15 +15,9 @@
     @include breakpoint($navigation-full) {
       @include grid-span(16,1);
       clear: both;
-    }     
-    // .active {
-    //   ul {
-    //     display: block;
-    //   } 
-    // }  
+    }      
 
     ul {
-      // display: none;
       @include grid-span(10,1);
       position: absolute;
       padding: $space;

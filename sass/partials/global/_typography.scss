@@ -1,5 +1,11 @@
 //////////////////////////////
 // Typography
+// _search.scss
+//////////////////////////////
+//
+// This parial seeks to control 
+// all type-related size, line height,
+// and base styling treatments.
 //
 //////////////////////////////
 
@@ -12,6 +18,7 @@ p {
   line-height: 1.5;
   color: $gray;
   margin-bottom: $space-doubled;
+  max-width: 632px; // for controlling ideal character count measure <= 72 characters
 }
 em {
   font-style: italic;
@@ -116,6 +123,15 @@ h6 {
   color: $gray;
 }
 
+main { // remove for drupal - can just be ul,ol
+  ul,
+  ol {
+    font-size: em(20); 
+    line-height: 1.8;
+    font-family: $serif;
+    color:$gray-lt;
+  }
+}
 
 
 // Section-specific type
@@ -174,7 +190,7 @@ footer {
   }
 }
 
-// Form type
+// Form components
 legend {
   font-family: $sans;
   line-height: 1.2;
@@ -236,7 +252,8 @@ input[type="submit"] {
 
 
 // Menus
-.menu {
+.menu,
+.primary {
   font-size: em(24);
   line-height: 1.2;
   font-family: $sans;
@@ -257,6 +274,7 @@ input[type="submit"] {
     }
   }
 }
+
 footer {
   .menu {
     font-size: em(22);

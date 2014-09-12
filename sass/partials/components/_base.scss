@@ -5,50 +5,37 @@
 // _base.scss
 
 //////////////////////////////
-// @{base}
-// Styling for Base Component
-.base {
 
+// Hide elements from all users.
+//
+// Used for elements which should not be immediately displayed to any user. An
+// example would be a collapsible fieldset that will be expanded with a click
+// from a user. The effect of this class can be toggled with the jQuery show()
+// and hide() functions.
+.element-hidden {
+  display: none;
 }
-// {base}@
-//////////////////////////////
 
-
-//////////////////////////////
-// @{base--text}
-// Text styling for Base Component
-.base--TEXT {
-  p {
-    @include breakpoint($paragraph-full) {
-      @include grid-span(11,1);
-      clear: both;
-    }
-    @include breakpoint($paragraph-medium) {
-      @include grid-span(9,1);
-      clear: both;
-    }
-  }
+// Hide elements from all users.
+//
+// Used for elements which should not be immediately displayed to any user. An
+// example would be a collapsible fieldset that will be expanded with a click
+// from a user. The effect of this class can be toggled with the jQuery show()
+// and hide() functions.
+.element-hidden {
+  display: none;
 }
-p.base--p {
-  @include breakpoint($paragraph-full) {
-    @include grid-span(11,1);
-    clear: both;
-  }
-  @include breakpoint($paragraph-medium) {
-    @include grid-span(9,1);
-    clear: both;
-  }  
+
+// Hide elements visually, but keep them available for screen-readers.
+//
+// Used for information required for screen-reader users to understand and use
+// the site where visual display is undesirable. Information provided in this
+// manner should be kept concise, to avoid unnecessary burden on the user.
+// "!important" is used to prevent unintentional overrides.
+.element-invisible {
+  position: absolute !important;
+  clip: rect(1px 1px 1px 1px); // IE6, IE7
+  clip: rect(1px, 1px, 1px, 1px);
+  overflow: hidden;
+  height: 1px;
 }
-// {base--text}@
-//////////////////////////////
-
-
-//////////////////////////////
-// @{base--form}
-// Form styling for Base Component
-.base--FORM {
-
-}
-// {base--form}@
-//////////////////////////////
-

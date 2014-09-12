@@ -1,0 +1,30 @@
+//////////////////////////////
+// Drupal Component - Tabs
+//
+
+ul.primary {
+  @extend %clearfix;
+
+  padding: 0;
+  margin:$space 0;
+
+  li {
+    display: inline-block;
+    margin: 0;
+  }
+  a {
+    padding:$space-half $space-doubled;
+    background-color: lighten($gray-lt3, 10%);
+    border-bottom: em(6) solid $gray-lt3;    
+    &:hover {
+      color: $gray;
+      background-color: $gray-lt3;
+      border-bottom: em(6) solid $gray-lt2;
+    }
+    &.active {
+      color: $white;
+      background-color: $blue-lt;
+      border-bottom: em(6) solid $blue;
+    }
+  }
+}

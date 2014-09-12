@@ -61,6 +61,7 @@ $browser-minimum-versions: (
 @import "partials/components/header";
 @import "partials/components/images";
 @import "partials/components/input-range";
+@import "partials/components/input-text";
 @import "partials/components/links";
 @import "partials/components/lists";
 @import "partials/components/logo";
@@ -72,11 +73,18 @@ $browser-minimum-versions: (
 @import "partials/components/sidebar";
 @import "partials/components/sidebar-list";
 @import "partials/components/sidebar-menu";
-@import "partials/components/text-input";
 @import "partials/components/top-bar";
 @import "partials/components/video";
 //////////////////////////////
 
+//////////////////////////////
+// DRUPAL COMPONENTS
+@import "partials/drupal/breadcrumbs";
+@import "partials/drupal/messages";
+@import "partials/drupal/pager";
+@import "partials/drupal/tabs";
+
+//////////////////////////////
 
 //////////////////////////////
 // Style-Prototype Only - don't migrate to Drupal

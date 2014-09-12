@@ -8,7 +8,7 @@
 // @{text-input}
 // Styling for Form Components
 form {
-  @include grid-span(16,1);
+  width: 100%;
 }
 fieldset {
   border: none;
@@ -64,11 +64,6 @@ textarea {
   }
 }
 
-// PROTOTYPE ONLY - Delete once in Drupal
-[data-sp-class="navigation--search"] {
-  padding: $space/3;
-  font-size: em(14);
-}
 
 
 // {text-input}@

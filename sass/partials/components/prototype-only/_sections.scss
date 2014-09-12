@@ -4,6 +4,32 @@
 // The partial and folder structure for this components should be as follows:
 // _sections.scss
 // 
+//
+////// This file is full of styles that can be ignored. Style prototypes requires some interesting resets.
+
+.base--TEXT {
+  p {
+    @include breakpoint($paragraph-full) {
+      @include grid-span(11,1);
+      clear: both;
+    }
+    @include breakpoint($paragraph-medium) {
+      @include grid-span(9,1);
+      clear: both;
+    }
+  }
+}
+p.base--p {
+  @include breakpoint($paragraph-full) {
+    @include grid-span(11,1);
+    clear: both;
+  }
+  @include breakpoint($paragraph-medium) {
+    @include grid-span(9,1);
+    clear: both;
+  }  
+}
+
 //////////////////////////////
 // @{_sections}
 // Styling for Prototype-Only / Sections
@@ -74,5 +100,102 @@ main { // main wrapper defined for prototype only
       font-family: $serif;
       color:$gray-lt;
     }
+  }
+}
+
+// Styling for List-Ordered Components
+
+// PROTOTYPE ONLY - Delete once in Drupal
+
+ul.base--ul {
+  margin: $space $space-doubled $space-doubled;
+  li {
+    list-style-type: disc;        
+  }
+  ul.base--ul {
+    margin: $space;
+    li {
+      list-style-type: disc;        
+    }
+  }
+}
+ol.base--ol {
+  margin: $space $space-doubled $space-doubled;
+  li {
+    list-style-type: decimal;        
+  }
+  ol.base--ol {
+    margin: $space;
+    li {
+      list-style-type: decimal;        
+    }
+  }
+  ul.base--ul {
+    margin: $space;
+    li {
+      list-style-type: disc;        
+    }
+  }  
+}
+
+// PROTOTYPE ONLY - Delete once in Drupal
+[data-sp-class="navigation--search"] {
+  padding: $space/3;
+  font-size: em(14);
+}
+
+// Forms -- radios
+ // PROTOTYPE ONLY - Delete once in Drupal
+span:not(#foo) > input[type="radio"] {
+  opacity: 0;
+  float: left;
+  width: 1px;
+  padding: 0;
+  margin:0;
+  &.required {
+    border-color: $red;
+  }
+}
+span:not(#foo) > input[type="radio"] + label {
+  margin: $space;
+  clear: none;
+  @include button(lighten($gray-lt2,40%), $gray-lt);
+  &.required {
+    border-color: $red;
+    color: $red;
+  }
+}
+span:not(#foo) > input[type='radio']:checked + label {
+  @include button($green, $white);
+}
+
+// Forms -- checkboxes
+// PROTOTYPE ONLY - Delete once in Drupal
+span:not(#foo) > input[type="checkbox"],
+li:not(#foo) > input[type="checkbox"] {
+  opacity: 0;
+  float: left;
+  width: 1px;
+  padding: 0;
+  margin:0;
+  &.required {
+    border-color: $red;
+  }
+}
+span:not(#foo) > input[type="checkbox"] + label,
+li:not(#foo) > input[type="checkbox"] + label {
+  margin: $space;
+  clear: none;
+  @include button(lighten($gray-lt2,40%), $gray-lt);
+  &.required {
+    border-color: $red;
+    color: $red;
+  }  
+}
+span:not(#foo) > input[type='checkbox']:checked + label,
+li:not(#foo) > input[type='checkbox']:checked + label {
+  @include button($green, $white);
+  a {
+    color: $white;
   }
 }

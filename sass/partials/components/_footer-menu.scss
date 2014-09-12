@@ -13,7 +13,7 @@ footer {
     }
   }
   .menu {
-    @include grid-span(16,1);
+    width: 100%;
     a {
       text-decoration: none;
       padding: $space-half $space;

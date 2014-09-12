@@ -12,7 +12,6 @@ a:visited {
     text-decoration: none;
   }
   &.active {
-    background-color: lighten($gray-lt3, 10%);
     color:lighten($blue, 10%);
     text-decoration: none;    
   }

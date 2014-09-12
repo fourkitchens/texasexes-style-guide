@@ -3,22 +3,10 @@
 //
 // The partial and folder structure for this layouts should be as follows:
 // _video-paragraph.scss
-// video-paragraph (folder)
-//   _extends.scss
-//   _mixins.scss
-//   _variables.scss
 //
-// Automatic Sass parsing is done through special comment blocks
-//  - Start styling block for base layouts: @{layouts}
-//  - End styling block for base layouts:   {layouts}@
+// ***** @TODO: *****
+// ----> Change for Drupal markup and/or how we're embedding media
 //
-//  - Start styling block for specific layouts aspect: @{layouts--aspect}
-//  - End styling block for specific layouts aspect:   {layouts--aspect}@
-//////////////////////////////
-
-@import "video-paragraph/variables";
-@import "video-paragraph/mixins";
-@import "video-paragraph/extends";
 
 //////////////////////////////
 // @{video-paragraph}

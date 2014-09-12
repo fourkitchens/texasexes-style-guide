@@ -3,28 +3,15 @@
 //
 // The partial and folder structure for this layouts should be as follows:
 // _three-column-page.scss
-// three-column-page (folder)
-//   _extends.scss
-//   _mixins.scss
-//   _variables.scss
 //
-// Automatic Sass parsing is done through special comment blocks
-//  - Start styling block for base layouts: @{layouts}
-//  - End styling block for base layouts:   {layouts}@
+// ***** @TODO: *****
+// ----> Change for Drupal markup/panels
 //
-//  - Start styling block for specific layouts aspect: @{layouts--aspect}
-//  - End styling block for specific layouts aspect:   {layouts--aspect}@
-//////////////////////////////
-
-@import "three-column-page/variables";
-@import "three-column-page/mixins";
-@import "three-column-page/extends";
-
 //////////////////////////////
 // @{three-column-page}
 // Styling for Three-Column-Page Layouts
 .three-column-page {
-  @include grid-span(16,1);
+  width: 100%;
 
   .sidebar {
     @include grid-span(4,1, $gutter:0);
@@ -36,7 +23,7 @@
       padding: $space 0;
     }
     &.right {
-      @include grid-span(16,1);
+      width: 100%;
       padding: $space-doubled 0 $space;
       background-color: lighten($gray-lt3, 12%);
       clear: both;
@@ -56,7 +43,7 @@
       @include grid-span(12,5, $gutter:0);
     }  
     @include breakpoint($sidebar-full) {
-      @include grid-span(16,1);
+      width: 100%;
       padding: $space;
     }
   }  
