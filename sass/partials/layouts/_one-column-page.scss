@@ -12,13 +12,13 @@
 // Styling for One-Column-Page Layouts
 .one-column-page {
   .content {
-    @include grid-span(16,1);
+    width: 100%;
   }
   .image {
-    @include grid-span(16,1);
+    width: 100%;
 
     &.half {
-      @include grid-span(16,1);
+      width: 100%;
       clear: both;
       margin-bottom: $space-doubled;
 

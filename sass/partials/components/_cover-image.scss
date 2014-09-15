@@ -8,11 +8,11 @@
   margin: em(2) 0 $space 0;
 
   @include breakpoint($cover-photo-full) {
-    margin-bottom: $space-negative;
+    margin-bottom: -8em;
   }
 
   @include breakpoint($cover-photo-huge) {
-    margin-bottom: $space-double-negative;
+    margin-bottom: -16em;
   }
   
   img {
