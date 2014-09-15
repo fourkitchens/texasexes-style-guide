@@ -63,8 +63,8 @@ $yellow-dk:#93920f;
 // Why are we doing this?
 //
 // The idea behind the $space variable is similar to using the EM calculator in that it allows for
-// fine tuning the site's vertical rhytem through altering one value. This way we don't have arbitrary values
-// littering our Sass partials. 
+// fine tuning the site's vertical rhythm through altering one value. This way we don't have arbitrary values
+// and math littering our Sass partials.
 
 $space: em(20);
 $space-doubled: $space*2;
@@ -74,8 +74,6 @@ $space-quadrupled: $space*4;
 $space-half: $space/2;
 $space-one-third: $space/3;
 
-$space-negative: -8em; // only used for cover image
-$space-double-negative: -16em; // only used for cover image
 
 /////////
 // Singularity variables
