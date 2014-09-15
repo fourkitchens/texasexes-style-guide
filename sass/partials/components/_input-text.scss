@@ -15,7 +15,7 @@ fieldset {
   margin-top: $space-doubled;
   margin-bottom: $space;
   padding: 0;
-  @include clearfix;
+  @extend %clearfix;
   @include grid-span(16,1);
   fieldset {
     margin-top: $space-doubled;

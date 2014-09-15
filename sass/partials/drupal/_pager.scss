@@ -16,6 +16,8 @@ ul.pager {
   margin:$space 0;
 
   li {
+    background-color: lighten($gray-lt3, 8%);
+
     &.pager-first,
     &.pager-previous,
     &.pager-next,
@@ -23,20 +25,26 @@ ul.pager {
       @include breakpoint($pager-small) {
         @include grid-span(8,1, $output-style:"float", $gutter:0);
       }
-
     }
-
-    @include grid-span(2,1, $output-style:"float");
+    @include grid-span(2,1, $output-style:"float", $gutter:0);
     text-align: center;
-
     @include breakpoint($pager-full) {
       display: inline-block;
       width: auto;
     }
-
+    @include breakpoint($pager-medium) {
+      @include grid-span(4,1, $output-style:"float", $gutter:0);
+    }    
+    @include breakpoint($pager-small) {
+      @include grid-span(4,1, $output-style:"float", $gutter:0);
+    }
   }
   a {
     display: block;
+    &:hover {
+      background-color: $gray-lt;
+      color: $white;
+    }
   }
   a,
   .pager-current,
