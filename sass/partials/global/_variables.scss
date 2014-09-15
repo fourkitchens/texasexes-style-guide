@@ -53,18 +53,6 @@ $yellow-dk:#93920f;
 
 @include cs-test($orange $orange-dk $gray $gray-lt $gray-lt2 $blue $blue-dk $green $green-dk);
 
-///////////
-// Spacing - see _functions.scss for calculator function
-//
-// Based on EM calculator: http://viljamis.com/blog/2013/prototyping-responsive-typography
-// Browser context is set to 20 as a global value.
-
-///////////
-// Why are we doing this?
-//
-// The idea behind the $space variable is similar to using the EM calculator in that it allows for
-// fine tuning the site's vertical rhythm through altering one value. This way we don't have arbitrary values
-// and math littering our Sass partials.
 
 $space: em(20);
 $space-doubled: $space*2;
