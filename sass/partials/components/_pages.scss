@@ -6,9 +6,11 @@
 
 //////////////////////////////
 .page {
-  padding: 0 $space;
-  @include grid-span(16,1);
-  &.one-column-page {
-    padding: $space-quadrupled $space $space-tripled;
+  padding: 0;
+  z-index: 1;
+
+  .content {
+    background-color: rgba($white, .88);
+    padding: $space-doubled $space $space;
   }
 }

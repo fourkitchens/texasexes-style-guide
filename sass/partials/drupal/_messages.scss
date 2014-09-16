@@ -8,7 +8,7 @@
 
 .messages {
   color: $gray;
-  border-width: em(1) em(1) em(1) $space;
+  border-width: $space-one-eigth $space-one-eigth $space-one-eigth $space;
   border-style: solid;
   padding: $space;
   margin-bottom: $space-doubled;

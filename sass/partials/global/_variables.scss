@@ -54,13 +54,22 @@ $yellow-dk:#93920f;
 @include cs-test($orange $orange-dk $gray $gray-lt $gray-lt2 $blue $blue-dk $green $green-dk);
 
 
-$space: em(20);
+$space: 24px;
 $space-doubled: $space*2;
 $space-tripled: $space*3;
 $space-quadrupled: $space*4;
 
 $space-half: $space/2;
 $space-one-third: $space/3;
+$space-one-fourth: $space/4;
+$space-one-fifth: $space/5;
+$space-one-sixth: $space/6;
+$space-one-seventh: $space/7;
+$space-one-eigth: $space/8;
+$space-one-ninth: $space/9;
+$space-one-tenth: $space/10;
+$space-one-eleventh: $space/11;
+$space-one-twelfth: $space/12;
 
 
 /////////
@@ -81,23 +90,23 @@ $breakpoint-to-ems: true;
 
 // Top Bar
 $entity-full:986px;
-$entity-show:680px; // show or hide entity icons
+$entity-medium: 662px;
 $entity-collapse: 0 661px;
 
 // Header
-$logo-full:0 680px;// show or hide entity icons
-
+$logo-half:680px;
 $search-med: 986px;
 
 // Sidebar
-$sidebar-full:0 723px;
-$sidebar-trigger:724px;
-$sidebar-right:990px;
-$sidebar-right-med:660px;
-$content-right:0 989px;
+$sidebar-desktop:991px;
+$sidebar-left:724px;
+
+$sidebar-right-desktop:990px;
+$sidebar-right-med:660px 989px;
+
+$sidebar-mobile-trigger:724px;
 
 $cta-med:500px 989px;
-
 
 $block-title:820px;
 
@@ -105,17 +114,14 @@ $block-title:820px;
 $paragraph-medium: 950px;
 $paragraph-full: 600px;
 
-// blockquotes
-$quotes-full: 825px;
 
 // Cover Photo
 $cover-photo-full: 780px;
 $cover-photo-huge: 1400px;
 
 // Menus
-$main-menu: 830px;
+$main-menu-full: 860px;
 $main-menu-med: 0 560px;
-$navigation-full: 0 680px;
 
 // Admin tabs
 $tabs-full: 570px;
@@ -136,5 +142,7 @@ $media-full: 0 820px;
 
 // Footer 
 $footer-full: 1112px;
-$footer-med: 0 680px;
+$footer-med: 680px;
+$footer-seal-full: 1000px;
 
+$footer-thirds:1000px;

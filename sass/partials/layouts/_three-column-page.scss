@@ -10,41 +10,34 @@
 //////////////////////////////
 // @{three-column-page}
 // Styling for Three-Column-Page Layouts
+
 .three-column-page {
-  width: 100%;
 
   .sidebar {
-    @include grid-span(4,1, $gutter:0);
-    background-color: lighten($gray-lt3, 6%);
-    padding: $space-tripled 0 $space;
+    width: 100%;
+    clear: both;
+    padding-top: $space;
 
-    @include breakpoint($sidebar-full) {
-      @include grid-span(16,1);
-      padding: $space 0;
+    @include breakpoint($sidebar-left) {
+      @include grid-span(4,1, $gutter:0);
     }
-    &.right {
-      width: 100%;
-      padding: $space-doubled 0 $space;
-      background-color: lighten($gray-lt3, 12%);
-      clear: both;
 
-      @include breakpoint($sidebar-right) {
+    &.right {
+      display: block;
+      width: 100%;
+      clear: both;
+      padding-top: 0;
+      @include breakpoint($sidebar-right-desktop) {
         @include grid-span(4,13, $gutter:0);
-        padding: 0 0 $space;
       }  
     }
   }
   .content {
-    @include grid-span(8,5, $gutter:0);
-    background-color: rgba($white, .88);
-    padding: $space-doubled $space-doubled $space-tripled;
-  
-    @include breakpoint($content-right) {
-      @include grid-span(12,5, $gutter:0);
-    }  
-    @include breakpoint($sidebar-full) {
-      width: 100%;
-      padding: $space;
+    @include breakpoint($sidebar-left) {
+      @include grid-span(11,5, $gutter:0);
+    }    
+    @include breakpoint($sidebar-right-desktop) {
+      @include grid-span(8,5, $gutter:0);
     }
   }  
 }

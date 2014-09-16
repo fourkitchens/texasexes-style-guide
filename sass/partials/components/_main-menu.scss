@@ -7,29 +7,25 @@
 
 .main-menu {
   ul {
-    float: right;   
     position: relative;
-    @include breakpoint($main-menu) {
-      margin-top: $space;
+
+    @include breakpoint($main-menu-full) {
+      float: right;   
     }    
-    @include breakpoint($navigation-full) {
-      @include grid-span(16,1);
-      clear: both;
-    }      
 
     ul {
-      @include grid-span(10,1);
+      width: 100%;
       position: absolute;
       padding: $space;
       z-index: 2;
       background-color: $white;
       margin-top: 0;
-      border-top: em(6) solid $blue-lt;
+      border-top: $space-one-fourth solid $blue-lt;
       @include box-shadow(0 1px 2px rgba($gray, .5));
-      @include breakpoint($main-menu-med) {
-        @include grid-span(16,1);
-      }
 
+      @include breakpoint($main-menu-full) {
+        width: 100%;   
+      } 
       a { // second level icons
         padding: $space-half;
         border-bottom: none;
@@ -37,45 +33,32 @@
         &:before {
           display: none;
         }
-        &:hover,
-        &.active {
-          border-bottom: none;
-        }
       }      
     }
   }
   a {
-    padding: $space;
+    padding:$space $space $space-half;
     text-decoration: none;
     color: $gray;
     display: block;
-    border-bottom: em(6) solid $white;
     text-align: center;
-    @include breakpoint($main-menu) {
-      text-align: left;
-    }
-    @include breakpoint($main-menu-med) {
-      border-bottom: none;
-      text-align: center;
-    }
+    @include breakpoint($main-menu-full) {
+      border-bottom: $space-one-fourth solid $white;
+    }       
     &:hover {
       color: $blue-lt;
-      border-bottom: em(6) solid $blue-lt;
-      @include breakpoint($main-menu-med) {
-        border-bottom: none;
-      }
+      @include breakpoint($main-menu-full) {
+        border-color: $blue-lt;
+      }   
     }
     &.active {
       color: $blue;
-      border-bottom: em(6) solid $blue;
       background-color: $white;
-      @include breakpoint($main-menu-med) {
-        background-color: lighten($gray-lt3, 10%);
-        border-bottom: none;
-      }
+      @include breakpoint($main-menu-full) {
+        border-color: $blue;
+      }         
       &:hover {
         color: $blue;
-        border-bottom: em(6) solid $gray-lt2;   
       }      
     }
   }
@@ -83,15 +66,11 @@
     display: inline;
     @include grid-span(4,1, $output-style:"float", $gutter:0);
 
-    @include breakpoint($main-menu) {
+    @include breakpoint($main-menu-full) {
       float: left;
       width: auto;
     }
-    @include breakpoint($main-menu-med) {
-      @include grid-span(8,1, $output-style:"float", $gutter:0);
-      text-align: center;
-      margin: 0;
-    }
+
     li {
       display: block;
       width: 100%;
@@ -107,13 +86,7 @@
         background-repeat: no-repeat;
         background-size: cover;
 
-        @include breakpoint($main-menu) {
-          display: inline-block;
-          margin: 0 $space-half 0 0
-        }
-        @include breakpoint($main-menu-med) {
-          width: 34px;
-          height: 34px;
+        @include breakpoint($main-menu-full) {
           display: inline-block;
           margin: 0 $space-half 0 0
         }
@@ -201,13 +174,16 @@
 // Mobile trigger toggle
 #main-toggle-label {
   text-align: center;
-  @include breakpoint($main-menu) {
+    &:hover {
+      &:before {
+        background-image: url(../images/icons/menu-blue.svg);
+      }
+    }
+  @include breakpoint($main-menu-full) {
     text-align: left;
-  }
-  @include breakpoint($main-menu-med) {
-    border-bottom: none;
-    text-align: center;
-  }  
+    padding: $space-half;
+  } 
+
   &:before {
     display: block;
     width: 28px;
@@ -219,47 +195,30 @@
     background-size: cover;
     background-image: url(../images/icons/menu.svg);
 
-    @include breakpoint($main-menu) {
-      display: inline-block;
-      margin: 0 $space-half 0 0
-    }
-    @include breakpoint($main-menu-med) {
-      width: 34px;
-      height: 34px;
+    @include breakpoint($main-menu-full) {
       display: inline-block;
       margin: 0 $space-half 0 0
     }
   }
 }
 #main-menu-toggle + #main-toggle-label {
-  background-color: #fff;
-  padding: $space;
+  padding:  $space $space $space-half;
   text-decoration: none;
   color: $gray;
   display: block;
-  border-top: none;
-  border-right: none;
-  border-left: none;
-  border-bottom: em(6) solid $white;
+  border:0;
+  background-color: transparent;
   text-align: center;
-  @include breakpoint($main-menu-med) {
-    border-bottom: none;
-    text-align: center;
-  }  
+  @include breakpoint($main-menu-full) {
+    border-bottom: $space-one-fourth solid $white;
+  }    
   &:hover {
     color: $blue-lt;
-    border-bottom: em(6) solid $blue-lt;
-    border-top: none;
-    border-right: none;
-    border-left: none; 
-    &:before {
-      background-image: url(../images/icons/menu-blue.svg);
-    }       
-    @include breakpoint($main-menu-med) {
-      border-bottom: none;
-      text-align: center;
-    } 
-  }
+
+    @include breakpoint($main-menu-full) {
+      border-color: $blue-lt;
+    }
+  } 
 }
 
 #main-menu-toggle + #main-toggle-label,
@@ -268,20 +227,29 @@
 
 }
 #main-menu-toggle:checked + #main-toggle-label {
-  @include button($white, $blue);
-  padding: $space;
+  padding: $space $space $space-half;
   display: block;
-  border-top: none;
-  border-right: none;
-  border-left: none; 
-  border-bottom: em(6) solid $blue;
+
   @include breakpoint($main-menu-med) {
     border-bottom: none;
     text-align: center;
   } 
+  @include breakpoint($main-menu-full) {
+    border-color: $blue;
+  }  
   &:before {
+    display: block;
+    width: 28px;
+    height: 28px;
+    margin: 0 auto $space-half;
+    vertical-align: middle;
+    content: "";
+    background-repeat: no-repeat;
+    background-size: cover;
     background-image: url(../images/icons/x-blue.svg);
-    @include breakpoint($main-menu) {
+    margin: 0 auto $space-half;
+
+    @include breakpoint($main-menu-full) {
       display: inline-block;
       margin: 0 $space-half 0 0
     }
@@ -294,10 +262,9 @@
   }
   &:hover {
     color: $blue;
-    border-bottom: em(6) solid $blue;
-    @include breakpoint($main-menu-med) {
-      border-bottom:none;
-    }   
+    @include breakpoint($main-menu-full) {
+      border-color: $blue-lt;
+    } 
     &:before {
       background-image: url(../images/icons/x-blue.svg);
     }

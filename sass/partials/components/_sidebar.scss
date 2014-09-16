@@ -7,12 +7,14 @@
 //////////////////////////////
 
 .sidebar {
-  display: block;
+  display: none;
+  background-color: lighten($gray-lt3, 6%);
 
-  @include breakpoint($sidebar-full) {
-    display: none;
-    &.right {
-      display: block;
-    }
+  @include breakpoint($sidebar-left) {
+    display: block;
+  }
+  &.right {
+    background-color: lighten($gray-lt3, 12%);
+    display: block;
   }
 }

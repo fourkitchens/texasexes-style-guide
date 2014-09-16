@@ -9,12 +9,14 @@
 //
 //////////////////////////////
 
-
+html {
+  font-size: 16px;
+}
 // Basic elements
 p {
   font-family: $serif;
   font-weight: 500;
-  font-size: em(20);
+  font-size:16px;
   line-height: 1.5;
   color: $gray;
   margin-bottom: $space-doubled;
@@ -29,7 +31,7 @@ strong {
 blockquote {
   font-family: $serif;
   font-weight: 800;  
-  font-size:em(38);
+  font-size:30px;
   line-height: 1.4;
   font-style: italic;
 }
@@ -37,7 +39,7 @@ cite {
   font-family: $sans49;
   font-style: normal;
   text-transform: uppercase;
-  font-size:em(28); 
+  font-size:24px;
   color: $gray-lt;
   span {
     color: $gray-lt2; 
@@ -46,14 +48,13 @@ cite {
 figcaption {
   color: $gray-lt; 
   font-family: $serif;
-  font-size:em(18);
-  padding: $space;
-  border-bottom: em(1) solid $gray-lt3;
+  padding: $space-half;
+  border-bottom: $space-one-tenth solid $gray-lt3;
   span {
     font-family: $sans49;
     text-transform: uppercase;
     font-style: normal;
-    letter-spacing: em(1);
+    letter-spacing: .1em;
   }
 }
 
@@ -62,7 +63,7 @@ h1 {
   font-family: $sans49;
   line-height: 1.5;
   font-weight: 400;
-  margin-bottom: em(6);
+  margin-bottom: $space-half;
 }
 
 h2,
@@ -70,7 +71,7 @@ h3,
 h4,
 h5,
 h6 {
-  margin-bottom: em(15);
+  margin-bottom: $space;
 }
 h2,
 h5,
@@ -93,97 +94,124 @@ h4 {
 
 // Heading font sizes 
 h1 {
-  font-size:em(65);
+  font-size:50px;
   text-transform: uppercase;
   color: $gray-dk;
 }
 h2 {
-  font-size:em(38);
+  font-size:30px;
   color: $gray-lt;
   text-transform: uppercase;
-  border-bottom: em(3) solid $gray-lt3;
+  border-bottom: $space-one-eigth solid $gray-lt3;
 }
 h3 {
-  font-size:em(32);  
+  font-size:28px;
   color: $gray-lt;
 }
 h4 {
-  font-size:em(30);  
+  font-size:24px;
   color: $gray-lt;
   text-transform: uppercase;
-  letter-spacing: em(1);
+  letter-spacing: $space-one-tenth;
 }
 h5 {
-  font-size:em(24);  
+  font-size:20px;
   color: $gray;
   text-transform: uppercase;
 }
 h6 {
-  font-size:em(20);  
+  font-size:16px;
   color: $gray;
 }
 
 main { // remove for drupal - can just be ul,ol
   ul,
   ol {
-    font-size: em(20); 
-    line-height: 1.8;
     font-family: $serif;
     color:$gray-lt;
   }
 }
 
+//
+// Menus
+//
 
+.menu,
+.primary {
+  font-size:20px;
+  line-height: 1.2;
+  font-family: $sans;
+  text-transform: uppercase;
+  ul {
+    text-transform: none;
+    font-size:16px;
+    line-height: 1.2;
+    font-family: $serif;
+  }
+  &.entities {
+    text-transform: none;
+    font-size:14px;
+    line-height: 1;    
+    @include breakpoint($entity-full) {
+      font-size:16px;
+      line-height: 1.2;   
+    }
+  }
+}
+
+footer {
+  .menu {
+    font-size:18px;
+  }
+}
+
+//
 // Section-specific type
+//
 .cta {
   h4 {
     color: $white;
   }
   p {
     color: $gray-lt3;
-    font-size: em(18);  
   }
 }
 .sidebar {
   h3 {
-    font-size: em(22);  
+    font-size:20px;
 
     @include breakpoint($block-title) {
-      font-size: em(30);  
+      font-size:23px;
     }
   }
   a {
     text-transform: none;
     text-decoration: none;
     font-family: $serif;
-    font-size: em(18);
+    font-size:18px;
     font-weight: 400;
     &:hover {
       text-decoration: underline;
-    }
-    @include breakpoint($sidebar-full) {
-      font-size: em(16);
     }
   }  
 }
 .teaser {
   p {
-    font-size: em(16);
+    font-size:16px;
     margin-top: $space;
   }
 }
 footer {
   p {
-    font-size: em(21);
+    font-size:16px;
     font-family: $sans49;
     font-weight: 400;
     color: $gray-lt2;
-    letter-spacing: em(1);
+    letter-spacing: $space-one-twelfth;
     margin:0;
     text-transform: uppercase;
-    @include breakpoint($footer-med) {    
-      text-align: center;
-    }
+    text-align: center;
+
     a {
       font-weight: 400;
     }
@@ -194,28 +222,28 @@ footer {
 legend {
   font-family: $sans;
   line-height: 1.2;
-  margin-bottom: em(8);
+  margin-bottom: .5em;
   color: $gray;
 }
 label {
   font-family: $sans49;
   font-weight: 400;
   line-height: 1.2;
-  margin-bottom: em(8);
+  margin-bottom: .5em;
   text-transform: uppercase;
   color: $gray;
-  font-size:em(30);
-  letter-spacing: em(1.5);
+  font-size:30px;
+  letter-spacing:$space-one-tenth;
   &.radio,
   &.checkbox {
     font-family: $sans;
-    font-size:em(20);
+    font-size:20px;
     text-transform: none;    
   }
 }
 input,
 textarea {
-  font-size: em(24);
+  font-size:18px;
   line-height: 1.2;
   font-family: $serif;
 }
@@ -227,11 +255,11 @@ input[type="submit"] {
   text-transform: uppercase;  
   font-family: $sans;
   font-weight: 400;
-  letter-spacing: em(1);
-  font-size: em(22);
+  letter-spacing: $space-one-twelfth;
+  font-size:18px;
   line-height: 1.8; 
   &.small {
-    font-size: em(20);
+    font-size:16px;
     line-height: 1.2; 
   }
   &.search {
@@ -240,44 +268,18 @@ input[type="submit"] {
 }
 
 // Label buttons for toggling
+#main-toggle-label { // Match main ul font-size
+  font-size:20px;
+}
+#toggle-label,
+#entity-toggle-label {
+  font-size:16px;
+}
 #main-toggle-label,
 #toggle-label,
 #entity-toggle-label {
-  font-size: em(20);
   line-height: 1.2;
   font-family: $sans;
   text-transform: uppercase;
   letter-spacing: normal;
 }
-
-
-// Menus
-.menu,
-.primary {
-  font-size: em(24);
-  line-height: 1.2;
-  font-family: $sans;
-  text-transform: uppercase;
-  ul {
-    text-transform: none;
-    font-size: em(18);
-    line-height: 1.2;
-    font-family: $serif;
-  }
-  &.entities {
-    text-transform: none;
-    font-size: em(18);
-    line-height: 1;    
-    @include breakpoint($entity-full) {
-      font-size: em(21);
-      line-height: 1.2;   
-    }
-  }
-}
-
-footer {
-  .menu {
-    font-size: em(22);
-  }
-}
-

@@ -9,14 +9,17 @@
 .sidebar {
   .menu {
     margin: 0;
-    padding: $space 0;
+    padding: $space-half 0;
     li {
       margin:0;
     }
     a {
-      padding: $space $space-doubled;
+      padding: $space-half $space;
       display: block;
       font-weight: 700;
+      &.active {
+        background-color: lighten($gray-lt3, 12%);
+      }
     }
   }
 }
@@ -42,7 +45,7 @@
   @include button($blue, $white);
   display: block;
 
-  @include breakpoint($sidebar-trigger) {
+  @include breakpoint($sidebar-mobile-trigger) {
     display: none;
   }
 }
@@ -54,6 +57,9 @@
 #menu-toggle:checked + #toggle-label {
   @include button($gray-lt3, $blue);
   display: block;
+  border-bottom-right-radius: 0;
+  border-bottom-left-radius: 0;
+
   &:before {
     background-image: url(../images/icons/x-circle-blue.svg);
   }

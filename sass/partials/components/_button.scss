@@ -46,8 +46,8 @@ input[type="submit"] {
       @include button($red, $white);
     }      
   }
-  margin-bottom: em(15);
-  border-radius: em(3)
+  margin-bottom: $space;
+  border-radius: $space-one-sixth;
 }
 input[type="reset"] {
   @include button($gray-lt, $white);

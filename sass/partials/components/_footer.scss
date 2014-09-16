@@ -7,64 +7,57 @@
 
 footer {
   background-color: $gray;
-  @include grid-span(16, 1);
+  width: 100%;
   padding:$space-tripled 0;
-  border-top: em(10) solid $gray-lt2;
+  border-top: $space-one-fourth solid $gray-lt2;
+  p {
+    max-width: 100%;
+  }
 
   .wrap {
-    @include grid-span(16,1);
-    border-top: em(3) solid $gray-lt; 
+    width: 100%;
+    border-top: $space-one-eigth solid $gray-lt; 
     margin-top: $space;
-    padding: $space;
+    padding: $space 0;
+    @extend %clearfix;
   }
   .copyright {
-    @include grid-span(14,1, $output-style:"float");
-    padding: $space $space 0;
-    clear: left;
-
-    @include breakpoint($footer-full) {
+    width: 100%;
+    padding:$space $space-half;
+    @include breakpoint($footer-thirds) { 
       @include grid-span(7,1);
-      padding: $space-tripled 0;
     }
-     @include breakpoint($footer-med) {    
-      @include grid-span(16,1);
-      padding: $space;
-      clear: both;
-    }     
   }
   .seal {
-    @include grid-span(2,15);
+    width: 100%;
     padding: $space-half $space-half 0 0;
-    clear: none;
 
-    @include breakpoint($footer-full) {
+    @include breakpoint($footer-seal-full) {
       @include grid-span(2,8);
-      padding-top: $space;
-    }
-    @include breakpoint($footer-med) {    
-      @include grid-span(4,7);
-      clear: both;
-      padding: $space 0;
-    }  
-    img {
-      width: 100%;
-      height: auto;
+    } 
+    .seal-image {
+      display: block;
+      background: transparent image-url('logos/seal-logo.svg') center center no-repeat;
+      background-size: contain;
+      width: 20%;
+      padding-bottom: 20%;
+      height: 0;
+      margin: 0 auto;
+      text-indent: 100%;
+      white-space: nowrap;
+      overflow: hidden;
+  
+      @include breakpoint($footer-seal-full) {
+        width: 100%;
+        padding-bottom: 100%;
+      }           
     }
   }
   .contact {
-    @include grid-span(14,1, $output-style:"float");
-    padding: $space;
-    clear: left;
-
-    @include breakpoint($footer-full) {    
+    width: 100%;
+    padding: $space $space-half;  
+    @include breakpoint($footer-thirds) { 
       @include grid-span(7,10);
-      text-align: right;
-      padding: $space-tripled 0;
     }
-    @include breakpoint($footer-med) {    
-      @include grid-span(16,1);
-      padding: 0 $space;
-      clear: both;
-    }    
   }  
 }

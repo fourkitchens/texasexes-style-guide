@@ -7,31 +7,29 @@ main,
 .container { // wrapper definition for prototype only
   .top-bar {
     background-color: lighten($gray-lt3, 10%);
-    @include grid-span(16,1);
-    
-    @include breakpoint($entity-show) {
-      padding-top: $space;
-    }
+    width: 100%;
+
     @include breakpoint($entity-collapse) {
       display: none;
       padding: 0 $space-doubled;
-
     }      
-    .entities {
-      @include grid-span(16,1);
 
+    .entities {
+      width: 100%;
+      @extend %clearfix;
+    
       @include breakpoint($entity-full) {
         @include grid-span(12,1);
       }
     }
     .search {
-      @include grid-span(16,1);
-      clear: both;
+      width: 100%;
+      @extend %clearfix;
       padding: $space;
 
       @include breakpoint($search-med) {
         @include grid-span(4,13);
-        padding: 0;
+        padding: $space-half 0 0;
       }        
     }     
   }

@@ -3,7 +3,6 @@
 // @_mixins.scss
 //////////////////////////////
 
-
 //////////////////////////////
 // button Component Mixins
 //////////////////////////////
@@ -15,8 +14,8 @@
   color: $text;
   cursor: pointer;
   transition: all .2s ease;
-  border: em(4) solid darken($bg, 5%);
-  padding: em(12) em(24);
+  border: $space-one-eigth solid darken($bg, 5%);
+  padding: $space-one-third $space-half;
   
   &:hover,
   &:focus {
@@ -39,9 +38,9 @@
     outline-color: darken($text, 15%);
   }
   &.large {
-    padding: em(12) em(24);
+    padding: $space-one-third $space-half;
   }
   &.small {
-    padding: em(10) em(20);
+    padding: $space-one-fourth $space-one-third;
   }
 }

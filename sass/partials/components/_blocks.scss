@@ -6,7 +6,7 @@
 
 //////////////////////////////
 .block + .block {
-  margin: $space-doubled 0 0;
+  margin: $space 0 0;
 }
 .block {
   width: 100%;
@@ -14,9 +14,9 @@
   @extend %clearfix;
 }
 .block-title {
-  border-bottom: em(6) solid lighten($gray-lt2, 20%);
+  border-bottom: $space-one-sixth solid lighten($gray-lt2, 20%);
   margin-bottom: 0;
-  padding: 0 $space-doubled;
+  padding: 0 $space;
   h3 {
     margin: 0;
   }
