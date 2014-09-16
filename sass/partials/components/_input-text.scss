@@ -12,17 +12,18 @@ form {
 }
 fieldset {
   border: none;
-  margin-top: $space-doubled;
+  margin-top: $space;
   margin-bottom: $space;
   padding: 0;
-  @extend %clearfix;
   width: 100%;
+  @extend %clearfix;
+
   fieldset {
     margin-top: $space-doubled;
-    margin-bottom: $space-doubled;
+    margin-bottom: $space;
   }
   .form-item {
-    margin: $space 0 $space-doubled;   
+    margin: $space-half 0 $space;   
     width: 100%
   }
 }

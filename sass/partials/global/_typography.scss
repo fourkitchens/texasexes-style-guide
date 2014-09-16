@@ -54,7 +54,7 @@ figcaption {
     font-family: $sans49;
     text-transform: uppercase;
     font-style: normal;
-    letter-spacing: .1em;
+    letter-spacing: $space-one-twelfth;
   }
 }
 
@@ -112,7 +112,7 @@ h4 {
   font-size:24px;
   color: $gray-lt;
   text-transform: uppercase;
-  letter-spacing: $space-one-tenth;
+  letter-spacing: $space-one-twelfth;
 }
 h5 {
   font-size:20px;
@@ -222,22 +222,23 @@ footer {
 legend {
   font-family: $sans;
   line-height: 1.2;
-  margin-bottom: .5em;
+  margin-bottom: $space-one-sixth;
   color: $gray;
 }
 label {
+  font-size:24px;
   font-family: $sans49;
   font-weight: 400;
   line-height: 1.2;
-  margin-bottom: .5em;
+  margin-bottom: $space-one-sixth;
   text-transform: uppercase;
   color: $gray;
-  font-size:30px;
-  letter-spacing:$space-one-tenth;
+  letter-spacing:$space-one-twelfth;
+
   &.radio,
   &.checkbox {
     font-family: $sans;
-    font-size:20px;
+    font-size:18px;
     text-transform: none;    
   }
 }
