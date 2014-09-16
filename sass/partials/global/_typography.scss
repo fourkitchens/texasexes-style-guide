@@ -138,10 +138,13 @@ main { // remove for drupal - can just be ul,ol
 
 .menu,
 .primary {
-  font-size:20px;
+  font-size:16px;
   line-height: 1.2;
   font-family: $sans;
   text-transform: uppercase;
+  @include breakpoint($main-menu-full) {
+    font-size:20px;
+  }
   ul {
     text-transform: none;
     font-size:16px;
@@ -267,7 +270,10 @@ input[type="submit"] {
 
 // Label buttons for toggling
 #main-toggle-label { // Match main ul font-size
-  font-size:20px;
+  font-size:16px;
+  @include breakpoint($main-menu-full) {
+    font-size:20px;
+  }  
 }
 #toggle-label {
   font-size:16px;
