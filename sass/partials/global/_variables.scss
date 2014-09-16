@@ -89,13 +89,15 @@ $breakpoint-to-ems: true;
 // to provide basic support for IE back to version 8
 
 // Top Bar
+$entity-larger-text:1086px;
 $entity-full:986px;
 $entity-medium: 662px;
-$entity-collapse: 0 661px;
+$entity-small: 300px;
 
 // Header
 $logo-half:680px;
 $search-med: 986px;
+$header-padding: 662px;
 
 // Sidebar
 $sidebar-desktop:991px;
@@ -121,7 +123,7 @@ $cover-photo-huge: 1400px;
 
 // Menus
 $main-menu-full: 860px;
-$main-menu-med: 0 560px;
+$main-menu-med: 560px;
 
 // Admin tabs
 $tabs-full: 570px;

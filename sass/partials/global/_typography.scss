@@ -61,7 +61,7 @@ figcaption {
 // Heading font family, weight, and margin
 h1 {
   font-family: $sans49;
-  line-height: 1.5;
+  line-height: 1.2;
   font-weight: 400;
   margin-bottom: $space-half;
 }
@@ -149,12 +149,13 @@ main { // remove for drupal - can just be ul,ol
     font-family: $serif;
   }
   &.entities {
-    text-transform: none;
-    font-size:14px;
-    line-height: 1;    
-    @include breakpoint($entity-full) {
+    text-transform: uppercase;
+    font-size:12px;
+    line-height: 1;  
+    @include breakpoint($entity-larger-text) {
       font-size:16px;
-      line-height: 1.2;   
+      line-height: 1.2;  
+      text-transform: none; 
     }
   }
 }
@@ -179,16 +180,12 @@ footer {
 .sidebar {
   h3 {
     font-size:20px;
-
-    @include breakpoint($block-title) {
-      font-size:23px;
-    }
   }
   a {
     text-transform: none;
     text-decoration: none;
     font-family: $serif;
-    font-size:18px;
+    font-size:16px;
     font-weight: 400;
     &:hover {
       text-decoration: underline;
@@ -272,13 +269,11 @@ input[type="submit"] {
 #main-toggle-label { // Match main ul font-size
   font-size:20px;
 }
-#toggle-label,
-#entity-toggle-label {
+#toggle-label {
   font-size:16px;
 }
 #main-toggle-label,
-#toggle-label,
-#entity-toggle-label {
+#toggle-label {
   line-height: 1.2;
   font-family: $sans;
   text-transform: uppercase;

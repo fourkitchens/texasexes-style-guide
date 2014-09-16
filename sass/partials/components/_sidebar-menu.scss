@@ -38,24 +38,28 @@
     content: "";
     background-repeat: no-repeat;
     background-size: cover;
-    background-image: url(../images/icons/sidemenu-white.svg);
+    background-image: url(../images/icons/sidemenu.svg);
   }
 }
+
 #menu-toggle + #toggle-label {
-  @include button($blue, $white);
+  border-radius: 0;
+  border-width: 0;
   display: block;
+  max-width: 200px;
+  margin-bottom: 0;
+  padding: $space-half;
+  background-color: $gray-lt3;
+  color: $gray;
 
   @include breakpoint($sidebar-mobile-trigger) {
     display: none;
   }
 }
 
-#menu-toggle + #toggle-label,
 #menu-toggle:checked + #toggle-label {
-  margin: 0; 
-}
-#menu-toggle:checked + #toggle-label {
-  @include button($gray-lt3, $blue);
+  background-color: $gray-lt3;
+  color: $blue-lt;
   display: block;
   border-bottom-right-radius: 0;
   border-bottom-left-radius: 0;

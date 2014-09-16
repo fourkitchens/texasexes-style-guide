@@ -7,8 +7,12 @@ main, // wrapper definition for prototype only
 .container {
   header {
     width: 100%;
-    padding: $space-doubled 0;
+    padding: $space-half 0;
     @include box-shadow(0 2px 4px rgba($gray, .5));
+
+    @include breakpoint($header-padding) {
+      padding: $space-doubled 0;
+    }    
 
     .logo {
       width: 100%;

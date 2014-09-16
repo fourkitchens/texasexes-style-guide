@@ -13,7 +13,7 @@
       float: right;   
     }    
 
-    ul {
+    ul { // Second level drop-down
       width: 100%;
       position: absolute;
       padding: $space;
@@ -37,11 +37,15 @@
     }
   }
   a {
-    padding:$space $space $space-half;
+    padding: $space-half;
     text-decoration: none;
     color: $gray;
     display: block;
     text-align: center;
+
+    @include breakpoint($main-menu-med) {
+      padding:$space $space $space-half;
+    }
     @include breakpoint($main-menu-full) {
       border-bottom: $space-one-fourth solid $white;
     }       
@@ -78,8 +82,8 @@
     a { // top level icons
       &:before {
         display: block;
-        width: 28px;
-        height: 28px;
+        width: 24px;
+        height: 24px;
         margin: 0 auto $space-half;
         vertical-align: middle;
         content: "";
@@ -174,6 +178,7 @@
 // Mobile trigger toggle
 #main-toggle-label {
   text-align: center;
+
     &:hover {
       &:before {
         background-image: url(../images/icons/menu-blue.svg);
@@ -181,13 +186,12 @@
     }
   @include breakpoint($main-menu-full) {
     text-align: left;
-    padding: $space-half;
-  } 
+  }  
 
   &:before {
     display: block;
-    width: 28px;
-    height: 28px;
+    width: 24px;
+    height: 24px;
     margin: 0 auto $space-half;
     vertical-align: middle;
     content: "";
@@ -202,16 +206,21 @@
   }
 }
 #main-menu-toggle + #main-toggle-label {
-  padding:  $space $space $space-half;
+  padding: $space-half;
   text-decoration: none;
   color: $gray;
   display: block;
   border:0;
   background-color: transparent;
   text-align: center;
+
+  @include breakpoint($main-menu-med) {
+    padding:$space $space $space-half;
+  }   
   @include breakpoint($main-menu-full) {
     border-bottom: $space-one-fourth solid $white;
-  }    
+  }   
+
   &:hover {
     color: $blue-lt;
 
@@ -227,35 +236,31 @@
 
 }
 #main-menu-toggle:checked + #main-toggle-label {
-  padding: $space $space $space-half;
+  padding: $space-half;
   display: block;
 
   @include breakpoint($main-menu-med) {
-    border-bottom: none;
     text-align: center;
+    padding:$space $space $space-half;
   } 
   @include breakpoint($main-menu-full) {
     border-color: $blue;
   }  
   &:before {
     display: block;
-    width: 28px;
-    height: 28px;
+    width: 24px;
+    height: 24px;
     margin: 0 auto $space-half;
     vertical-align: middle;
     content: "";
     background-repeat: no-repeat;
     background-size: cover;
     background-image: url(../images/icons/x-blue.svg);
-    margin: 0 auto $space-half;
 
     @include breakpoint($main-menu-full) {
       display: inline-block;
-      margin: 0 $space-half 0 0
     }
     @include breakpoint($main-menu-med) {
-      width: 34px;
-      height: 34px;
       display: inline-block;
       margin: 0 $space-half 0 0
     }

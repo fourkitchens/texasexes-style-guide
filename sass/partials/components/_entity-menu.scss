@@ -13,6 +13,15 @@
     display: block;
     border-bottom: $space-one-sixth solid $gray-lt3;
     text-align: center;
+
+    @include breakpoint($entity-small) {
+      padding: $space-one-fourth $space-one-third;
+    }
+
+    @include breakpoint($entity-full) {
+      padding: $space-half;
+    }
+
     &:hover {
       color: $gray-lt;
       border-color:$gray-lt2;
@@ -30,11 +39,16 @@
     display: block;
     width: 100%;
 
-    @include breakpoint($entity-medium) {      
-      @include layout(5) {
+    @include breakpoint($entity-small) {
+      @include layout(3) {
         @include grid-span(1,1, $output-style:"float", $gutter:0);
       }
     }
+    @include breakpoint($entity-medium) {
+      @include layout(5) {
+        @include grid-span(1,1, $output-style:"float", $gutter:0);
+      }
+    }    
     @include breakpoint($entity-full) {
       display: inline;
       float: left;

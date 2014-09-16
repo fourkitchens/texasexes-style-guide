@@ -12,9 +12,11 @@
 
   @include breakpoint($sidebar-left) {
     display: block;
+    padding-top: $space-tripled;
   }
   &.right {
     background-color: lighten($gray-lt3, 12%);
     display: block;
+    padding-top: 0;
   }
 }

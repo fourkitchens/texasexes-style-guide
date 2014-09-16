@@ -15,12 +15,11 @@
 }
 .block-title {
   border-bottom: $space-one-sixth solid lighten($gray-lt2, 20%);
-  margin-bottom: 0;
-  padding: 0 $space;
+  padding: $space $space $space-half;
   h3 {
     margin: 0;
   }
   h4 {
-    margin: 0 0 $space-half;
+    margin: 0;
   }
 }
