@@ -51,7 +51,6 @@
     }    
     @include breakpoint($entity-full) {
       display: inline;
-      float: left;
       width: auto;
     }
 

@@ -8,14 +8,11 @@
 .list {
   margin: 0;
   padding: $space-half 0;
-  width: 100%;
   @extend %clearfix;
 
   li {
     margin:0 0 $space-half;
     border-bottom: $space-one-eigth solid darken($gray-lt3, 5%);
-    width: 100%;
-    clear: both;
     display: block;
     padding: $space-one-third $space;
     @extend %clearfix;
@@ -27,12 +24,17 @@
     }    
   }
   .featured-image {
-    @include grid-span(5,1);
+    img {
+      width: 100%;
+    }
+    @include breakpoint($sidebar-right-mobile) {
+      @include grid-span(5,1);
+    }
   }
   .teaser {
-    @include grid-span(11,6);
-    padding: 0 $space;
-    display: block;
-    font-weight: 700;    
+    @include breakpoint($sidebar-right-mobile) {
+      @include grid-span(11,6);
+      padding-left: $space-half;
+    }
   }
 } 

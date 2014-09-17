@@ -6,7 +6,6 @@
 main, // wrapper definition for prototype only
 .container {
   header {
-    width: 100%;
     padding: $space-half 0;
     @include box-shadow(0 2px 4px rgba($gray, .5));
 
@@ -15,7 +14,6 @@ main, // wrapper definition for prototype only
     }    
 
     .logo {
-      width: 100%;
       text-align: left;
       @include breakpoint($logo-half) {
         @include grid-span(5,1);  
@@ -23,8 +21,6 @@ main, // wrapper definition for prototype only
 
     } 
     .main-menu {
-      width: 100%;
-      clear: both;
 
       @include breakpoint($logo-half) {
         @include grid-span(11,6);  

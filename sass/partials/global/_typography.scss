@@ -11,12 +11,12 @@
 
 html {
   font-size: 16px;
+  line-height: 1.2;
 }
 // Basic elements
 p {
   font-family: $serif;
   font-weight: 500;
-  font-size:16px;
   line-height: 1.5;
   color: $gray;
   margin-bottom: $space-doubled;
@@ -120,7 +120,6 @@ h5 {
   text-transform: uppercase;
 }
 h6 {
-  font-size:16px;
   color: $gray;
 }
 
@@ -129,8 +128,10 @@ main { // remove for drupal - can just be ul,ol
   ol {
     font-family: $serif;
     color:$gray-lt;
+    line-height: 2;
   }
 }
+
 
 //
 // Menus
@@ -178,6 +179,7 @@ footer {
   }
   p {
     color: $gray-lt3;
+    margin-bottom: $space;
   }
 }
 .sidebar {
@@ -197,7 +199,7 @@ footer {
 }
 .teaser {
   p {
-    font-size:16px;
+    font-size:14px;
     margin-top: $space;
   }
 }
@@ -211,7 +213,6 @@ footer {
     margin:0;
     text-transform: uppercase;
     text-align: center;
-
     a {
       font-weight: 400;
     }

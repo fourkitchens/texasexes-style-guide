@@ -11,26 +11,7 @@
 // @{one-column-page}
 // Styling for One-Column-Page Layouts
 .one-column-page {
-  padding-top: $space;
-  .content {
-    width: 100%;
-  }
-  .image {
-    width: 100%;
-
-    &.half {
-      width: 100%;
-      clear: both;
-      margin-bottom: $space-doubled;
-
-      @include breakpoint($image-full) {
-        @include grid-span(12,1);
-        clear: both;
-        padding: $space;
-        
-      }
-    }
-  } 
+  padding-top: $space; 
 }
 // {one-column-page}@
 //////////////////////////////

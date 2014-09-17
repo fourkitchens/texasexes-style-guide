@@ -15,7 +15,6 @@ fieldset {
   margin-top: $space;
   margin-bottom: $space;
   padding: 0;
-  width: 100%;
   @extend %clearfix;
 
   fieldset {
@@ -24,7 +23,6 @@ fieldset {
   }
   .form-item {
     margin: $space-half 0 $space;   
-    width: 100%
   }
 }
 legend {

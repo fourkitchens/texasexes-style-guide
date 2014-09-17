@@ -4,3 +4,9 @@
 // The partial and folder structure for this components should be as follows:
 // _images.scss
 //////////////////////////////
+
+.page {
+  .image {
+    margin-bottom: $space-doubled;
+  }
+}
