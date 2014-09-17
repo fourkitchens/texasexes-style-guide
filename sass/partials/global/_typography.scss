@@ -256,7 +256,7 @@ input[type="submit"] {
   text-transform: uppercase;  
   font-family: $sans;
   font-weight: 400;
-  letter-spacing: $space-one-twelfth;
+  letter-spacing:1.2px;
   font-size:18px;
   line-height: 1.8; 
   &.small {

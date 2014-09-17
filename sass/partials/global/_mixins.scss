@@ -38,9 +38,9 @@
     outline-color: darken($text, 15%);
   }
   &.large {
-    padding: $space-one-third $space-half;
+    padding: $space-half $space;
   }
   &.small {
-    padding: $space-one-fourth $space-one-third;
+    padding: $space-one-third $space;
   }
 }
