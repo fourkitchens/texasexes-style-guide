@@ -7,6 +7,14 @@
   background-color: rgba($gray, .8);
   padding: $space-doubled $space $space-half;
 
+  h4 {
+    color: $white;
+  }
+  p {
+    color: $gray-lt3;
+    margin-bottom: $space;
+  }
+
   @include breakpoint($cta-med) {
     h4,
     p {

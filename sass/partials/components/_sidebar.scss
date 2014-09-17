@@ -19,4 +19,23 @@
     display: block;
     padding-top: 0;
   }
+  h3 {
+    font-size:20px;
+  }
+  a {
+    text-transform: none;
+    text-decoration: none;
+    font-family: $serif;
+    font-size:16px;
+    font-weight: 400;
+    &:hover {
+      text-decoration: underline;
+    }
+  }  
+}
+.teaser {
+  p {
+    font-size:14px;
+    margin-top: $space;
+  }
 }

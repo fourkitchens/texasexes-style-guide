@@ -21,7 +21,7 @@ ol {
 .content {
   ul,
   ol {
-    margin: $space 0 $space-doubled;
+    margin: $space $space $space-doubled;
     ul,
     ol {
       margin: $space;

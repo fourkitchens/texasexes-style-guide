@@ -12,6 +12,16 @@ footer {
   border-top: $space-one-fourth solid $gray-lt2;
   p {
     max-width: 100%;
+    font-family: $sans49;
+    font-weight: 400;
+    color: $gray-lt2;
+    letter-spacing: $space-one-twelfth;
+    margin:0;
+    text-transform: uppercase;
+    text-align: center;
+    a {
+      font-weight: 400;
+    }
   }
 
   .wrap {
