@@ -10,7 +10,7 @@
   &.left {
     display: none;
     background-color: lighten($gray-lt3, 6%);
-    border-top: $space-one-sixth solid $blue-lt;
+    border-top: $space-one-sixth solid lighten($gray-lt2, 10%);
 
     @include breakpoint($sidebar-left) {
       display: block;
