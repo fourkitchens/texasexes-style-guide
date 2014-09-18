@@ -21,19 +21,19 @@ ul.primary {
   a {
     padding:$space-half $space-doubled;
     background-color: lighten($gray-lt3, 10%);
-    border-bottom: em(6) solid $gray-lt3;  
+    border-bottom: $space-one-sixth solid $gray-lt3;  
     display: block;  
     text-decoration: none;
     text-align: center;
     &:hover {
       color: $gray;
       background-color: $gray-lt3;
-      border-bottom: em(6) solid $gray-lt2;
+      border-color: $gray-lt2;
     }
     &.active {
       color: $white;
       background-color: $blue-lt;
-      border-bottom: em(6) solid $blue;
+      border-color: $blue;
     }
   }
 }

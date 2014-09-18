@@ -7,55 +7,66 @@
 
 .entities {       
   a {
-    padding: $space;
+    padding: $space-half $space;
     text-decoration: none;
     color: $gray-lt2;
     display: block;
-    border-bottom: em(6) solid $gray-lt3;
+    border-bottom: $space-one-sixth solid $gray-lt3;
     text-align: center;
+
+    @include breakpoint($entity-small) {
+      padding: $space-one-fourth $space-one-third;
+    }
+
+    @include breakpoint($entity-full) {
+      padding: $space-half;
+    }
+
     &:hover {
       color: $gray-lt;
-      border-bottom: em(6) solid $gray-lt2;
+      border-color:$gray-lt2;
     }
     &.active {
       color: $gray-lt;
-      border-bottom: em(6) solid $gray-lt2;
-      @include breakpoint($main-menu-med) {
-        background-color: lighten($gray-lt3, 10%);
-      }
+      border-color:$gray-lt2;
       &:hover {
-      color: $gray-lt2;
-        border-bottom: em(6) solid $gray-lt2;   
+        color: $gray-lt2;
+        border-color:$gray-lt2;
       }
     }
   }
   li {
-    @include layout(5) {
-      @include grid-span(1,1, $output-style:"float", $gutter:0);
+    display: block;
+    width: 100%;
+
+    @include breakpoint($entity-small) {
+      @include layout(3) {
+        @include grid-span(1,1, $output-style:"float", $gutter:0);
+      }
     }
+    @include breakpoint($entity-medium) {
+      @include layout(5) {
+        @include grid-span(1,1, $output-style:"float", $gutter:0);
+      }
+    }    
     @include breakpoint($entity-full) {
       display: inline;
-      float: left;
       width: auto;
     }
-    @include breakpoint($entity-collapse) {
-      width: 100%;
-      float: left;
-      display: block;
-    }
+
     a { // top level icons
       &:before {
         display: block;
         width: 24px;
         height: 24px;
-        margin: 0 auto $space-half;
+        margin: 0 auto $space-one-third;
         vertical-align: middle;
         content: "";
         background-repeat: no-repeat;
         background-size: cover;
-        @include breakpoint($main-menu) {
+        @include breakpoint($entity-full) {
           display: inline-block;
-          margin: 0 $space-half 0 0
+          margin: 0 $space-half 0 0;
         }
       }
     }

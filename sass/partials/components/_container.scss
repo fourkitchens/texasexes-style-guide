@@ -7,8 +7,15 @@
 //////////////////////////////
 // @{container}
 // Styling for containing elements
-
-.container {
+//
+.container { 
   max-width: 70em;
   margin: 0 auto;
+
+  @include breakpoint($grid-medium) {
+    max-width: 90em;
+  }
+  @include breakpoint($grid-huge) {
+    max-width: 120em;
+  }
 }

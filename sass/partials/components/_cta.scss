@@ -5,19 +5,20 @@
 
 .cta {
   background-color: rgba($gray, .8);
-  padding: $space-doubled $space-doubled $space;
+  padding: $space-doubled $space $space-half;
+
+  h4 {
+    color: $white;
+  }
+  p {
+    color: $gray-lt3;
+    margin-bottom: $space;
+  }
 
   @include breakpoint($cta-med) {
-    h4 {
-      @include grid-span(10,1, $output-style:"float");
-    }
+    h4,
     p {
-      @include grid-span(10,1, $output-style:"float");
-      clear: left;
-    }
-    button {
-      float: right;
-      clear: right;
+      width: 100%;
     }
   }
 }

@@ -9,14 +9,17 @@
 .sidebar {
   .menu {
     margin: 0;
-    padding: $space 0;
+    padding: 0 0 $space-half 0;
     li {
       margin:0;
     }
     a {
-      padding: $space $space-doubled;
+      padding: $space-half $space;
       display: block;
       font-weight: 700;
+      &.active {
+        background-color: lighten($gray-lt3, 12%);
+      }
     }
   }
 }
@@ -35,31 +38,38 @@
     content: "";
     background-repeat: no-repeat;
     background-size: cover;
-    background-image: url(../images/icons/sidemenu-white.svg);
+    background-image: url(../images/icons/arrow-right.svg);
   }
 }
-#menu-toggle + #toggle-label {
-  @include button($blue, $white);
-  display: block;
 
-  @include breakpoint($sidebar-trigger) {
+#menu-toggle + #toggle-label {
+  border-radius: 0;
+  border-width: 0;
+  display: block;
+  max-width: 200px;
+  margin-bottom: 0;
+  padding: $space-half;
+  background-color: $gray-lt3;
+  color: $gray;
+
+  @include breakpoint($sidebar-mobile-trigger) {
     display: none;
   }
 }
 
-#menu-toggle + #toggle-label,
 #menu-toggle:checked + #toggle-label {
-  margin: 0; 
-}
-#menu-toggle:checked + #toggle-label {
-  @include button($gray-lt3, $blue);
+  background-color: $gray-lt3;
+  color: $blue-lt;
   display: block;
+  border-bottom-right-radius: 0;
+  border-bottom-left-radius: 0;
+
   &:before {
-    background-image: url(../images/icons/x-circle-blue.svg);
+    background-image: url(../images/icons/arrow-down-blue.svg);
   }
   &:hover {
     &:before {
-      background-image: url(../images/icons/x-circle.svg);
+      background-image: url(../images/icons/arrow-down-blue.svg);
     }
   }
 }

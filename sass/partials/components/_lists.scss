@@ -5,27 +5,39 @@
 // @{lists}
 // Styling for List-Ordered Components
 // ***** @TODO: *****
-// ----> Change for Drupal markup
+// ----> Change for Drupal markup - double-check margins for drupal.
 
-main { // for prototype only
-  .base--TEXT {
+ul {
+  li {
+    list-style: disc;
+  }
+}
+ol {
+  li {
+    list-style: decimal;
+  }
+}
+
+.content {
+  ul,
+  ol {
+    margin: $space $space $space-doubled;
     ul,
     ol {
-      margin: $space $space-doubled $space-doubled;
-      ul,
-      ol {
-        margin: $space;
-      }
+      margin: $space;
     }
-    ul {
-      li {
-        list-style-type: disc;
-      }
+  }
+}
+
+.sidebar {
+  ul {
+    li {
+      list-style: none;
     }
-    ol {
-      li {
-        list-style-type: decimal;
-      }
+  }
+  ol {
+    li {
+      list-style: none;
     }
   }
 }

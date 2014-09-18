@@ -13,25 +13,17 @@ footer {
     }
   }
   .menu {
-    width: 100%;
+    @extend %clearfix;
+    
     a {
       text-decoration: none;
       padding: $space-half $space;
       text-align: center;
-      float: left;
+      display: block;
       color: $gray-lt2;
       &:hover {
         color: $white;
-      }
-      @include breakpoint($main-menu) {
-        text-align: left;
-      }
-      @include breakpoint($main-menu-med) {
-        border-bottom: none;
-        text-align: center;
-        display: block;
-        float: none;
-      }          
+      }         
       &:hover {
         color: $white;
       }
@@ -40,21 +32,18 @@ footer {
       }
     }
     li {
-      display: inline;
-      @include layout(5) {
-        @include grid-span(1,1, $output-style:"float", $gutter:0);     
+      display: block;
+      width: 100%;
+      clear: both;
+      @include breakpoint($footer-med) {
+        @include layout(5) {
+          @include grid-span(1,1, $output-style:"float", $gutter:0);     
+        }
       }
-
-      @include breakpoint($main-menu) {
-        float: left;
+      @include breakpoint($footer-full) {
+        clear: none;
         width: auto;
-      }
-      @include breakpoint($main-menu-med) {
-        width: 100%;
-        float: left;
-        clear: both;
-        text-align: center;
-        margin: $space-half 0;
+        display: inline;
       }
     }
   }

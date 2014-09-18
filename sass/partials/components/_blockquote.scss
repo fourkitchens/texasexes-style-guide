@@ -12,26 +12,11 @@ blockquote {
   border-left: $space solid $orange-lt2;
   margin: $space 0;
   padding-left: $space;
-
-  @include grid-span(16,1);
-  clear: both;
-
-  @include breakpoint($quotes-full) {
-    @include grid-span(6,1);
-    clear: both;
-  }
+  max-width: 460px;
 }
 cite {
-  padding-left:$space-doubled;
   margin: 0 0 $space-doubled $space-doubled;
-
-  @include grid-span(16,1);
-  clear: both;
-
-  @include breakpoint($quotes-full) {
-    @include grid-span(6,1);
-    clear: both;
-  }
+  display: block;
 
 }
 // {blockquote}@

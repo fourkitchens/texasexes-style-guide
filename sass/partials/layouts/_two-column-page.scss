@@ -11,25 +11,17 @@
 // @{two-column-page}
 // Styling for Two-Column-Page Layouts
 .two-column-page {
-  width: 100%;
-  .sidebar {
-    @include grid-span(4,1, $gutter:0);
-    background-color: $gray-lt3;
-    padding: $space-tripled 0 $space;
 
-    @include breakpoint($sidebar-full) {
-      @include grid-span(16,1);
-      padding: $space 0;
+  .sidebar {
+    @include breakpoint($sidebar-left) {
+      @include grid-span(4,1, $gutter:0);
+      background-color: $gray-lt3;
+      padding: $space-tripled 0 $space;
     }
   }
   .content {
-    @include grid-span(12,5, $gutter:0);
-    background-color: rgba($white, .88);
-    padding: $space-doubled $space-doubled $space-tripled;
-
-    @include breakpoint($sidebar-full) {
-      width: 100%;
-      padding: $space;
+    @include breakpoint($sidebar-left) {
+      @include grid-span(12,5, $gutter:0);
     }
   }  
 }

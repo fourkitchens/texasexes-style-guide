@@ -1,0 +1,18 @@
+//////////////////////////////
+// Section Styles
+//
+// The partial and folder structure for this components should be as follows:
+// _sections.scss
+// main/wrap styles
+//////////////////////////////
+// @{sections}
+// Styling for section elements
+// 
+//////////////////////////////
+
+section,
+header,
+footer {  
+  @extend %clearfix;
+
+}

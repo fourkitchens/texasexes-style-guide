@@ -95,7 +95,7 @@ main { // main wrapper defined for prototype only
   .base--ul,
   .base--ol {
     li {
-      font-size: em(20); 
+      font-size: 18px; 
       line-height: 1.8;
       font-family: $serif;
       color:$gray-lt;
@@ -140,8 +140,8 @@ ol.base--ol {
 
 // PROTOTYPE ONLY - Delete once in Drupal
 [data-sp-class="navigation--search"] {
-  padding: $space/3;
-  font-size: em(14);
+  padding: $space-one-sixth;
+  font-size:14px;
 }
 
 // Forms -- radios

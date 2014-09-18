@@ -1,42 +1,33 @@
 //////////////////////////////
 // Logo Components
 //
-// The partial and folder structure for this components should be as follows:
-// _logo.scss
-// logo (folder)
-//   _extends.scss
-//   _mixins.scss
-//   _variables.scss
-//
-// Automatic Sass parsing is done through special comment blocks
-//  - Start styling block for base components: @{components}
-//  - End styling block for base components:   {components}@
-//
-//  - Start styling block for specific components aspect: @{components--aspect}
-//  - End styling block for specific components aspect:   {components--aspect}@
 //////////////////////////////
-
+// ***** @TODO: *****
+// ----> Add SVG Fallback PNG logo - use modernizr?
+// ----> IE8 background-size from World Pulse
+// ----> Taylor knows what this is - show Joe how it works
 
 //////////////////////////////
 // @{logo}
 // Styling for Logo Components
 .logo {
   a { 
-    background-image:url(/images/logos/logo.svg);
-    background-repeat: no-repeat;
-    background-size: cover;
-    background-position: left;
-    margin: 0;
+    background: transparent image-url('logos/logo.svg') center center no-repeat;  
+    margin: 0 auto;
     display: block;
-    text-indent: -9999em;
-    width: 300px;
-    height: auto;
-    @include breakpoint($logo-full) {
-      clear: both;
-      background-position: center;   
-      background-size: contain;
-      margin: 0 auto;
+    max-width: 300px;
+    height: 0;
+    background-size: contain;
+    padding-bottom: 20%;
+    text-indent: 100%;
+    white-space: nowrap;
+    overflow: hidden;
+
+
+    @include breakpoint($logo-half) {
+      background-position: left;
       min-height: 100px;
+      margin: 0;
     }
   }
 }

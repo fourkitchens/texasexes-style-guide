@@ -39,10 +39,11 @@ $browser-minimum-versions: (
 @import "partials/global/config";
 @import "partials/global/functions";
 @import "partials/global/variables";
-@import "partials/global/typography";
 @import "partials/global/extras";
 @import "partials/global/mixins";
 @import "partials/global/extends";
+@import "partials/global/typography";
+
 //////////////////////////////
 
 //////////////////////////////
@@ -60,8 +61,7 @@ $browser-minimum-versions: (
 @import "partials/components/footer-menu";
 @import "partials/components/header";
 @import "partials/components/images";
-@import "partials/components/input-range";
-@import "partials/components/input-text";
+@import "partials/components/forms";
 @import "partials/components/links";
 @import "partials/components/lists";
 @import "partials/components/logo";
@@ -70,6 +70,7 @@ $browser-minimum-versions: (
 @import "partials/components/paragraph";
 @import "partials/components/radio";
 @import "partials/components/search";
+@import "partials/components/sections";
 @import "partials/components/sidebar";
 @import "partials/components/sidebar-list";
 @import "partials/components/sidebar-menu";
