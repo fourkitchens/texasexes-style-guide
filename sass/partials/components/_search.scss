@@ -30,6 +30,8 @@
     border:$space-one-sixth solid $gray-lt3;
     background-color:lighten($gray-lt3, 8%);
     height:40px;
+    padding: $space-one-fourth;
+
     &:focus {
       outline-color: $green-dk;
       background-color: $white;

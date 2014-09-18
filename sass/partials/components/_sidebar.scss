@@ -7,12 +7,23 @@
 //////////////////////////////
 
 .sidebar {
-  display: none;
-  background-color: lighten($gray-lt3, 6%);
+  &.left {
+    display: none;
+    background-color: lighten($gray-lt3, 6%);
+    border-top: $space-one-sixth solid $blue-lt;
 
-  @include breakpoint($sidebar-left) {
-    display: block;
-    padding-top: $space-tripled;
+    @include breakpoint($sidebar-left) {
+      display: block;
+      padding-top: $space-tripled;
+      border-top: none;
+    }
+    .block-title {
+      display: none;
+
+      @include breakpoint($sidebar-mobile-trigger) {
+        display: block;
+      }
+    }
   }
   &.right {
     background-color: lighten($gray-lt3, 12%);
