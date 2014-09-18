@@ -17,7 +17,7 @@ main,
     }
     .search {
       @extend %clearfix;
-      padding: $space;
+      padding: $space-half;
 
       @include breakpoint($search-med) {
         @include grid-span(4,13);
