@@ -1,0 +1,18 @@
+# Site settings
+title: Texas Exes
+email: texasexes@fourkitchens.com
+description: "Texas Style"
+baseurl: ""
+
+# Build settings
+markdown: kramdown
+permalink: /:year/:month/:title
+exclude: [_site, package.json, Gruntfile.js, .gitignore, node_modules, _config.yml, config.rb, Gemfile, Gemfile.lock,]
+
+navigation:
+ - title: Archive
+   url: /archive
+ - title: About
+   url: /about
+ - title: Contact
+   url: /contact

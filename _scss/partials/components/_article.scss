@@ -1,0 +1,39 @@
+/**
+ * @file _article.scss
+ * Article styles
+ */
+article {
+  margin-bottom: $space-half;
+  &.node-teaser {
+    @include breakpoint($sidebar-left) {
+      padding: $space;
+    }
+  }
+  .inline {
+    display:block;
+    margin: 0 0 $space;
+    .field-label {
+      display: inline-block;
+    }
+    li {
+      list-style: none;
+      display: inline;
+    }
+  }
+  p {
+    margin-bottom: $space;
+  }
+  .node-readmore {
+    a {
+      display: block;
+      text-decoration: none;
+      font-weight: 700;
+      text-align: center;
+      padding: $space-one-third 0;
+      border:$space-one-eighth solid $gray-lt3;
+      &:hover {
+        border:$space-one-eighth solid $gray-lt2;
+      }
+    }
+  }
+}

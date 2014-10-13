@@ -1,0 +1,40 @@
+/**
+ * @file _radio.scss
+ * Styles for input[type="radio"]
+ * Note that these styles don't work in IE8, so the :not(#foo) selector string
+ * (which IE8 also doesn't support) keeps these rules from applying to that
+ * browser
+ */
+input[type="radio"] {
+  div:not(#foo) & {
+    opacity: 0;
+    float: left;
+    width: 1px;
+    padding: 0;
+    margin: 0;
+    &.required {
+      border-color: $red;
+    }
+
+    & + label {
+      margin: 0 $space-half $space-half 0;
+      float: left;
+      clear: none;
+      @include button(lighten($gray-lt2,15%), $gray-lt);
+      border-radius: $space-half;
+      &.required {
+        border-color: $red;
+        color: $red;
+      }
+    }
+
+    &:checked + label {
+      @include button($green, $white);
+    }
+  }
+}
+
+
+
+// {radio}@
+//////////////////////////////

@@ -1,0 +1,44 @@
+/**
+ * @file _views-exposed-form-txex-benefit-content-browser-panel-pane-1.scss
+ * Filterable exposed form for Benefits content
+ */
+
+#views-exposed-form-txex-benefit-content-browser-panel-pane-1 {
+  .view-filters {
+    padding-bottom: $space;
+  }
+  .bef-checkboxes {
+    .form-item {
+      display: inline-block;
+    }
+  }
+  .views-exposed-widget {
+    margin-bottom: $space-one-third;
+    display: block;
+    &.views-widget-filter-field_txex_benefit_cat_ref_target_id,
+    &.views-widget-filter-field_txex_benefit_eligible_ref_target_id {
+      @include breakpoint($sidebar-left) { 
+        display: inline-block;
+      }
+    }
+    &.views-widget-filter-field_txex_benefit_cat_ref_target_id {
+      @include breakpoint($sidebar-left) { 
+        margin-right: $space-half;
+      }
+    }
+    input[type="checkbox"] + label { // override these because of space.
+      margin: 0 $space-one-third $space-one-third 0;
+      padding: $space-one-third $space-one-fourth;
+
+    }
+    &.views-submit-button,
+    &.views-reset-button {
+      clear: both;
+      margin: 0;
+      display: block;
+      input[type="submit"] {
+        margin: 0;
+      }   
+    }
+  }
+}

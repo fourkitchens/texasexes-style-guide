@@ -1,0 +1,199 @@
+/**
+ * @file _entities-slick-js.scss
+ * Based on Ken Wheeler's slick.js 
+ * http://kenwheeler.github.io/slick
+ * 
+ * The "Entities" menu scrollable, responsively. This file addresses JS-added class styling only.
+ * Note: several default "slick packaged" styling has been altered.
+ * @TODO : Add Grunticon arrows to replace HTML unicodes.
+ *
+ */
+ @charset "UTF-8";
+
+
+// Default Variables
+
+$slick-arrow-color: $gray-lt2 !default;
+$slick-prev-character: '\25C0' !default;
+$slick-next-character: '\25B6' !default;
+$opacity-default: .75;
+$opacity-on-hover: 1;
+$opacity-not-active: .25;
+
+/* Slider */
+
+.slick-slider {
+  position: relative;
+  display: block;
+  box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  -webkit-touch-callout: none;
+  -webkit-user-select: none;
+  -khtml-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+  -ms-touch-action: pan-y;
+  touch-action: pan-y;
+  -webkit-tap-highlight-color: transparent;
+}
+.slick-list {
+  position: relative;
+  overflow: hidden;
+  display: block;
+  margin: 0;
+  padding: 0;
+
+  &:focus {
+    outline: none;
+  }
+
+  .slick-loading & {
+    background: #fff image-url("ajax-loader.gif") center center no-repeat;
+  }
+
+  &.dragging {
+    cursor: pointer;
+    cursor: hand;
+  }
+}
+.slick-slider .slick-list,
+.slick-track,
+.slick-slide,
+.slick-slide img {
+  -webkit-transform: translate3d(0, 0, 0);
+  -moz-transform: translate3d(0, 0, 0);
+  -ms-transform: translate3d(0, 0, 0);
+  -o-transform: translate3d(0, 0, 0);
+  transform: translate3d(0, 0, 0);
+}
+.slick-track {
+  position: relative;
+  left: 0;
+  top: 0;
+  display: block;
+  zoom: 1;
+
+  &:before,
+  &:after {
+    content: "";
+    display: table;
+  }
+
+  &:after {
+    clear: both;
+  }
+
+  .slick-loading & {
+    visibility: hidden;
+  }
+}
+.slick-slide {
+  float: left;
+  height: 100%;
+  min-height: 1px;
+  [dir="rtl"] & {
+    float: right;
+  }
+  img {
+    display: block;
+  }
+  &.slick-loading img {
+    display: none;
+  }
+
+  display: none;
+
+  &.dragging img {
+    pointer-events: none;
+  }
+
+  .slick-initialized & {
+    display: block;
+  }
+
+  .slick-loading & {
+    visibility: hidden;
+  }
+
+  .slick-vertical & {
+    display: block;
+    height: auto;
+    border: 1px solid transparent;
+  }
+}
+
+/* Arrows */
+.slick-next {
+  @include background-image(linear-gradient(left, rgba(255,255,255,0) 0%,rgba(255,255,255,0.05) 24%,rgba(255,255,255,0.5) 60%,rgba(255,255,255,1) 100%));
+}
+.slick-prev {
+  @include background-image(linear-gradient(left, rgba(255,255,255,1) 0%,rgba(255,255,255,0.5) 40%,rgba(255,255,255,0.05) 76%,rgba(255,255,255,0) 100%));
+}
+.slick-prev,
+.slick-next {
+  position: absolute;
+  display: block;
+  height: 60px;
+  width: 30px;
+  line-height: 0;
+  font-size: 0;
+  cursor: pointer;
+  color: transparent;
+  background-color: transparent;
+  top: 0;
+  margin-top: 0;
+  padding: 0;
+  border: none;
+  outline: none;
+  &:hover, &:focus {
+    outline: none;
+    background: transparent;
+    color: transparent;
+    &:before {
+      opacity: $opacity-on-hover;
+    }
+  }
+  &.slick-disabled {
+    background: transparent;
+    color: transparent;
+  }
+  &.slick-disabled:before {
+    opacity: $opacity-not-active;
+    color: transparent;
+  }
+}
+.slick-prev:before, .slick-next:before {
+  font-size: 20px;
+  line-height: 1;
+  color: $slick-arrow-color;
+  opacity: $opacity-default;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+.slick-prev {
+  left: 0;
+  [dir="rtl"] & {
+    left:  auto;
+    right: 0;
+  }
+  &:before {
+    content: $slick-prev-character;
+    [dir="rtl"] & {
+      content: $slick-next-character;
+    }
+  }
+}
+.slick-next {
+  right: 0;
+  [dir="rtl"] & {
+    left:  0;
+    right: auto;
+  }
+  &:before {
+    content: $slick-next-character;
+    [dir="rtl"] & {
+      content: $slick-prev-character;
+    }
+  }
+}

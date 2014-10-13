@@ -1,0 +1,132 @@
+//////////////////////////////
+// Typography
+// _search.scss
+//////////////////////////////
+//
+// This parial seeks to control 
+// all type-related size, line height,
+// and base styling treatments.
+//
+//////////////////////////////
+
+html {
+  font-size: 16px;
+  line-height: 1.2;
+  font-family: $serif;
+  font-weight: 500;
+}
+// Basic elements
+p {
+  line-height: 1.5;
+  color: $gray;
+  margin-bottom: $space-doubled;
+  max-width: 632px; // for controlling ideal character count measure <= 72 characters
+}
+em, i {
+  font-style: italic;
+}
+strong, b {
+  font-weight: 800;  
+}
+blockquote {
+  font-weight: 800;  
+  font-size:30px;
+  line-height: 1.4;
+  font-style: italic;
+}
+cite {
+  font-family: $sans49;
+  font-style: normal;
+  text-transform: uppercase;
+  font-size:24px;
+  color: $gray-lt;
+  span {
+    color: $gray-lt2; 
+  }
+}
+figcaption {
+  color: $gray-lt; 
+  padding: $space-half;
+  border-bottom: $space-one-tenth solid $gray-lt3;
+  span {
+    font-family: $sans49;
+    text-transform: uppercase;
+    font-style: normal;
+    letter-spacing: $space-one-twelfth;
+  }
+}
+
+// Heading font family, weight, and margin
+h1 {
+  font-family: $sans49;
+  line-height: 1.2;
+  font-weight: 400;
+  margin-bottom: $space-half;
+}
+
+h2,
+h3,
+h4,
+h5,
+h6 {
+  margin-bottom: $space;
+}
+h2,
+h5,
+h6 {
+  font-family: $sans;
+  font-weight: 400;
+  line-height: 1.2;
+}
+h3 {
+  font-family: $serif;
+  font-weight: 700;
+  line-height: 1.5;
+}
+h4 {
+  font-family: $sans49;
+  line-height: 1.2;
+  font-weight: 400;
+}
+
+
+// Heading font sizes 
+h1 {
+  font-size:50px;
+  text-transform: uppercase;
+  color: $gray-dk;
+}
+h2 {
+  font-size:30px;
+  color: $gray-lt;
+  text-transform: uppercase;
+  border-bottom: $space-one-eighth solid $gray-lt3;
+}
+h3 {
+  font-size:28px;
+  color: $gray-lt;
+}
+h4 {
+  font-size:24px;
+  color: $gray-lt;
+  text-transform: uppercase;
+  letter-spacing: $space-one-twelfth;
+}
+h5 {
+  font-size:20px;
+  color: $gray;
+  text-transform: uppercase;
+}
+h6 {
+  color: $gray;
+}
+
+ul,
+ol {
+  color:$gray-lt;
+  line-height: 2;
+}
+
+code, kbd, pre, samp {
+  font-family: $monospace;
+}

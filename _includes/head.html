@@ -1,0 +1,18 @@
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>{% if page.meta_title %}{{ page.meta_title }}{% else %}{{ site.title }}{% endif %}</title>
+    <meta name="viewport" content="width=device-width">
+    <meta name="description" content="{% if page.meta_description %}{{ page.meta_description }}{% else %}{{ site.description }}{% endif %}">
+    <link rel="shortcut icon" href="/favicon.ico" />
+    <link rel="canonical" href="{{ page.url | replace:'index.html','' | prepend: site.baseurl | prepend: site.url }}">
+
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="{{ "/css/style.css" | prepend: site.baseurl }}">
+    <script type="text/javascript" src="{{"/js/min/main.min.js"| prepend: site.baseurl }}"></script>
+    
+    <!-- Typekit -->
+    <script type="text/javascript" src="//use.typekit.net/gfx0gri.js"></script>
+    <script type="text/javascript">try{Typekit.load();}catch(e){}</script>    
+
+</head>

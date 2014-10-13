@@ -1,0 +1,16 @@
+/**
+ * @file _blockquote.scss
+ * Blockquotes and citations
+ */
+
+blockquote {
+  border-left: $space solid $orange-lt2;
+  margin: $space 0;
+  padding-left: $space;
+  max-width: 460px;
+
+  cite {
+    margin: 0 0 $space-doubled $space-doubled;
+    display: block;
+  }
+}

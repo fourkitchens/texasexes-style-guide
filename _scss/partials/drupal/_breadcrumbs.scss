@@ -1,0 +1,18 @@
+/**
+ * @file _breadcrumbs.scss
+ * Breadcrumbs
+ */
+
+.breadcrumb {
+  color: $gray-lt2;
+  border-bottom:$space-one-sixth solid $gray-lt3;
+  padding: $space;
+  margin-bottom: $space-doubled;
+  a {
+    color: $gray-lt2;
+    padding: $space;
+    &:hover {
+      color: $gray;
+    }
+  }
+}

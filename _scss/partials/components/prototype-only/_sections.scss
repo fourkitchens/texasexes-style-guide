@@ -1,0 +1,201 @@
+//////////////////////////////
+// Prototype-Only / Sections
+//
+// The partial and folder structure for this components should be as follows:
+// _sections.scss
+// 
+//
+////// This file is full of styles that can be ignored. Style prototypes requires some interesting resets.
+
+.base--TEXT {
+  p {
+    @include breakpoint($paragraph-full) {
+      @include grid-span(11,1);
+      clear: both;
+    }
+    @include breakpoint($paragraph-medium) {
+      @include grid-span(9,1);
+      clear: both;
+    }
+  }
+}
+p.base--p {
+  @include breakpoint($paragraph-full) {
+    @include grid-span(11,1);
+    clear: both;
+  }
+  @include breakpoint($paragraph-medium) {
+    @include grid-span(9,1);
+    clear: both;
+  }  
+}
+
+//////////////////////////////
+// @{_sections}
+// Styling for Prototype-Only / Sections
+
+[data-sp-class="section--group"] {
+  padding: 0;
+  margin: 0 auto;
+  clear: both;
+  display: block;
+  width: 100%;
+}
+li[data-sp-class="section--group"] + li[data-sp-class="section--group"] {
+  margin: 0 0 $space-tripled;
+  float: left;
+}
+ul[data-sp-class],
+[data-sp-class="section--header"] {
+  padding: $space;
+  margin: 0 auto;
+}
+p.info,
+.base--TEXT,
+.base--em,
+.base--img,
+.base--link,
+.base--a,
+.base--p,
+.base--strong,
+.base--h1,
+.base--h2,
+.base--h3,
+.base--h4,
+.base--h5,
+.base--h6,
+.base--mixed-list,
+.size-info,
+.base--ol,
+.base--ul,
+.base--FORM,
+fieldset.ng-scope {
+  padding: 0 $space;
+}
+.base--button,
+.base--select {
+  margin-left: $space;
+}
+
+// clear things
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+ul,
+ol {
+  clear: both;
+}
+
+// Lists 
+main { // main wrapper defined for prototype only
+  .base--TEXT,
+  .base--ul,
+  .base--ol {
+    li {
+      font-size: 18px; 
+      line-height: 1.8;
+      font-family: $serif;
+      color:$gray-lt;
+    }
+  }
+}
+
+// Styling for List-Ordered Components
+
+// PROTOTYPE ONLY - Delete once in Drupal
+
+ul.base--ul {
+  margin: $space $space-doubled $space-doubled;
+  li {
+    list-style-type: disc;        
+  }
+  ul.base--ul {
+    margin: $space;
+    li {
+      list-style-type: disc;        
+    }
+  }
+}
+ol.base--ol {
+  margin: $space $space-doubled $space-doubled;
+  li {
+    list-style-type: decimal;        
+  }
+  ol.base--ol {
+    margin: $space;
+    li {
+      list-style-type: decimal;        
+    }
+  }
+  ul.base--ul {
+    margin: $space;
+    li {
+      list-style-type: disc;        
+    }
+  }  
+}
+
+// PROTOTYPE ONLY - Delete once in Drupal
+[data-sp-class="navigation--search"] {
+  padding: $space-one-sixth;
+  font-size:14px;
+}
+
+// Forms -- radios
+ // PROTOTYPE ONLY - Delete once in Drupal
+span:not(#foo) > input[type="radio"] {
+  opacity: 0;
+  float: left;
+  width: 1px;
+  padding: 0;
+  margin:0;
+  &.required {
+    border-color: $red;
+  }
+}
+span:not(#foo) > input[type="radio"] + label {
+  margin: $space;
+  clear: none;
+  @include button(lighten($gray-lt2,40%), $gray-lt);
+  &.required {
+    border-color: $red;
+    color: $red;
+  }
+}
+span:not(#foo) > input[type='radio']:checked + label {
+  @include button($green, $white);
+}
+
+// Forms -- checkboxes
+// PROTOTYPE ONLY - Delete once in Drupal
+span:not(#foo) > input[type="checkbox"],
+li:not(#foo) > input[type="checkbox"] {
+  opacity: 0;
+  float: left;
+  width: 1px;
+  padding: 0;
+  margin:0;
+  &.required {
+    border-color: $red;
+  }
+}
+span:not(#foo) > input[type="checkbox"] + label,
+li:not(#foo) > input[type="checkbox"] + label {
+  margin: $space;
+  clear: none;
+  @include button(lighten($gray-lt2,40%), $gray-lt);
+  &.required {
+    border-color: $red;
+    color: $red;
+  }  
+}
+span:not(#foo) > input[type='checkbox']:checked + label,
+li:not(#foo) > input[type='checkbox']:checked + label {
+  @include button($green, $white);
+  a {
+    color: $white;
+  }
+}

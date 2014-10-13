@@ -1,0 +1,11 @@
+/**
+ * @file _tables.scss
+ * Styles for all table elements
+ */
+table {
+  display: block;
+}
+th,
+td {
+  padding: $space-one-eighth;
+}

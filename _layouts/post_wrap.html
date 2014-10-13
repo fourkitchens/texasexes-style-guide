@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html>
+
+  {% include head.html %}
+
+    <body {% if page.page-class %}class="{{ page.page-class }}"{% endif %}>
+    {% include header.html %}
+    {% include featured_image.html %}
+    {% include post_summary.html %}
+    <div class="page-wrapper{% if page.page-class %} {{ page.page-class }}{% endif %}">
+      <div class="wrap post">
+       {{ content }}
+      </div>
+
+    </div><!--/.page-wrap-->
+
+    {% include footer.html %}
+
+    </body>
+</html>

@@ -1,0 +1,21 @@
+//////////////////////////////
+// Container Element Styles
+//
+// The partial and folder structure for this components should be as follows:
+// _container.scss
+// main/wrap styles
+//////////////////////////////
+// @{container}
+// Styling for containing elements
+//
+.container { 
+  max-width: 70em;
+  margin: 0 auto;
+
+  @include breakpoint($grid-medium) {
+    max-width: 80em;
+  }
+  @include breakpoint($grid-huge) {
+    max-width: 100em;
+  }
+}

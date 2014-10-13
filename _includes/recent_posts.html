@@ -1,0 +1,8 @@
+<div class="recent fade">
+  <h4>Recent posts:</h4>
+  <ul>     
+    {% for post in site.posts limit:3 %}
+      <li><a href="{{ post.url }}">{{ post.title }}</a></li>
+    {% endfor %}
+  </ul> 
+</div>                

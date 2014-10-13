@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html>
+
+  {% include head.html %}
+
+    <body class="page{% if page.page-class %} {{ page.page-class }}{% endif %}">
+
+    {% include header.html %}
+    {% include featured_image.html %}
+
+    <div class="page-wrapper{% if page.page-class %} {{ page.page-class }}{% endif %}">
+      <div class="container">
+      {{ content }}
+      </div>
+    </div>
+
+    {% include footer.html %}
+    </body>
+</html>

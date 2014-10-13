@@ -1,0 +1,24 @@
+/**
+ * @file _datepicker.scss
+ * Styles for UI Datepicker popup
+ */
+
+.ui-datepicker {
+  background-color: $white;
+  @include box-shadow(0 2px 8px lighten($gray-lt2, 2%));
+}
+.ui-datepicker-calendar {
+  padding:$space;
+}
+.ui-datepicker-title {
+  padding-top: $space-half;
+}
+.ui-datepicker-header {
+  padding:$space;
+  text-align: center;
+  background-color: $gray-lt3;
+  a {
+    padding: 0 $space-one-third;
+    cursor: pointer;
+  }
+}

@@ -1,0 +1,15 @@
+/**
+ * @file _blocks.scss
+ */
+
+.panel-pane, .pane-block {
+  @extend %clearfix;
+
+  .pane-title {
+    border-bottom: $space-one-sixth solid lighten($gray-lt2, 20%);
+  }
+
+  + .panel-pane, + .pane-block {
+    margin-top: $space 0 0;
+  }
+}

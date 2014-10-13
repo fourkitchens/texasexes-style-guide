@@ -1,0 +1,28 @@
+/**
+ * @file _field-txex-benefit-cat-ref.scss
+ * The benefit category field display for benefit nodes
+ */
+
+%field-txex-benefit-cat-ref,
+.field-txex-benefit-cat-ref {
+  margin: 0 0 $space-half 0;
+  clear: both; // Don't let this float next to the benefit thumbnail in the view
+  text-transform: uppercase;
+  font-family: $sans;
+  color: $gray-lt2;
+
+  .view & {
+    font-size: 14px;
+  }
+
+  li {
+    display: inline-block;
+    padding-right: $space-one-third;
+  }
+
+  li + li:before {
+    content: " | ";
+    color: $gray-lt3;
+    padding-right: $space-one-third;
+  }
+}

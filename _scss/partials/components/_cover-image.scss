@@ -1,0 +1,27 @@
+/**
+ * @file _cover-image.scss
+ */
+
+.cover-image {
+  margin: .1em 0 0;
+  position: relative;
+
+  @include breakpoint($cover-photo-full) {
+    margin-bottom: -8em;
+    z-index: -1;
+  }
+
+  @include breakpoint($cover-photo-medium) {
+    margin-bottom: -16em;
+  }
+
+  @include breakpoint($cover-photo-huge) {
+    margin-bottom: -30em;
+  }
+  
+  img {
+    display: block;
+    margin: 0 auto;
+    width: 100%;
+  }
+}

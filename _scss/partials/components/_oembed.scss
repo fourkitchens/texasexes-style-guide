@@ -1,0 +1,22 @@
+/**
+ * @file _oembed.scss
+ * Styles for oEmbed containers
+ */
+.oembed {
+  margin-bottom: $space;
+
+  > a {
+    display: none;
+  }
+
+  &.oembed-video {
+    .oembed-content {
+      @include ir();
+    }
+  }
+
+  iframe {
+    max-width: 100%;
+    width: 100%;
+  }
+}

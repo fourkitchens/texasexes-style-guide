@@ -1,0 +1,9 @@
+/**
+ * @file _video.scss
+ * @TODO: These won't be the right classes. And ir() will need an argument
+ */
+.video {
+}
+.fluid-video {
+  @include ir(); // include intrinsic ratio for scaling responsiveness.
+}

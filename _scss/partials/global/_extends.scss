@@ -1,0 +1,9 @@
+/**
+ * @file _extends.scss
+ * Extendable classes go here
+ */
+
+.clearfix,
+%clearfix {
+  @include clearfix;
+}
