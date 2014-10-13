@@ -96,7 +96,10 @@ footer:after,
 .field-txex-benefit-redeem-link:after,
 .field-txex-gallery-images:after,
 ul.pager:after,
-ul.primary:after {
+ul.primary:after,
+.homepage article:after,
+.homepage .panel:after,
+.guide .component:after {
   content: "";
   display: table;
   clear: both; }
@@ -2114,73 +2117,56 @@ ul.primary {
       background-color: #2a8e97;
       border-color: #227178; }
 
-.video-paragraph {
-  width: 100%;
-  float: right;
-  margin-left: 0;
-  margin-right: 0;
-  clear: none; }
-  .video-paragraph .video {
-    width: 60.86957%;
+.homepage article {
+  padding: 24px; }
+.homepage .pane-title {
+  padding: 24px 24px 12px; }
+.homepage .panel {
+  background-color: #d7d7d7; }
+@media (min-width: 48.75em) {
+  .homepage .news {
+    clear: both;
+    width: 100%; } }
+@media (min-width: 67.5em) {
+  .homepage .news {
+    width: 37.5%;
     float: left;
     margin-right: -100%;
     margin-left: 0;
-    clear: none; }
-    @media (min-width: 0) and (max-width: 51.25em) {
-      .video-paragraph .video {
-        width: 100%;
-        float: right;
-        margin-left: 0;
-        margin-right: 0;
-        clear: none; } }
-  .video-paragraph .video-content {
-    width: 34.78261%;
+    clear: none; } }
+@media (min-width: 48.75em) {
+  .homepage .announcements {
+    width: 50%;
     float: right;
     margin-left: 0;
     margin-right: 0;
-    clear: none; }
-    @media (min-width: 0) and (max-width: 51.25em) {
-      .video-paragraph .video-content {
-        width: 100%;
-        float: right;
-        margin-left: 0;
-        margin-right: 0;
-        clear: none;
-        padding: 48px; } }
-
-.image-paragraph {
-  width: 100%;
-  float: right;
-  margin-left: 0;
-  margin-right: 0;
-  clear: none; }
-  .image-paragraph .image {
-    width: 60.86957%;
+    clear: none; } }
+@media (min-width: 67.5em) {
+  .homepage .announcements {
+    width: 25%;
+    float: right;
+    margin-left: 0;
+    margin-right: 0;
+    clear: none; } }
+@media (min-width: 26.5625em) and (max-width: 61.8125em) {
+  .homepage .announcements .node-txex-announce {
+    width: 100%;
+    display: inline-block;
+    vertical-align: middle; } }
+@media (min-width: 48.75em) {
+  .homepage .events {
+    width: 50%;
     float: left;
     margin-right: -100%;
     margin-left: 0;
-    clear: none; }
-    @media (min-width: 0) and (max-width: 51.25em) {
-      .image-paragraph .image {
-        width: 100%;
-        float: right;
-        margin-left: 0;
-        margin-right: 0;
-        clear: none; } }
-  .image-paragraph .image-content {
-    width: 34.78261%;
-    float: right;
-    margin-left: 0;
-    margin-right: 0;
-    clear: none; }
-    @media (min-width: 0) and (max-width: 51.25em) {
-      .image-paragraph .image-content {
-        width: 100%;
-        float: right;
-        margin-left: 0;
-        margin-right: 0;
-        clear: none;
-        padding: 48px; } }
+    clear: none; } }
+@media (min-width: 67.5em) {
+  .homepage .events {
+    width: 37.5%;
+    float: left;
+    margin-right: -100%;
+    margin-left: 37.5%;
+    clear: none; } }
 
 .one-column-page {
   padding-top: 24px; }
@@ -2234,3 +2220,7 @@ ul.primary {
     margin-right: -100%;
     margin-left: 25%;
     clear: none; } }
+
+.guide .component {
+  background-color: white;
+  padding: 48px 48px; }

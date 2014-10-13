@@ -62,9 +62,15 @@
 
 //////////////////////////////
 // LAYOUTS
-@import "partials/layouts/video-paragraph";
-@import "partials/layouts/image-paragraph";
+@import "partials/layouts/homepage";
 @import "partials/layouts/one-column-page";
 @import "partials/layouts/two-column-page";
 @import "partials/layouts/three-column-page";
 //////////////////////////////
+
+//////////////////////////////
+// PROTOTYPE ONLY
+@import "partials/components/prototype-only/sections";
+
+//////////////////////////////
+

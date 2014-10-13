@@ -1,0 +1,56 @@
+//////////////////////////////
+// Homepage Layout
+//
+// The partial and folder structure for this layouts should be as follows:
+// _homepage.scss
+//
+//////////////////////////////
+
+.homepage {
+  article {
+    @extend %clearfix; 
+    padding: $space;
+  }
+  .pane-title {
+    padding: $space $space $space-half;
+  }
+  .panel {
+    background-color: lighten($gray-lt3, 6%); 
+    @extend %clearfix; 
+  }
+
+  .news {
+    @include breakpoint($homepage-tablet) {
+      clear: both;
+      width: 100%;
+    }  
+    @include breakpoint($homepage-desktop) {
+      @include grid-span(6,1, $gutter:0);
+    }
+  }
+
+  .announcements {
+    @include breakpoint($homepage-tablet) {
+      @include grid-span(8,9, $gutter:0);
+    }    
+    @include breakpoint($homepage-desktop) {
+      @include grid-span(4,13, $gutter:0);
+    } 
+    .node-txex-announce {
+      @include breakpoint($sidebar-articles-mobile) {
+        width: 100%;
+        display: inline-block;  
+        vertical-align: middle;
+      }
+    }
+  }
+
+  .events {
+    @include breakpoint($homepage-tablet) {
+      @include grid-span(8,1, $gutter:0);
+    }     
+    @include breakpoint($homepage-desktop) {
+      @include grid-span(6,7, $gutter:0);
+    }    
+  }        
+}

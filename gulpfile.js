@@ -13,10 +13,11 @@ var changed = require('gulp-changed');
 var deploy = require("gulp-gh-pages");
 
 var paths = {
-  sass: ['_scss/**/*.scss'],
-  css: 'css',
+  css: '_site/css/',
   imagesSrc: ['_img/**/*'],
   imagesDest: 'img',
+  sass: '_scss/style.scss',
+  sassFiles: '_scss/**/*.scss',
   jekyll: ['**/*.html', '**/*.md', '!_site/**/*.html', '!node_modules/**/*'],
 };
 
@@ -51,7 +52,7 @@ gulp.task('images', function() {
 
 // Watch Files For Changes
 gulp.task('watch', function() {
-  gulp.watch(paths.sass, ['sass']);
+  gulp.watch(paths.sassFiles, ['sass']);
   gulp.watch(paths.imagesSrc, function() {
     runSequence(['images'], ['jekyll-rebuild']);
   });
