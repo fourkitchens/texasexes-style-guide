@@ -20,10 +20,13 @@
     }    
     .pane-title {
       border-bottom: 0;
-      color: $gray;
       font-family: $sans49;
+      letter-spacing: 1px;
+      @include breakpoint($cover-photo-homepage-mobile) {
+        color: $white;
+      }
       @include breakpoint($homepage-tablet) {
-        font-size: 50px;
+        font-size: 48px;
       }
     }
     .pane-content {
@@ -31,8 +34,21 @@
       margin: 0 auto;
     }
     p {
-      max-width: 100%;
-      font-size: 20px;
+      max-width: 100%; //override global max-width
+      @include breakpoint($cover-photo-homepage-mobile) {
+        color: $gray-lt3;
+      }      
+      @include breakpoint($homepage-tablet) {
+        font-size: 20px;
+      }
+    }
+    button {
+      @include breakpoint($homepage-tablet) {
+        padding: $space-one-third $space;
+        + button {
+          margin-left: $space-doubled;
+        } 
+      }     
     }
   }
   small {
@@ -50,7 +66,7 @@
   }
   .panel {
     @extend %clearfix; 
-    background-color: rgba($white, .78);
+    background-color: rgba($white, .88);
   }
 
   .news {

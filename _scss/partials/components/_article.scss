@@ -9,6 +9,12 @@ article {
       padding: $space;
     }
   }
+  ul {
+    max-width: 632px; // for controlling ideal character count measure <= 72 characters
+  }
+  li {
+    margin-bottom: $space-half; 
+  }
   .inline {
     display:block;
     margin: 0 0 $space;

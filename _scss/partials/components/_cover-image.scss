@@ -20,11 +20,17 @@
   }
 
   .homepage & {
+    @include breakpoint($cover-photo-homepage-hidden) {
+      display: none;     
+    }
+    @include breakpoint($cover-photo-homepage-mobile) {
+      margin-bottom: -20em;
+      z-index: -1;     
+    }
     @include breakpoint($cover-photo-full) {
       margin-bottom: -24em;
       z-index: -1;
     }
-
     @include breakpoint($cover-photo-medium) {
       margin-bottom: -40em;
     }

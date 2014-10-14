@@ -11,6 +11,19 @@
   .component {
     background-color: $white;
     @extend %clearfix;
-    padding: $space-doubled $space-doubled;
+    padding: $space $space $space-half;
+    border-bottom: $space-one-fifth dashed $gray-lt3;
+  }
+  form {
+    label {
+      &.radio,
+      &.checkbox {
+        padding: $space-half;
+        font-size: 18px;
+      }
+    }
+    .form-item {
+      clear: both;
+    }
   }
 }
