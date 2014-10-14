@@ -78,76 +78,76 @@
     }
     .texas-exes { // 1. entity bar - texas exes
       &:before {
-        background-image: url(../images/logos/seal-logo-black.svg);
+        background-image: url(../img/logos/seal-logo-black.svg);
       }
       &:hover {
         &:before {
-          background-image: url(../images/logos/seal-logo-blue.svg);
+          background-image: url(../img/logos/seal-logo-blue.svg);
         }
       }  
       &.active {
         &:before {
-          background-image: url(../images/logos/seal-logo.svg);
+          background-image: url(../img/logos/seal-logo.svg);
         }
       }              
     }
     .alcalde { // 2. entity bar - alcalde
       &:before {
-        background-image: url(../images/logos/alcalde.svg);
+        background-image: url(../img/logos/alcalde.svg);
       }
       &:hover {
         &:before {
-          background-image: url(../images/logos/alcalde.svg);
+          background-image: url(../img/logos/alcalde.svg);
         }
       }  
       &.active {
         &:before {
-          background-image: url(../images/logos/alcalde.svg);
+          background-image: url(../img/logos/alcalde.svg);
         }
       } 
     }
     .scholarships { // 3. entity bar - scholarships
       &:before {
-        background-image: url(../images/logos/scholarships.svg);
+        background-image: url(../img/logos/scholarships.svg);
       }
       &:hover {
         &:before {
-          background-image: url(../images/logos/scholarships.svg);
+          background-image: url(../img/logos/scholarships.svg);
         }
       }  
       &.active {
         &:before {
-          background-image: url(../images/logos/scholarships.svg);
+          background-image: url(../img/logos/scholarships.svg);
         }
       } 
     }         
     .gameday { // 4. entity bar - gameday
       &:before {
-        background-image: url(../images/logos/longhorn.svg);
+        background-image: url(../img/logos/longhorn.svg);
       }
       &:hover {
         &:before {
-          background-image: url(../images/logos/longhorn.svg);
+          background-image: url(../img/logos/longhorn.svg);
         }
       }  
       &.active {
         &:before {
-          background-image: url(../images/logos/longhorn.svg);
+          background-image: url(../img/logos/longhorn.svg);
         }
       }   
     } 
     .the-hook { // 5. entity bar - the hook
       &:before {
-        background-image: url(../images/logos/hook.svg);
+        background-image: url(../img/logos/hook.svg);
       }
       &:hover {
         &:before {
-          background-image: url(../images/logos/hook.svg);
+          background-image: url(../img/logos/hook.svg);
         }
       }  
       &.active {
         &:before {
-          background-image: url(../images/logos/hook.svg);
+          background-image: url(../img/logos/hook.svg);
         }
       }       
     }          

@@ -7,16 +7,50 @@
 //////////////////////////////
 
 .homepage {
+  &.user.panel {
+    text-align: center;
+    margin: 0 auto;
+    background-color: transparent;
+    padding: $space;
+    @include breakpoint($homepage-tablet) {
+      padding: $space $space $space-doubled;
+    }
+    @include breakpoint($homepage-desktop) {
+      padding: $space $space $space-tripled;
+    }    
+    .pane-title {
+      border-bottom: 0;
+      color: $gray;
+      font-family: $sans49;
+      @include breakpoint($homepage-tablet) {
+        font-size: 50px;
+      }
+    }
+    .pane-content {
+      max-width: 700px;
+      margin: 0 auto;
+    }
+    p {
+      max-width: 100%;
+      font-size: 20px;
+    }
+  }
+  small {
+    display: block;
+  }
   article {
     @extend %clearfix; 
     padding: $space;
+    h3 {
+      font-size: 20px;
+    }
   }
   .pane-title {
     padding: $space $space $space-half;
   }
   .panel {
-    background-color: lighten($gray-lt3, 6%); 
     @extend %clearfix; 
+    background-color: rgba($white, .78);
   }
 
   .news {
@@ -25,16 +59,27 @@
       width: 100%;
     }  
     @include breakpoint($homepage-desktop) {
-      @include grid-span(6,1, $gutter:0);
+      @include grid-span(6,7);
+    }
+    article {
+      @include breakpoint($homepage-tablet) {
+        @include layout(3) {
+          @include grid-span(1,1, $output-style:"float", $gutter:0);
+        }
+      }    
+      @include breakpoint($homepage-desktop) {
+        clear: both;
+        width: 100%;
+      }          
     }
   }
 
   .announcements {
     @include breakpoint($homepage-tablet) {
-      @include grid-span(8,9, $gutter:0);
+      @include grid-span(8,9);
     }    
     @include breakpoint($homepage-desktop) {
-      @include grid-span(4,13, $gutter:0);
+      @include grid-span(4,13);
     } 
     .node-txex-announce {
       @include breakpoint($sidebar-articles-mobile) {
@@ -47,10 +92,10 @@
 
   .events {
     @include breakpoint($homepage-tablet) {
-      @include grid-span(8,1, $gutter:0);
+      @include grid-span(8,1);
     }     
     @include breakpoint($homepage-desktop) {
-      @include grid-span(6,7, $gutter:0);
+      @include grid-span(6,1);
     }    
   }        
 }
