@@ -7,8 +7,12 @@
 .node-txex-announce {
   padding: $space;
 
-  .field-txex-announce-disp-title {
+  h2.field-txex-announce-disp-title {
     padding-top: $space;
+    font-family: $serif;
+    font-weight: 700;
+    font-size: 20px;
+    text-transform: none;     
   }
     @include breakpoint($sidebar-articles-mobile) {
       width: 49.5%;

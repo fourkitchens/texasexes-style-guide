@@ -7,6 +7,9 @@
 
   .pane-title {
     border-bottom: $space-one-sixth solid lighten($gray-lt2, 20%);
+    #{headings(2,4)} {
+      margin: 0;
+    }   
   }
 
   + .panel-pane, + .pane-block {
