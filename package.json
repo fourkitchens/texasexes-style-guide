@@ -1,22 +1,27 @@
 {
-  "name": "joe-tower",
+  "name": "texasexes-style-guide",
   "version": "0.1.0",
-  "repository": "https://github.com/joetower/joetower.com",
-  "description": "My blog",
-  "author": "Joe Tower",
+  "repository": "https://github.com/fourkitchens/texasexes-style-guide",
+  "description": "Texas Exes",
+  "author": "Four Kitchens",
   "devDependencies": {
     "browser-sync": "^0.8.2",
-    "gulp": "^3.8.6",
-    "gulp-autoprefixer": "0.0.8",
+    "gulp": "^3.6.2",
+    "gulp-autoprefixer": "0.0.7",
     "gulp-changed": "^0.3.0",
     "gulp-concat": "^2.2.0",
-    "gulp-gh-pages": "^0.3.3",
+    "gulp-gzip": "0.0.8",
     "gulp-imagemin": "^0.6.1",
     "gulp-jekyll": "0.0.0",
-    "gulp-minify-css": "^0.3.7",
+    "gulp-jshint": "^1.6.1",
+    "gulp-minify-css": "^0.3.4",
     "gulp-rename": "^1.2.0",
     "gulp-ruby-sass": "^0.5.0",
-    "gulp-uglify": "^0.3.1",
+    "gulp-strip-debug": "^0.3.0",
+    "gulp-uglify": "^0.3.0",
     "run-sequence": "^0.3.6"
+  },
+  "engines": {
+    "node": ">=0.8.0"
   }
 }

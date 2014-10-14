@@ -1,25 +1,32 @@
 var gulp = require('gulp');
 
-var sass = require('gulp-ruby-sass');
-var minifyCSS = require('gulp-minify-css');
-var prefix = require('gulp-autoprefixer');
-var imagemin = require('gulp-imagemin');
-var concat = require('gulp-concat');
-var uglify = require('gulp-uglify');
-var browserSync = require('browser-sync');
-var cp = require('child_process');
-var runSequence = require('run-sequence');
-var changed = require('gulp-changed');
-var deploy = require("gulp-gh-pages");
-
+// Include Our Plugins
+var jshint = require('gulp-jshint'),
+    sass = require('gulp-ruby-sass'),
+    minifyCSS = require('gulp-minify-css'),
+    prefix = require('gulp-autoprefixer'),
+    concat = require('gulp-concat'),
+    uglify = require('gulp-uglify'),
+    stripDebug = require('gulp-strip-debug'),
+    rename = require('gulp-rename'),
+    imagemin = require('gulp-imagemin'),
+    changed = require('gulp-changed'),
+    gzip = require('gulp-gzip'),
+    browserSync = require('browser-sync'),
+    cp = require('child_process'),
+    runSequence = require('run-sequence');
+    
 var paths = {
   css: '_site/css/',
   imagesSrc: ['_img/**/*'],
   imagesDest: 'img',
   sass: '_scss/style.scss',
+  scripts: ['js/*.js', '!js/slick-entities.js'],
   sassFiles: '_scss/**/*.scss',
   jekyll: ['**/*.html', '**/*.md', '!_site/**/*.html', '!node_modules/**/*'],
 };
+
+// Compile Our Sass
 
 gulp.task('sass', function() {
   browserSync.notify('<span style="color: grey">Running:</span> Sass compiling');
@@ -50,30 +57,13 @@ gulp.task('images', function() {
     .pipe(gulp.dest(paths.imagesDest));
 });
 
-// Watch Files For Changes
-gulp.task('watch', function() {
-  gulp.watch(paths.sassFiles, ['sass']);
-  gulp.watch(paths.imagesSrc, function() {
-    runSequence(['images'], ['jekyll-rebuild']);
-  });
-  gulp.watch(paths.jekyll, ['jekyll-rebuild']);
+// Lint Task
+gulp.task('lint', function() {
+  return gulp.src(paths.scripts)
+    .pipe(jshint())
+    .pipe(jshint.reporter('default'));
 });
 
-
-//////////////////////////////
-// BrowserSync Task
-//////////////////////////////
-gulp.task('browserSync', function () {
-  browserSync.init([
-    '_site/' + paths +  '/**/*.css',
-    '_site/**/*.html',
-  ], {
-    server: {
-      baseDir: '_site'
-    },
-    host: "localhost"
-  });
-});
 
 // Our 'build' tasks for jekyll server.
 gulp.task('jekyll-build', function (done) {
@@ -94,25 +84,6 @@ gulp.task('jekyll-rebuild', function() {
   });
 });
 
-
-gulp.task('server', function(cb) {
-  return runSequence(['images', 'sass'],
-    'jekyll-dev',
-    ['browserSync', 'watch'],
-    cb
-  );
-});
-
-gulp.task('serve', ['server']);
-
-gulp.task('build', function(cb) {
-  return runSequence(['sass', 'images'],
-    'jekyll-build',
-    cb
-  );
-});
-
-
 gulp.task('deploy', function(cb) {
   return runSequence(
     'build',
@@ -127,3 +98,49 @@ gulp.task('gh-pages', function () {
       cacheDir: '.tmp'
     })).pipe(gulp.dest('/tmp/gh-pages'));
 });
+
+
+// Watch Files For Changes
+gulp.task('watch', function() {
+  gulp.watch(paths.scripts, ['lint', 'jekyll-rebuild']);
+  gulp.watch(paths.sassFiles, ['sass']);
+  gulp.watch(paths.imagesSrc, function() {
+    runSequence(['images'], ['jekyll-dev'])
+  });
+  gulp.watch(paths.jekyll, ['jekyll-rebuild']);
+});
+
+
+//////////////////////////////
+// BrowserSync Task
+//////////////////////////////
+gulp.task('browserSync', function () {
+  browserSync.init([
+    '_site/' + paths +  '/**/*.css',
+    '_site/' + paths + '/**/*.js',
+    '_site/**/*.html',
+  ], {
+    server: {
+      baseDir: '_site'
+    },
+    host: "localhost"
+  });
+});
+
+// Build Task
+gulp.task('build', function() {
+  runSequence(['lint', 'sass'],
+    'jekyll-build'
+  );
+});
+
+gulp.task('default', ['build']);
+
+gulp.task('server', function() {
+  runSequence(['lint', 'images', 'sass'],
+    'jekyll-dev',
+    ['browserSync', 'watch']
+  );
+});
+
+gulp.task('serve', ['server']);
