@@ -17,12 +17,12 @@ var jshint = require('gulp-jshint'),
     runSequence = require('run-sequence');
     
 var paths = {
-  css: '_site/css/',
   imagesSrc: ['_img/**/*'],
   imagesDest: 'img',
   sass: '_scss/style.scss',
-  scripts: ['js/*.js', '!js/slick-entities.js'],
   sassFiles: '_scss/**/*.scss',
+  css: '_site/css/',
+  scripts: ['!js/*.js', '!js/slick-entities.js'],
   jekyll: ['**/*.html', '**/*.md', '!_site/**/*.html', '!node_modules/**/*'],
 };
 
@@ -43,6 +43,7 @@ gulp.task('sass', function() {
       ]
     }))
     .pipe(prefix("last 2 versions", "> 1%"))
+    .pipe(gulp.dest('css'))
     .pipe(gulp.dest(paths.css))
     .pipe(browserSync.reload({stream:true}));
 });
@@ -55,13 +56,6 @@ gulp.task('images', function() {
     .pipe(imagemin({optimizationLevel: 5}))
     // Put them in the images directory.
     .pipe(gulp.dest(paths.imagesDest));
-});
-
-// Lint Task
-gulp.task('lint', function() {
-  return gulp.src(paths.scripts)
-    .pipe(jshint())
-    .pipe(jshint.reporter('default'));
 });
 
 
@@ -102,7 +96,6 @@ gulp.task('gh-pages', function () {
 
 // Watch Files For Changes
 gulp.task('watch', function() {
-  gulp.watch(paths.scripts, ['lint', 'jekyll-rebuild']);
   gulp.watch(paths.sassFiles, ['sass']);
   gulp.watch(paths.imagesSrc, function() {
     runSequence(['images'], ['jekyll-dev'])
@@ -116,8 +109,7 @@ gulp.task('watch', function() {
 //////////////////////////////
 gulp.task('browserSync', function () {
   browserSync.init([
-    '_site/' + paths +  '/**/*.css',
-    '_site/' + paths + '/**/*.js',
+    '_site/' + paths +  '/*.css',
     '_site/**/*.html',
   ], {
     server: {
@@ -129,7 +121,7 @@ gulp.task('browserSync', function () {
 
 // Build Task
 gulp.task('build', function() {
-  runSequence(['lint', 'sass'],
+  runSequence(['sass'],
     'jekyll-build'
   );
 });
@@ -137,7 +129,7 @@ gulp.task('build', function() {
 gulp.task('default', ['build']);
 
 gulp.task('server', function() {
-  runSequence(['lint', 'images', 'sass'],
+  runSequence(['images', 'sass'],
     'jekyll-dev',
     ['browserSync', 'watch']
   );
