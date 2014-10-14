@@ -1,14 +1,14 @@
-joetower.com
+texasexes-style-guide
 ============
 
-My Jekyll website
+A Jekyll styleguide
 
-## Licensing
+## installation
 
-### Source code
-All code is licensed under the [MIT license](http://opensource.org/licenses/MIT)
+1 ```clone``` the repo.
+2 run ```bundle install```
+3 run ```npm install```
+4 run ```bower install```
+5 ```gulp serve```
+6 ```gulp deploy``` to deploy updates to ```gh-pages```
 
-### My words / images
-My content (my text / images / words) are licensed under [Creative Commons Attribution-NonCommercial 3.0 Unported](http://creativecommons.org/licenses/by-nc/3.0/) ( CC BY-NC 3.0 ) 
-
-Please contact me for any commercial use.
