@@ -13,7 +13,5 @@ A Jekyll styleguide
 
 4 run ```bower install```
 
-5 ```gulp serve```
-
-6 ```gulp deploy``` to deploy updates to ```gh-pages```
+5 run ```gulp serve```
 
