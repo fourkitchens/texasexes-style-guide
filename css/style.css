@@ -988,7 +988,7 @@ div:not(#foo) input[type="checkbox"] {
       clear: none; } }
   #footer .seal .seal-image {
     display: block;
-    background: transparent url('/img/logos/seal-logo.svg?1413330214') center center no-repeat;
+    background: transparent url('/img/logos/seal-logo.svg?1413382548') center center no-repeat;
     -webkit-background-size: contain;
     background-size: contain;
     width: 20%;
@@ -1242,7 +1242,7 @@ ol {
   max-width: 300px;
   overflow: hidden; }
   .logo h1 {
-    background: transparent url('/img/logos/logo.svg?1413330214') center center no-repeat;
+    background: transparent url('/img/logos/logo.svg?1413382548') center center no-repeat;
     margin: 0 auto;
     height: 0;
     -webkit-background-size: contain;
@@ -1874,7 +1874,7 @@ td {
   .slick-list:focus {
     outline: none; }
   .slick-loading .slick-list {
-    background: white url('/img/ajax-loader.gif?1413330214') center center no-repeat; }
+    background: white url('/img/ajax-loader.gif?1413382548') center center no-repeat; }
   .slick-list.dragging {
     cursor: pointer;
     cursor: hand; }
@@ -2345,3 +2345,32 @@ ul.primary {
   font-size: 18px; }
 .guide form .form-item {
   clear: both; }
+
+/**
+ * @file _menu-icons.scss
+ * Get icons to show on prototype.
+ */
+.icon-menu {
+  background-image: url(../img/icons/menu.svg); }
+  .icon-menu:hover {
+    background-image: url(../img/icons/menu-blue.svg); }
+
+.icon-login {
+  background-image: url(../img/icons/login.svg); }
+  .icon-login:hover {
+    background-image: url(../img/icons/login-blue.svg); }
+
+.icon-logout {
+  background-image: url(../img/icons/logout.svg); }
+  .icon-logout:hover {
+    background-image: url(../img/icons/logout-blue.svg); }
+
+.icon-join {
+  background-image: url(../img/icons/join.svg); }
+  .icon-join:hover {
+    background-image: url(../img/icons/join-blue.svg); }
+
+.icon-give {
+  background-image: url(../img/icons/give.svg); }
+  .icon-give:hover {
+    background-image: url(../img/icons/give-blue.svg); }
