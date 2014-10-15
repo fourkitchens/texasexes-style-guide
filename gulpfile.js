@@ -22,12 +22,11 @@ var paths = {
   sass: '_scss/style.scss',
   sassFiles: '_scss/**/*.scss',
   css: '_site/css/',
-  scripts: ['!js/*.js', '!js/slick-entities.js'],
+  scripts: ['js/*.js', '!js/slick-entities.js', '!js/jquery-1.11.1.js'],
   jekyll: ['**/*.html', '**/*.md', '!_site/**/*.html', '!node_modules/**/*'],
 };
 
 // Compile Our Sass
-
 gulp.task('sass', function() {
   browserSync.notify('<span style="color: grey">Running:</span> Sass compiling');
   return gulp.src(paths.sass)
@@ -65,6 +64,13 @@ gulp.task('jekyll-build', function (done) {
     .on('close', done);
 });
 
+// Lint Task
+gulp.task('lint', function() {
+  return gulp.src(paths.scripts)
+    .pipe(jshint())
+    .pipe(jshint.reporter('default'));
+});
+
 // Our 'dev' tasks for jekyll server, note: it builds the files, but uses extra configuration.
 gulp.task('jekyll-dev', function (done) {
   browserSync.notify('<span style="color: grey">Running:</span> $ jekyll build');
@@ -96,6 +102,7 @@ gulp.task('gh-pages', function () {
 
 // Watch Files For Changes
 gulp.task('watch', function() {
+  gulp.watch(paths.scripts, ['lint', 'jekyll-rebuild']);
   gulp.watch(paths.sassFiles, ['sass']);
   gulp.watch(paths.imagesSrc, function() {
     runSequence(['images'], ['jekyll-dev'])
@@ -110,6 +117,7 @@ gulp.task('watch', function() {
 gulp.task('browserSync', function () {
   browserSync.init([
     '_site/' + paths +  '/*.css',
+    '_site/' + paths +  '/*.js',
     '_site/**/*.html',
   ], {
     server: {
@@ -121,7 +129,7 @@ gulp.task('browserSync', function () {
 
 // Build Task
 gulp.task('build', function() {
-  runSequence(['sass'],
+  runSequence(['lint', 'sass',],
     'jekyll-build'
   );
 });
@@ -129,7 +137,7 @@ gulp.task('build', function() {
 gulp.task('default', ['build']);
 
 gulp.task('server', function() {
-  runSequence(['images', 'sass'],
+  runSequence(['lint', 'images', 'sass'],
     'jekyll-dev',
     ['browserSync', 'watch']
   );
