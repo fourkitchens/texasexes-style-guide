@@ -1222,35 +1222,35 @@ a:visited {
           display: inline-block;
           margin: 0 12px 0 0; } }
     .entities li .texas-exes:before {
-      background-image: url(../images/logos/seal-logo-black.svg); }
+      background-image: url(../img/logos/seal-logo-black.svg); }
     .entities li .texas-exes:hover:before {
-      background-image: url(../images/logos/seal-logo-blue.svg); }
+      background-image: url(../img/logos/seal-logo-blue.svg); }
     .entities li .texas-exes.active:before {
-      background-image: url(../images/logos/seal-logo.svg); }
+      background-image: url(../img/logos/seal-logo.svg); }
     .entities li .alcalde:before {
-      background-image: url(../images/logos/alcalde.svg); }
+      background-image: url(../img/logos/alcalde.svg); }
     .entities li .alcalde:hover:before {
-      background-image: url(../images/logos/alcalde.svg); }
+      background-image: url(../img/logos/alcalde.svg); }
     .entities li .alcalde.active:before {
-      background-image: url(../images/logos/alcalde.svg); }
+      background-image: url(../img/logos/alcalde.svg); }
     .entities li .scholarships:before {
-      background-image: url(../images/logos/scholarships.svg); }
+      background-image: url(../img/logos/scholarships.svg); }
     .entities li .scholarships:hover:before {
-      background-image: url(../images/logos/scholarships.svg); }
+      background-image: url(../img/logos/scholarships.svg); }
     .entities li .scholarships.active:before {
-      background-image: url(../images/logos/scholarships.svg); }
+      background-image: url(../img/logos/scholarships.svg); }
     .entities li .gameday:before {
-      background-image: url(../images/logos/longhorn.svg); }
+      background-image: url(../img/logos/longhorn.svg); }
     .entities li .gameday:hover:before {
-      background-image: url(../images/logos/longhorn.svg); }
+      background-image: url(../img/logos/longhorn.svg); }
     .entities li .gameday.active:before {
-      background-image: url(../images/logos/longhorn.svg); }
+      background-image: url(../img/logos/longhorn.svg); }
     .entities li .the-hook:before {
-      background-image: url(../images/logos/hook.svg); }
+      background-image: url(../img/logos/hook.svg); }
     .entities li .the-hook:hover:before {
-      background-image: url(../images/logos/hook.svg); }
+      background-image: url(../img/logos/hook.svg); }
     .entities li .the-hook.active:before {
-      background-image: url(../images/logos/hook.svg); }
+      background-image: url(../img/logos/hook.svg); }
 
 /**
  * @file _lists.scss
@@ -2506,3 +2506,11 @@ ul.primary {
   background-image: url(../img/icons/give.svg); }
   .icon-give:hover, .icon-give:active, .icon-give.active {
     background-image: url(../img/icons/give-blue.svg); }
+
+.search input[type="submit"],
+.search .form-submit {
+  background-image: url(../img/icons/search.svg);
+  background-repeat: no-repeat; }
+  .search input[type="submit"]:hover,
+  .search .form-submit:hover {
+    background-image: url(../img/icons/search-blue.svg); }

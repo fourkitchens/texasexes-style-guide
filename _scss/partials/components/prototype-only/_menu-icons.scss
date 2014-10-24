@@ -42,3 +42,14 @@
     background-image: url(../img/icons/give-blue.svg);
   }
 }
+
+.search {
+  input[type="submit"],
+  .form-submit {
+    background-image: url(../img/icons/search.svg);
+    background-repeat: no-repeat;
+    &:hover {
+      background-image: url(../img/icons/search-blue.svg);  
+    }
+  }
+}
