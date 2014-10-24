@@ -105,7 +105,7 @@ $entity-small: 300px;
 
 // Header
 $logo-half:680px;
-$search-med: 986px;
+$search-medium: 986px;
 $header-padding: 662px;
 
 // Sidebar
@@ -113,10 +113,10 @@ $sidebar-desktop:991px;
 $sidebar-left:724px;
 
 $sidebar-right-desktop:990px;
-$sidebar-right-med:660px 989px; // For use for layout-specific control (three columns)
+$sidebar-right-medium:660px 989px; // For use for layout-specific control (three columns)
 
-$sidebar-articles-mobile:425px 989px; // Specific to articles in the sidebar
-
+$sidebar-articles-mobile:565px 989px; // Specific to articles in the sidebar
+$sidebar-article-buttons-mobile:0 620px; // buttons in sidebar article
 
 // Paragraphs 
 $paragraph-medium: 950px;
@@ -135,8 +135,8 @@ $cover-photo-extra-large: 1800px;
 
 // Menus
 $main-menu-full: 860px;
-$main-menu-med: 560px;
-$main-menu-sm: 400px;
+$main-menu-medium: 560px;
+$main-menu-small: 400px;
 
 
 // Admin tabs
@@ -150,18 +150,17 @@ $pager-small: 0 644px;
 // Forms
 $forms-medium: 830px;
 
-// Media - Images and Video
-$image-full: 900px;
-$media-full: 0 820px;
-
 // Footer 
 $footer-full: 1112px;
-$footer-med: 680px;
+$footer-medium: 680px;
+
+$footer-seal-medium: 800px;
 $footer-seal-full: 1000px;
 
 $footer-thirds:1000px;
 
 // Homepage
+$homepage-mobile:570px;
 $homepage-tablet:780px;
 $homepage-desktop:1080px;
 

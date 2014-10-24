@@ -1,11 +1,21 @@
 /**
  * @file _extras.scss
  * Contains a few miscellaneous global items.
+ * @TODO: might not be the best place for html and body. Not sure where they fit.
  */
 
 ::selection {
   color: $white;
   background: $orange;
+}
+
+html {
+  background-color: lighten($gray-lt3, 5%);
+}
+body {
+  background-color: $white;
+  z-index: 0;
+  position: relative;
 }
 
 // Hide elements from all users.

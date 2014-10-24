@@ -3,16 +3,14 @@
  */
 
 #footer {
-  background-color: $gray;
+  background-color: lighten($gray-lt3, 5%);
   width: 100%;
-  padding:$space-tripled 0;
-  border-top: $space-one-fourth solid $gray-lt2;
+  padding:$space 0;
+  border-top: $space-one-fourth solid $gray-lt3;
+  @extend %clearfix;
 
-  a {
-    color: $gray-lt2;
-    &:hover {
-      color: $white;
-    }
+  @include breakpoint($footer-thirds) { 
+    padding:$space-doubled 0 $space;
   }
 
   p {
@@ -25,18 +23,22 @@
     text-transform: uppercase;
     a {
       font-weight: 400;
+      color: $gray;
     }
   }
 
   .wrap {
-    border-top: $space-one-eighth solid $gray-lt; 
+    border-top: $space-one-eighth solid $gray-lt3; 
     margin-top: $space;
-    padding: $space 0;
+    padding: $space;
     @extend %clearfix;
+    @include breakpoint($footer-thirds) { 
+      padding: $space 0;
+    }
   }
   .copyright {
     text-align: center;
-    padding:$space-half 0; 
+    padding:$space-half 0 $space-one-fourth; 
 
     @include breakpoint($footer-thirds) { 
       @include grid-span(7,1);
@@ -59,17 +61,23 @@
       text-indent: 100%;
       white-space: nowrap;
       overflow: hidden;
-  
+
+      @include breakpoint($footer-seal-medium) {
+        width: 15%;
+        padding-bottom: 15%;
+      }    
+
       @include breakpoint($footer-seal-full) {
-        width: 100%;
-        padding-bottom: 100%;
+        width: 80%;
+        padding-bottom: 80%;
       }           
     }
   }
   .contact {
     text-align: center;
-    padding:$space-half 0; 
-
+    a {
+      white-space: nowrap;
+    }  
     @include breakpoint($footer-thirds) { 
       @include grid-span(7,10);
       text-align: right;

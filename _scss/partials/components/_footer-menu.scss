@@ -6,37 +6,27 @@
 footer .menu {
   @extend %clearfix;
   margin:0;
-  font-size:18px;
-
+  font-size:16px;
+  font-family: $serif;
+  text-transform: none;
   a {
     text-decoration: none;
     padding: $space-half 0;
     text-align: center;
     display: block;
-    color: $gray-lt2;
 
-    @include breakpoint($footer-med) {
+    @include breakpoint($footer-medium) {
       padding: $space-half 0 $space-half $space-one-third;
     }
     @include breakpoint($footer-thirds) {
       padding: $space-half 0;
     }    
-
-    &:hover {
-      color: $white;
-    }
-    &:hover {
-      color: $white;
-    }
-    &.active {
-      color: $white;
-    }
   }
 
   li {
     display: block;
     clear: both;
-    @include breakpoint($footer-med) {
+    @include breakpoint($footer-medium) {
       @include layout(5) {
         @include grid-span(1,1, $output-style:"float", $gutter:0);
       }

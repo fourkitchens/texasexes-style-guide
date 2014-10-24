@@ -3,7 +3,6 @@
  */
 
 .cover-image {
-  margin: .1em 0 0;
   position: relative;
 
   @include breakpoint($cover-photo-full) {
@@ -19,13 +18,13 @@
     margin-bottom: -30em;
   }
 
-  .homepage & {
+  &.home-page-cover-image {
     @include breakpoint($cover-photo-homepage-hidden) {
-      display: none;     
+      display: none;
     }
     @include breakpoint($cover-photo-homepage-mobile) {
       margin-bottom: -20em;
-      z-index: -1;     
+      z-index: -1;
     }
     @include breakpoint($cover-photo-full) {
       margin-bottom: -24em;
@@ -37,12 +36,13 @@
 
     @include breakpoint($cover-photo-huge) {
       margin-bottom: -50em;
-    }   
+    }
     @include breakpoint($cover-photo-extra-large) {
       margin-bottom: -60em;
-    }        
+    }
   }
-  
+
+
   img {
     display: block;
     margin: 0 auto;

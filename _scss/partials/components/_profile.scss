@@ -1,0 +1,13 @@
+/**
+ * @file _profile.scss
+ * Profile page links.
+ */
+.profile {
+  a {
+    padding-bottom: $space-half;
+    display: block;
+  }
+  .user-profile-category-history {
+    padding-top: $space;
+  }
+}

@@ -1,0 +1,21 @@
+/**
+ * @file _views-exposed-form-txex-search-view-general-panel-pane-1.scss
+ * Sidebar search on search results page
+ */
+#views-exposed-form-txex-search-view-general-panel-pane-1 {
+  padding: $space;
+  margin-bottom: 0;
+  input {
+    width: 100%;
+  }
+  .views-exposed-widget  {
+    margin-top: $space-half;
+  }
+  input.form-submit {
+    margin: $space-half 0 0;
+    
+    @include breakpoint($sidebar-left) {
+      width: auto;
+    }
+  }
+}

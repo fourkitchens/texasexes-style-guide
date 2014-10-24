@@ -1,0 +1,60 @@
+/**
+ * @file _home-page.scss
+ * Home page layout work, does not include any styles for components.
+ * If you're looking for the home page header stuff, look at masthead.
+ */
+
+.home-page {
+
+  .container > div {
+    @include clearfix(); // Mixin instead of extendable because the admin styles don't have that extendable
+    background-color: rgba($white, .88);
+  }
+
+  .left { // Desktop left, mobile top (was "Events")
+    @include breakpoint($homepage-tablet) {
+      @include grid-span(8,1);
+    }
+    @include breakpoint($homepage-desktop) {
+      @include grid-span(6,1);
+    }
+  }
+
+  .center { // Desktop center, mobile bottom (was "News")
+    @include breakpoint($homepage-tablet) {
+      clear: both;
+      float: none;
+      width: auto;
+    }
+    @include breakpoint($homepage-desktop) {
+      @include grid-span(6,7);
+    }
+    article {
+      @include breakpoint($homepage-tablet) {
+        @include layout(3) {
+          @include grid-span(1,1, $output-style:"float", $gutter:0);
+        }
+      }
+      @include breakpoint($homepage-desktop) {
+        clear: both;
+        float: none;
+        width: 100%;
+      }
+    }
+
+  }
+
+  .right { // Desktop right, mobile center (was "Announcements")
+    @include breakpoint($homepage-tablet) {
+      @include grid-span(8,9);
+    }
+    @include breakpoint($homepage-desktop) {
+      @include grid-span(4,13);
+    }
+    .node-txex-announce { // make 100% instead of standard 2 column.
+      @include breakpoint($sidebar-articles-mobile) {
+        width: 100%;
+      }
+    }
+  }
+}

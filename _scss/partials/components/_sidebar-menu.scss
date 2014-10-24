@@ -9,6 +9,7 @@
   // @TODO: This should be its own partial and styles for this menu should exist
   // in that partial. Let's add a class name first, though, because this one
   // has an index on it.
+  .pane-og-menu-og-single-menu-block,
   .pane-menu-block-txex-menus-1 {
     display: none;
 
@@ -22,6 +23,7 @@
       }
     }
   }
+  
   .menu {
     margin: 0;
     padding: 0 0 $space-half 0;

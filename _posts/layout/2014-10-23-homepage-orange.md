@@ -1,8 +1,8 @@
 ---
 
-title: Texas Homepage Layout
+title: Texas Homepage Layout - Orange Cover
 
-image: covers-black.jpg
+image: covers-orange.jpg
 
 layout: homepage
 

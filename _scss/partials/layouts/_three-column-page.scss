@@ -20,7 +20,7 @@
     }
 
     &.right {
-      @include breakpoint($sidebar-right-med) { // overrides inherited .sidebar grid.
+      @include breakpoint($sidebar-right-medium) { // overrides inherited .sidebar grid.
         width: 100%;
         clear: both;
       }
@@ -35,6 +35,9 @@
     }    
     @include breakpoint($sidebar-right-desktop) {
       @include grid-span(8,5, $gutter:0);
+    }
+    @include breakpoint($cover-photo-huge) {
+      min-height: 500px;
     }
   }  
 }
