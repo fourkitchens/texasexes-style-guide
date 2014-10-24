@@ -2514,3 +2514,8 @@ ul.primary {
   .search input[type="submit"]:hover,
   .search .form-submit:hover {
     background-image: url(../img/icons/search-blue.svg); }
+
+.masthead p {
+  margin-right: auto;
+  margin-left: auto;
+  max-width: 700px; }
