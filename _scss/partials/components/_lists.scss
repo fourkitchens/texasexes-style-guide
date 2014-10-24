@@ -1,0 +1,27 @@
+/**
+ * @file _lists.scss
+ * Styling for List-Ordered Components
+ */
+
+// ***** @TODO: *****
+// ----> Change for Drupal markup - double-check margins for drupal.
+
+ul {
+  li {
+    list-style: disc;
+  }
+}
+ol {
+  li {
+    list-style: decimal;
+  }
+}
+
+ul,
+ol {
+  margin: $space $space $space-doubled;
+  ul,
+  ol {
+    margin: $space;
+  }
+}

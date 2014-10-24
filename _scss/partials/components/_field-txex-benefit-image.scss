@@ -1,0 +1,20 @@
+/**
+ * @file _field-txex-benefit-image.scss
+ * The image for benefits (not the cover image)
+ */
+.field-txex-benefit-image {
+  float: left;
+  margin: 0 $space-half $space-half 0;
+
+  img {
+    display: block;
+  }
+
+  .view & {
+    max-width: 33%;
+  }
+
+  .page-node & {
+    max-width: 50%;
+  }
+}

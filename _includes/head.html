@@ -1,0 +1,22 @@
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>{% if page.meta_title %}{{ page.meta_title }}{% else %}{{ site.title }}{% endif %}</title>
+    <meta name="viewport" content="width=device-width">
+    <meta name="description" content="{% if page.meta_description %}{{ page.meta_description }}{% else %}{{ site.description }}{% endif %}">
+    <link rel="shortcut icon" href="/favicon.ico" />
+    <link rel="canonical" href="{{ page.url | replace:'index.html','' | prepend: site.baseurl | prepend: site.url }}">
+
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="{{ "/css/style.css" | prepend: site.baseurl }}">
+
+    <!-- Custom JS -->
+    <script type="text/javascript" src="{{"/js/jquery-1.11.1.js"| prepend: site.baseurl }}"></script>
+    
+    <script type="text/javascript" src="{{"/js/main.js"| prepend: site.baseurl }}"></script>
+
+    <script type="text/javascript" src="{{"/js/slick-entities.js"| prepend: site.baseurl }}"></script>
+    <!-- Typography.com -->
+    <link rel="stylesheet" type="text/css" href="//cloud.typography.com/737040/656724/css/fonts.css" />
+ 
+</head>

@@ -1,0 +1,38 @@
+/**
+ * @file _tabs.scss
+ * Drupal Component - Tabs
+ */
+ul.primary {
+  @extend %clearfix;
+  margin: $space auto;
+  padding: 0 $space;
+
+  li {
+    display: inline-block;
+    margin: 0;
+    @include grid-span(8,1, $output-style:"float", $gutter:0);
+
+    @include breakpoint($tabs-full) {
+      width: auto;
+      margin: 0 $space-one-fourth 0 0;
+    }   
+  }
+  a {
+    padding:$space-half $space-doubled;
+    background-color: lighten($gray-lt3, 10%);
+    border-bottom: $space-one-sixth solid $gray-lt3;  
+    display: block;  
+    text-decoration: none;
+    text-align: center;
+    &:hover {
+      color: $gray;
+      background-color: $gray-lt3;
+      border-color: $gray-lt2;
+    }
+    &.active {
+      color: $white;
+      background-color: $blue-lt;
+      border-color: $blue;
+    }
+  }
+}

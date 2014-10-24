@@ -1,0 +1,155 @@
+/**
+ * @file _entity-menu.scss
+ * The "Entities" menu (the top nav bar with links to other TXE related sites)
+ */
+
+.entities {
+  @extend %clearfix;
+
+  margin:0;
+
+  @include breakpoint($entity-full) {
+    @include grid-span(12,1);
+  }
+
+  a {
+    padding: $space-half $space;
+    text-decoration: none;
+    color: $gray-lt2;
+    display: block;
+    border-bottom: $space-one-sixth solid $gray-lt3;
+    text-align: center;
+
+    @include breakpoint($entity-small) {
+      padding: $space-one-fourth $space-one-third;
+    }
+
+    @include breakpoint($entity-full) {
+      padding: $space-half;
+    }
+
+    &:hover {
+      color: $gray-lt;
+      border-color:$gray-lt2;
+    }
+    &.active {
+      color: $gray-lt;
+      border-color:$gray-lt2;
+      &:hover {
+        color: $gray-lt2;
+        border-color:$gray-lt2;
+      }
+    }
+  }
+  li {
+    display: block;
+    width: 100%;
+
+    @include breakpoint($entity-small) {
+      @include layout(3) {
+        @include grid-span(1,1, $output-style:"float", $gutter:0);
+      }
+    }
+    @include breakpoint($entity-medium) {
+      @include layout(5) {
+        @include grid-span(1,1, $output-style:"float", $gutter:0);
+      }
+    }    
+    @include breakpoint($entity-full) {
+      display: inline;
+      width: auto;
+    }
+
+    a { // top level icons
+      &:before {
+        display: block;
+        width: 24px;
+        height: 24px;
+        margin: 0 auto $space-one-third;
+        vertical-align: middle;
+        content: "";
+        background-repeat: no-repeat;
+        background-size: cover;
+        @include breakpoint($entity-full) {
+          display: inline-block;
+          margin: 0 $space-half 0 0;
+        }
+      }
+    }
+    .texas-exes { // 1. entity bar - texas exes
+      &:before {
+        background-image: url(../img/logos/seal-logo-black.svg);
+      }
+      &:hover {
+        &:before {
+          background-image: url(../img/logos/seal-logo-blue.svg);
+        }
+      }  
+      &.active {
+        &:before {
+          background-image: url(../img/logos/seal-logo.svg);
+        }
+      }              
+    }
+    .alcalde { // 2. entity bar - alcalde
+      &:before {
+        background-image: url(../img/logos/alcalde.svg);
+      }
+      &:hover {
+        &:before {
+          background-image: url(../img/logos/alcalde.svg);
+        }
+      }  
+      &.active {
+        &:before {
+          background-image: url(../img/logos/alcalde.svg);
+        }
+      } 
+    }
+    .scholarships { // 3. entity bar - scholarships
+      &:before {
+        background-image: url(../img/logos/scholarships.svg);
+      }
+      &:hover {
+        &:before {
+          background-image: url(../img/logos/scholarships.svg);
+        }
+      }  
+      &.active {
+        &:before {
+          background-image: url(../img/logos/scholarships.svg);
+        }
+      } 
+    }         
+    .gameday { // 4. entity bar - gameday
+      &:before {
+        background-image: url(../img/logos/longhorn.svg);
+      }
+      &:hover {
+        &:before {
+          background-image: url(../img/logos/longhorn.svg);
+        }
+      }  
+      &.active {
+        &:before {
+          background-image: url(../img/logos/longhorn.svg);
+        }
+      }   
+    } 
+    .the-hook { // 5. entity bar - the hook
+      &:before {
+        background-image: url(../img/logos/hook.svg);
+      }
+      &:hover {
+        &:before {
+          background-image: url(../img/logos/hook.svg);
+        }
+      }  
+      &.active {
+        &:before {
+          background-image: url(../img/logos/hook.svg);
+        }
+      }       
+    }          
+  }
+}

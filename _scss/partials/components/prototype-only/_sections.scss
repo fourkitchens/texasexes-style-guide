@@ -1,0 +1,29 @@
+//////////////////////////////
+// Prototype-Only / Sections
+//
+// The partial and folder structure for this components should be as follows:
+// _sections.scss
+// 
+//
+////// This file is full of styles that can be ignored. Style prototypes requires some interesting resets.
+
+.guide {
+  .component {
+    background-color: $white;
+    @extend %clearfix;
+    padding: $space $space $space-half;
+    border-bottom: $space-one-fifth dashed $gray-lt3;
+  }
+  form {
+    label {
+      &.radio,
+      &.checkbox {
+        padding: $space-half;
+        font-size: 18px;
+      }
+    }
+    .form-item {
+      clear: both;
+    }
+  }
+}

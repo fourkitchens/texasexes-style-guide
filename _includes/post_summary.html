@@ -1,0 +1,15 @@
+<header class="post-header">
+  <div class="wrap post-head">  
+    <p class="meta">{{ page.date | date: "%b %-d, %Y" }}{% if page.author %} • {{ page.author }}{% endif %}{% if page.meta %} • {{ page.meta }}{% endif %}</p>    
+    <h1>{{ page.title }}</h1>
+  </div>
+</header>
+
+
+{% if page.summary %}
+  <div class="summary">
+    <div class="wrap{% if page.summary-class %} {{ page.summary-class }}{% endif %}">
+      <blockquote>{{ page.summary }}</blockquote>
+    </div>
+  </div>
+{% endif %}

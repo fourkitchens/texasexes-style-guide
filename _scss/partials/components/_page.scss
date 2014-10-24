@@ -1,0 +1,17 @@
+/**
+ * @file _page.scss
+ */
+
+.page {
+  padding: $space-one-twelfth 0 0;
+  z-index: 1;
+
+  .page-primary-content {
+    background-color: rgba($white, .88);
+    padding:$space;
+
+    @include breakpoint($sidebar-left) {
+      padding: $space-doubled $space-doubled $space;
+    }
+  }
+}

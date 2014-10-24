@@ -1,0 +1,62 @@
+//////////////////////////////
+// Sidebar styles for Drupal
+//
+// The partial and folder structure for this layouts should be as follows:
+// _sidebar.scss
+
+//////////////////////////////
+
+.sidebar {
+  &.left {
+    background-color: lighten($gray-lt3, 6%);
+
+    &.minimized {
+      background-color: transparent;
+    }
+
+    @include breakpoint($sidebar-left) {
+      padding-top: $space-tripled;
+    }
+  }
+
+  &.right {
+    background-color: lighten($gray-lt3, 12%);
+    display: block;
+    padding-top: 0;
+  }
+
+  &:empty, &:empty[style] {
+    display: none !important;
+  }
+
+  .pane-title {
+    padding: $space $space $space-half;   
+  }  
+  h3 {
+    font-size:20px;
+  }
+
+  // @TODO: Need to simplify this. Links for the sidebar nav are styled between
+  // _sidebar.scss, _sidebar-menu.scss, and _typography.scss and when the
+  // .pane-title (the h2 menu title) became a link to the top page, it dropped
+  // to an unbolded link style as outlined below.
+  h2, h2 a {
+    // Drupal will output pane-titles as H2, but they should follow the styles
+    // of a global h3.
+    font-family: $serif;
+    font-weight: 700;
+    font-size: 20px;
+    text-transform: none;
+  }
+
+  ul {
+    li {
+      list-style: none;
+    }
+  }
+  ol {
+    li {
+      list-style: none;
+    }
+  }
+}

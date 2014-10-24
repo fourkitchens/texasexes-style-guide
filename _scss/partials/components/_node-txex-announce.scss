@@ -1,0 +1,45 @@
+/**
+ * @file _node-txex-announce.scss
+ * 
+ * Announcement / Call to action styles
+ */
+
+.node-txex-announce {
+  padding: $space;
+
+  h2.field-txex-announce-disp-title {
+    padding-top: $space;
+    font-family: $serif;
+    font-weight: 700;
+    font-size: 20px;
+    text-transform: none;     
+  }
+    @include breakpoint($sidebar-articles-mobile) {
+      width: 49.5%;
+      display: inline-block;  
+      vertical-align: middle;
+    }
+  + .node-txex-announce {
+    .field-txex-announce-disp-title {
+      padding-top: 0;
+    }    
+    padding-top: 0;
+    margin-top: $space;
+  }
+
+  &.node-view-mode-full {
+    fieldset {
+      border-bottom: $space-one-eighth solid $gray-lt3;
+      margin-bottom: $space;
+    }
+
+    .field-label {
+      font-weight: 700;
+      display: block;
+    }
+
+    .field-txex-announce-display {
+      white-space: pre-line;
+    }
+  }
+}

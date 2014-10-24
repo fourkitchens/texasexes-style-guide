@@ -1,0 +1,131 @@
+/**
+ * @file _main-menu.scss
+ */
+
+.menu,
+.primary {
+  font-size:16px;
+  line-height: 1.2;
+  font-family: $sans;
+  text-transform: uppercase;
+  @include breakpoint($main-menu-full) {
+    font-size:20px;
+  }
+  ul {
+    text-transform: none;
+    font-size:16px;
+    line-height: 1.2;
+    font-family: $serif;
+  }
+  &.entities {
+    text-transform: uppercase;
+    font-size:12px;
+    line-height: 1;  
+    @include breakpoint($entity-larger-text) {
+      font-size:16px;
+      line-height: 1.2;  
+      text-transform: none; 
+    }
+  }
+}
+
+.main-menu {
+  ul {
+    position: relative;
+    margin: 0;
+    @extend %clearfix;
+
+    @include breakpoint($main-menu-full) {
+      float: right;   
+    }    
+
+    ul { // Second level drop-down
+      display: none;
+      width: 100%;
+      position: absolute;
+      padding: $space;
+      z-index: 2;
+      background-color: $white;
+      margin-top: 0;
+      border-top: $space-one-fourth solid $blue-lt;
+      @include box-shadow(0 1px 2px rgba($gray, .5));
+
+      @include breakpoint($main-menu-full) {
+        width: 100%;   
+      } 
+      a { // second level icons
+        padding: $space-half;
+        border-bottom: none;
+        text-align: left;
+        &:before {
+          display: none;
+        }
+      }      
+    }
+  }
+  a {
+    padding: $space-half;
+    text-decoration: none;
+    color: $gray;
+    display: block;
+
+    @include breakpoint($main-menu-med) {
+      padding:$space;
+      padding-bottom: $space - $space-one-fourth - 2px; // For better background-image alignment
+    }
+    @include breakpoint($main-menu-full) {
+      border-bottom: $space-one-fourth solid $white;
+    }       
+    &:hover {
+      color: $blue-lt;
+      @include breakpoint($main-menu-full) {
+        border-color: $blue-lt;
+      }   
+    }
+    &.active {
+      color: $blue;
+      background-color: $white;
+      @include breakpoint($main-menu-full) {
+        border-color: $blue;
+      }         
+      &:hover {
+        color: $blue;
+      }      
+    }
+  }
+  li {
+    display: inline;
+    @include grid-span(4,1, $output-style:"float", $gutter:0);
+    text-align: center;
+
+    @include breakpoint($main-menu-full) {
+      float: left;
+      width: auto;
+      text-align: left;
+    }
+
+    li {
+      display: block;
+      width: 100%;
+      text-align: left;
+    }
+
+    > a { // top level icons
+      display: block;
+      padding: 24px + $space-half $space-half $space-half $space-half;
+      background-position: top center;
+      background-repeat: no-repeat;
+      background-size: 24px;
+
+      @include breakpoint($main-menu-sm) {
+        display: inline-block;
+        padding: $space-half $space-half $space-half 24px + $space-half;
+        background-position: left;
+      }
+      @include breakpoint($main-menu-full) {
+        display: inline-block;
+        padding-right:$space;
+      }
+    }
+  }
+}

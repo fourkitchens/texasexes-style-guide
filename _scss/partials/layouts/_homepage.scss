@@ -1,0 +1,117 @@
+//////////////////////////////
+// Homepage Layout
+//
+// The partial and folder structure for this layouts should be as follows:
+// _homepage.scss
+//
+//////////////////////////////
+
+.homepage {
+  &.user.panel {
+    text-align: center;
+    margin: 0 auto;
+    background-color: transparent;
+    padding: $space;
+    @include breakpoint($homepage-tablet) {
+      padding: $space $space $space-doubled;
+    }
+    @include breakpoint($homepage-desktop) {
+      padding: $space $space $space-tripled;
+    }    
+    .pane-title {
+      border-bottom: 0;
+      font-family: $sans49;
+      letter-spacing: 1px;
+      @include breakpoint($cover-photo-homepage-mobile) {
+        color: $white;
+      }
+      @include breakpoint($homepage-tablet) {
+        font-size: 48px;
+      }
+    }
+    .pane-content {
+      max-width: 700px;
+      margin: 0 auto;
+    }
+    p {
+      max-width: 100%; //override global max-width
+      @include breakpoint($cover-photo-homepage-mobile) {
+        color: $gray-lt3;
+      }      
+      @include breakpoint($homepage-tablet) {
+        font-size: 20px;
+      }
+    }
+    button {
+      @include breakpoint($homepage-tablet) {
+        padding: $space-one-third $space;
+        + button {
+          margin-left: $space-doubled;
+        } 
+      }     
+    }
+  }
+  small {
+    display: block;
+  }
+  article {
+    @extend %clearfix; 
+    padding: $space;
+    h3 {
+      font-size: 20px;
+    }
+  }
+  .pane-title {
+    padding: $space $space $space-half;
+  }
+  .panel {
+    @extend %clearfix; 
+    background-color: rgba($white, .88);
+  }
+
+  .news {
+    @include breakpoint($homepage-tablet) {
+      clear: both;
+      width: 100%;
+    }  
+    @include breakpoint($homepage-desktop) {
+      @include grid-span(6,7);
+    }
+    article {
+      @include breakpoint($homepage-tablet) {
+        @include layout(3) {
+          @include grid-span(1,1, $output-style:"float", $gutter:0);
+        }
+      }    
+      @include breakpoint($homepage-desktop) {
+        clear: both;
+        width: 100%;
+      }          
+    }
+  }
+
+  .announcements {
+    @include breakpoint($homepage-tablet) {
+      @include grid-span(8,9);
+    }    
+    @include breakpoint($homepage-desktop) {
+      @include grid-span(4,13);
+    } 
+    .node-txex-announce {
+      @include breakpoint($sidebar-articles-mobile) {
+        width: 100%;
+        display: inline-block;  
+        vertical-align: middle;
+      }
+    }
+  }
+
+  .events {
+    @include breakpoint($homepage-tablet) {
+      @include grid-span(8,1);
+    }     
+    @include breakpoint($homepage-desktop) {
+      @include grid-span(6,1);
+    }    
+  }        
+}

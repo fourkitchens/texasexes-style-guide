@@ -1,0 +1,26 @@
+/**
+ * @file _menu-sidenav-collapse.scss
+ * The sidebar "In this section" collapse button for mobile
+ */
+#menu-sidenav-collapse {
+  display: block;
+  padding: $space-half;
+  padding-left: 24px + $space-half;
+  background-position: center left;
+  max-width: 200px;
+  margin-bottom: 0;
+  background-color: lighten($gray-lt3, 6%);
+  color: $gray;
+
+  border-radius: 0;
+  border: 0;
+
+  @include breakpoint($sidebar-left) {
+    display: none;
+  }
+
+  &.active {
+    background-color: transparent;
+    @include box-shadow(none);
+  }
+}

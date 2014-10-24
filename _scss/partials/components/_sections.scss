@@ -1,0 +1,11 @@
+/**
+ * @file _sections.scss
+ * @TODO: This isn't a great place for this rule, ultimately.
+ */
+
+section,
+header,
+footer {  
+  @extend %clearfix;
+
+}

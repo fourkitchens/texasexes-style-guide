@@ -1,0 +1,152 @@
+//////////////////////////////
+// Form Components
+//
+// The partial and folder structure for this components should be as follows:
+// _forms.scss
+// All general input and form styles
+//////////////////////////////
+// @{text-input}
+
+// @TODO - Removed toggle label# declaration
+
+//
+// Form component typography
+//
+legend {
+  font-family: $sans;
+  line-height: 1.2;
+  margin-bottom: $space-one-sixth;
+  color: $gray;
+}
+label {
+  font-size:24px;
+  font-family: $sans49;
+  font-weight: 400;
+  line-height: 1.2;
+  margin-bottom: $space-one-sixth;
+  text-transform: uppercase;
+  color: $gray;
+  letter-spacing:$space-one-twelfth;
+  display: block;
+}
+input,
+textarea {
+  font-size:18px;
+  line-height: 1.2;
+  font-family: $serif;
+}
+
+// Specific form components
+.form-type-radio,
+.form-type-checkbox,
+.bef-checkboxes {
+  label {
+    font-family: $sans;
+    font-size:18px;
+    text-transform: none; 
+  }
+}
+
+// Buttons 
+.button,
+button,
+input[type="submit"] {
+  text-transform: uppercase;  
+  font-family: $sans;
+  font-weight: 400;
+  letter-spacing:1.2px;
+  font-size:18px;
+  line-height: 1.8; 
+  &.small {
+    font-size:16px;
+    line-height: 1.2; 
+  }
+  &.search {
+    line-height: 1.1; 
+  }
+}
+
+// Styling for Form Components
+
+form {
+  border: none;
+  margin-top: $space;
+  margin-bottom: $space;
+  padding: 0;
+  @extend %clearfix;
+
+  .form-item {
+    margin: 0 0 $space-one-third;
+    &.webform-component {
+      margin: $space-half 0 $space-doubled;   
+      @extend %clearfix;
+    }
+  }
+  fieldset {
+    margin-top: $space-doubled;
+    margin-bottom: $space;
+    @extend %clearfix;
+  }
+}
+label {
+  cursor: default;
+}
+
+input[type="range"] {
+  padding: $space-doubled;
+}
+
+.form-type-select {
+  display: inline-block;
+  vertical-align: middle;
+}
+
+//
+// Input styles
+//
+
+input,
+textarea {
+  padding: $space-half;
+  border:$space-one-sixth solid $gray-lt2;
+  background-color: lighten($gray-lt2, 30%);
+  &:focus {
+    border-color: $green;
+    outline-color: $green-dk;
+    background-color: $white;
+    @include transition(all .4s ease);
+  }
+  &.required {
+    border-color: $red;
+    &:focus {
+      border-color: $green;
+      outline-color: $green-dk;
+      background-color: $white;
+    }
+  }
+}
+
+// Input widths
+input {
+  width: 100%;
+
+  @include breakpoint($forms-medium) {
+    width: 50%;
+  }
+}
+input[type="image"] {
+  padding: 0;
+  border: 0;
+}
+
+input[type="image"],
+input[type="submit"] {
+  width: auto;
+}
+textarea {
+  width: 100%;
+
+  @include breakpoint($forms-medium) {
+    width: 70%;
+  }  
+}

@@ -1,0 +1,26 @@
+---
+
+layout: page
+
+meta_title: "Texas Exes Style Guide"
+
+meta_description: "Texas Exes Style Guide"
+
+---
+
+<div class="home">
+
+  <h1>Links</h1>
+
+  <ul class="posts">
+    {% for post in site.posts limit:6 %}
+      <li>
+        <a href="{{ post.url | prepend: site.baseurl }}">
+          <span class="post-date">{{ post.date | date: "%b %-d, %Y" }}</span>
+          <span class="post-link" href="{{ post.url | prepend: site.baseurl }}">{{ post.title }}</span>
+        </a>
+      </li>
+    {% endfor %}
+  </ul>
+
+</div>

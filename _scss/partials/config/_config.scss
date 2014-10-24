@@ -1,0 +1,34 @@
+////////////////////////////
+// Cross Browser Support
+$graceful-usage-threshold: 100;
+$critical-usage-threshold: 100;
+
+$browser-minimum-versions: (
+  "ie": "9",
+  "android": "4",
+  "chrome": "31",
+  "safari": "5",
+  "firefox": "25",
+  "ios-safari": "6.0-6.1",
+);
+
+////////////////////////////
+
+////////////////////////
+// Compass Imports
+@import "compass";
+@import "compass/reset";
+////////////////////////
+
+////////////////////////
+// Compass Extensions
+@import 'breakpoint';
+@import 'singularitygs';
+@import 'toolkit';
+@import "toolkit/kickstart";
+
+////////////////////////
+
+@import "functions";
+@import "variables";
+@import "mixins";

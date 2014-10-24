@@ -1,0 +1,17 @@
+/**
+ * @file _field-txex-benefit-redeem-link.scss
+ * A benefit redemption link, when set.
+ */
+
+.field-txex-benefit-redeem-link {
+  margin: $space-half 0 $space-doubled;
+  @extend %clearfix;
+  
+  a {
+    @include button($gray-lt, $white);
+    text-decoration: none;
+    max-width: 300px;
+    padding: $space-half $space;
+    border-radius: $space-one-sixth;
+  }
+}

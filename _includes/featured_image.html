@@ -1,0 +1,5 @@
+{% if page.image %}
+  <div class="cover-image{% if page.image-class %} {{ page.image-class }}{% endif %}">
+    <img src="{{ site.url }}/img/posts/featured/{{ page.image }}" />
+  </div>
+{% endif %}

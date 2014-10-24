@@ -1,0 +1,50 @@
+/**
+ * @file _sidebar-menu.scss
+ * @TODO: May need to move or be renamed; this won't be the only "menu" in the sidebars
+ * maybe "subnav" or "second nav" or something
+ */
+
+.sidebar {
+
+  // @TODO: This should be its own partial and styles for this menu should exist
+  // in that partial. Let's add a class name first, though, because this one
+  // has an index on it.
+  .pane-menu-block-txex-menus-1 {
+    display: none;
+
+    @include breakpoint($sidebar-left) {
+      // At this breakpoint, the menu collapse button is hidden, so the menu
+      // better be visible. This specificity will override the inline display:none
+      // if someone hid the menu with the button before the viewport got
+      // bigger (resized the window, rotated a tablet, etc.)
+      &, &[style] {
+        display: block !important;
+      }
+    }
+  }
+  .menu {
+    margin: 0;
+    padding: 0 0 $space-half 0;
+    li {
+      margin:0;
+
+      ul {
+        margin-left: $space;
+      }
+    }
+    a {
+      padding: $space-half $space;
+      display: block;
+      font-weight: 700;
+      font-family: $serif; 
+      text-transform: none;
+      font-size:16px;   
+      &:hover {
+        text-decoration: none;
+      }   
+      &.active {
+        background-color: lighten($gray-lt3, 12%);
+      }
+    }
+  }
+}

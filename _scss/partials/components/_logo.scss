@@ -1,0 +1,28 @@
+/**
+ * @file _logo.scss
+ */
+// ***** @TODO: *****
+// ----> Add SVG Fallback PNG logo - use modernizr?
+// ----> IE8 background-size from World Pulse
+// ----> Taylor knows what this is - show Joe how it works
+
+.logo {
+  max-width: 300px;
+  overflow: hidden;
+
+  h1 {
+    background: transparent image-url('logos/logo.svg') center center no-repeat;
+    margin: 0 auto;
+    height: 0;
+    background-size: contain;
+    padding-bottom: 35%;
+
+    text-indent: 100%;
+    white-space: nowrap;
+
+    @include breakpoint($logo-half) {
+      background-position: left;
+      margin: 0;
+    }
+  }
+}

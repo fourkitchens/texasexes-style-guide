@@ -1,0 +1,44 @@
+/**
+ * @file _menu-icons.scss
+ * Get icons to show on prototype.
+ */
+.icon-menu {
+  background-image: url(../img/icons/menu.svg);
+  &:hover,
+  &:active,
+  &.active {
+    background-image: url(../img/icons/menu-blue.svg);
+  }
+}
+.icon-login {
+  background-image: url(../img/icons/login.svg);
+  &:hover,
+  &:active,
+  &.active {
+    background-image: url(../img/icons/login-blue.svg);
+  }
+}
+.icon-logout {
+  background-image: url(../img/icons/logout.svg);
+  &:hover,
+  &:active,
+  &.active {
+    background-image: url(../img/icons/logout-blue.svg);
+  }  
+}
+.icon-join {
+  background-image: url(../img/icons/join.svg);
+  &:hover,
+  &:active,
+  &.active {
+    background-image: url(../img/icons/join-blue.svg);
+  }
+}
+.icon-give {
+  background-image: url(../img/icons/give.svg);
+  &:hover,
+  &:active,
+  &.active {
+    background-image: url(../img/icons/give-blue.svg);
+  }
+}

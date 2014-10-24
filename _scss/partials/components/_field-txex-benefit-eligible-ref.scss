@@ -1,0 +1,8 @@
+/**
+ * @file _field-txex-benefit-eligible-ref.scss
+ * The benefit eligibility field display for benefit nodes
+ */
+
+.field-txex-benefit-eligible-ref {
+  @extend %field-txex-benefit-cat-ref;
+}

@@ -1,0 +1,31 @@
+/**
+ * @file _header.scss
+ */
+
+#header {
+  padding: $space-half 0;
+  @include box-shadow(0 2px 4px rgba($gray, .5));
+
+  @include breakpoint($header-padding) {
+    padding: $space 0;
+  }
+
+  .logo {
+    text-align: center;
+    display: block;
+    margin: 0 auto;
+    @include breakpoint($logo-half) {
+      @include grid-span(5,1);
+      text-align: left;
+    }
+
+  }
+  .main-menu {
+    @extend %clearfix;
+
+    @include breakpoint($logo-half) {
+      @include grid-span(11,6);
+      margin-top: $space;
+    }
+  }
+}
