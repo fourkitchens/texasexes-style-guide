@@ -69,7 +69,7 @@
     color: $gray;
     display: block;
 
-    @include breakpoint($main-menu-med) {
+    @include breakpoint($main-menu-medium) {
       padding:$space;
       padding-bottom: $space - $space-one-fourth - 2px; // For better background-image alignment
     }
@@ -117,7 +117,7 @@
       background-repeat: no-repeat;
       background-size: 24px;
 
-      @include breakpoint($main-menu-sm) {
+      @include breakpoint($main-menu-small) {
         display: inline-block;
         padding: $space-half $space-half $space-half 24px + $space-half;
         background-position: left;

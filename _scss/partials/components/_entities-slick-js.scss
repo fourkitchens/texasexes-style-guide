@@ -12,13 +12,9 @@
 
 
 // Default Variables
-
-$slick-arrow-color: $gray-lt2 !default;
-$slick-prev-character: '\25C0' !default;
-$slick-next-character: '\25B6' !default;
-$opacity-default: .75;
+$opacity-default: .60;
 $opacity-on-hover: 1;
-$opacity-not-active: .25;
+$opacity-not-active: 0;
 
 /* Slider */
 
@@ -135,7 +131,7 @@ $opacity-not-active: .25;
   position: absolute;
   display: block;
   height: 60px;
-  width: 30px;
+  width: 20px;
   line-height: 0;
   font-size: 0;
   cursor: pointer;
@@ -166,7 +162,6 @@ $opacity-not-active: .25;
 .slick-prev:before, .slick-next:before {
   font-size: 20px;
   line-height: 1;
-  color: $slick-arrow-color;
   opacity: $opacity-default;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
@@ -178,9 +173,12 @@ $opacity-not-active: .25;
     right: 0;
   }
   &:before {
-    content: $slick-prev-character;
+    content: "";
+    height:100%;
+    display: block;
+    background-position: 0;
     [dir="rtl"] & {
-      content: $slick-next-character;
+      content: "";
     }
   }
 }
@@ -191,9 +189,12 @@ $opacity-not-active: .25;
     right: auto;
   }
   &:before {
-    content: $slick-next-character;
+    content: "";
+    height:100%;
+    display: block;
+    background-position: 0;
     [dir="rtl"] & {
-      content: $slick-prev-character;
+      content: "";
     }
   }
 }

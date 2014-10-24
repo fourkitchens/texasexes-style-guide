@@ -16,6 +16,7 @@
 //////////////////////////////
 // COMPONENTS
 @import "partials/components/blockquote";
+@import "partials/components/panel-pane";
 @import "partials/components/button";
 @import "partials/components/checkbox";
 @import "partials/components/container";
@@ -32,7 +33,6 @@
 @import "partials/components/page";
 @import "partials/components/radio";
 @import "partials/components/search";
-@import "partials/components/sections";
 @import "partials/components/sidebar";
 @import "partials/components/sidebar-menu";
 @import "partials/components/top-bar";
@@ -50,6 +50,10 @@
 @import "partials/components/menu-sidenav-collapse";
 @import "partials/components/entities-slick-js";
 @import "partials/components/node-txex-announce";
+@import "partials/components/masthead";
+@import "partials/components/profile";
+@import "partials/components/views-exposed-form-txex-search-view-general-panel-pane-1";
+@import "partials/components/view-txex-search-view-general";
 //////////////////////////////
 
 //////////////////////////////
@@ -62,7 +66,7 @@
 
 //////////////////////////////
 // LAYOUTS
-@import "partials/layouts/homepage";
+@import "partials/layouts/home-page";
 @import "partials/layouts/one-column-page";
 @import "partials/layouts/two-column-page";
 @import "partials/layouts/three-column-page";

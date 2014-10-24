@@ -1,0 +1,13 @@
+/**
+ * @file _field-txex-chapter-logo.scss
+ * Chapter Logo display
+ */
+.field-txex-chapter-logo {
+  text-align: center;
+  display: none;
+
+  @include breakpoint($sidebar-left) {
+    display: block;
+  }
+
+}

@@ -5,4 +5,5 @@
 
 .top-bar {
   background-color: lighten($gray-lt3, 10%);
+  @extend %clearfix;
 }

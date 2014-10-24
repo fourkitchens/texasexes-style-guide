@@ -9,7 +9,7 @@ article {
       padding: $space;
     }
   }
-  ul {
+  > ul {
     max-width: 632px; // for controlling ideal character count measure <= 72 characters
   }
   li {
@@ -40,6 +40,14 @@ article {
       &:hover {
         border:$space-one-eighth solid $gray-lt2;
       }
+    }
+  }
+
+  .home-page & {
+    @extend %clearfix; // @TODO: Are their contents floated, why is this here?
+    padding: $space;
+    h3 { // @TODO: These are h2 tags in output. Change this, or change that?
+      font-size: 20px;
     }
   }
 }

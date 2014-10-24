@@ -3,39 +3,48 @@
  */
 
 .search {
-  button {
-    @include grid-span(4,13, $gutter:0);
-    padding: $space-half;
-    margin-bottom: 0;
-    border-width: 0;
-    background-position: center center;
-    background-repeat: no-repeat;
-    background-size:24px;
-    background-image: url(../images/icons/search.svg);
-    text-indent: -9999em;
-    height:40px;
+  margin: 0;
+  font-size: 0;
+  input {
+    padding: $space-one-fourth;
+    width: 100%;
+    font-size: 16px;
+    border-color: $gray-lt3;
+    background-color:lighten($gray-lt3, 8%);
+    &:focus {
+      background-color: $white;
+      border-color: $gray-lt2;
+    }
+  }
+  .form-item {
+    margin: 0;
+    &.form-item-s {
+      display: inline-block;
+      width: 80%;
+    }
+  }
+
+  input[type="submit"],
+  .form-submit {
+    border:none;
+    background-color:$gray-lt3;
+    padding: 0;
+    margin: 0;
+    font: 0/0 a;
+    color: transparent;
+    height: 39px;
+    width: 20%;
+    background-position: center;
+    background-size: 22px 22px;
+    vertical-align: top;
     border-top-left-radius: 0;
     border-bottom-left-radius: 0;
     &:hover {
-      border-width: 0;
-      background-position: center center;
-      background-repeat: no-repeat;
-      background-size:24px;
-      background-image: url(../images/icons/search.svg);
-      text-indent: -9999em;
+      background-color: $gray-lt3;
     }
-  }
-  input[type="search"] {
-    @include grid-span(12,1,$gutter:0);
-    border:$space-one-sixth solid $gray-lt3;
-    background-color:lighten($gray-lt3, 8%);
-    height:40px;
-    padding: $space-one-fourth;
-
     &:focus {
       outline-color: $green-dk;
       background-color: $white;
-      border-color:$gray-lt2;
     }
   }
 
@@ -43,8 +52,8 @@
     @extend %clearfix;
     padding: $space-half;
 
-    @include breakpoint($search-med) {
-      @include grid-span(4,13);
+    @include breakpoint($search-medium) {
+      @include grid-span(5,12);
       padding: $space-half 0 0;
     }
   }

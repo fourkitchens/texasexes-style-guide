@@ -1,18 +1,28 @@
 /**
- * @file _blocks.scss
+ * @file _panel-pane.scss
  */
 
 .panel-pane, .pane-block {
   @extend %clearfix;
 
   .pane-title {
-    border-bottom: $space-one-sixth solid lighten($gray-lt2, 20%);
+    border-bottom: $space-one-sixth solid lighten($gray-lt2, 20%); 
+    padding: $space $space $space-half;
+
     #{headings(2,4)} {
       margin: 0;
-    }   
+    }
+  }
+  + .panel-pane, + .pane-block {
+    margin-top: $space;
   }
 
-  + .panel-pane, + .pane-block {
-    margin-top: $space 0 0;
+  .right & {
+    .pane-content {
+      padding: $space;
+      ul {
+        margin: 0 0 $space-doubled;
+      }
+    }    
   }
 }

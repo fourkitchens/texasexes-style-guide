@@ -3,10 +3,23 @@
  * Filterable exposed form for Benefits content
  */
 
-#views-exposed-form-txex-benefit-content-browser-panel-pane-1 {
+.view-txex-benefit-content-browser {
   .view-filters {
-    padding-bottom: $space;
+    padding: $space;
+    background-color:lighten($gray-lt3, 8%);
+    form {
+      margin: 0;
+    }
   }
+  .view-content {
+    margin-top: $space-doubled;
+
+    @include breakpoint($forms-medium) {
+      margin-top: 0;
+    }
+  }
+}
+#views-exposed-form-txex-benefit-content-browser-panel-pane-1 {
   .bef-checkboxes {
     .form-item {
       display: inline-block;

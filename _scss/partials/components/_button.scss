@@ -9,7 +9,7 @@ input[type="submit"] {
   @include button($blue, $white);
   margin-bottom: $space;
   border-radius: $space-one-sixth;
-  padding: $space-one-third $space-half;
+  padding: $space-one-fourth $space-half;
 
   &.primary {
     @include button($blue, $white);

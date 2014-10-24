@@ -12,7 +12,31 @@
     background-color: $white;
     @extend %clearfix;
     padding: $space $space $space-half;
-    border-bottom: $space-one-fifth dashed $gray-lt3;
+
+    .font-size {
+      font-style: italic;
+      font-family: $serif;
+      text-transform: none;
+      padding:$space-one-fourth $space-half;
+      font-size: 16px;
+      background-color: lighten($gray-lt3, 10%);
+      border:$space-one-tenth solid $gray-lt3;
+      vertical-align: middle;
+      margin-left: $space;
+    }
+  }
+  .component-head {
+    padding: $space-half $space;
+    background-color: lighten($gray-lt3, 10%);
+    margin-bottom: $space;
+    margin-left: -$space;
+    margin-right: -$space;
+    margin-top: -$space;
+    border-bottom:$space-one-tenth solid $gray-lt3;
+
+    h3 {
+      margin: 0;
+    }
   }
   form {
     label {
