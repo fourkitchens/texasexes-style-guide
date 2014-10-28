@@ -2188,13 +2188,19 @@ td {
  * Breadcrumbs
  */
 .breadcrumb {
+  display: none;
+  font-size: 15px;
   color: #7c7c7c;
-  border-bottom: 4px solid #c8c8c8;
-  padding: 24px;
-  margin-bottom: 48px; }
+  border-bottom: 4px solid rgba(255, 255, 255, 0.4);
+  background-color: rgba(255, 255, 255, 0.6);
+  padding: 12px 0;
+  margin-top: -12px; }
+  @media (min-width: 45.25em) {
+    .breadcrumb {
+      display: block; } }
   .breadcrumb a {
     color: #7c7c7c;
-    padding: 24px; }
+    padding: 12px; }
     .breadcrumb a:hover {
       color: #1a1b1c; }
 
@@ -2448,6 +2454,10 @@ ul.primary {
 @media (min-width: 100em) {
   .three-column-page .page-primary-content {
     min-height: 500px; } }
+
+.home {
+  padding-right: 24px;
+  padding-left: 24px; }
 
 .guide .component {
   background-color: white;

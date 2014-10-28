@@ -7,6 +7,11 @@
 //
 ////// This file is full of styles that can be ignored. Style prototypes requires some interesting resets.
 
+.home {
+  padding-right: $space;
+  padding-left: $space;
+}
+
 .guide {
   .component {
     background-color: $white;
