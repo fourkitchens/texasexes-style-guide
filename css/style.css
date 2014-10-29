@@ -2184,6 +2184,117 @@ td {
   padding: 24px 0; }
 
 /**
+ * @file _views-exposed-form-chapter-directory-content-browser-panel-pane-1.scss
+ * Search view for chapters
+ */
+#views-exposed-form-chapter-directory-content-browser-panel-pane-1 .form-item {
+  display: inline; }
+  @media (min-width: 31.25em) {
+    #views-exposed-form-chapter-directory-content-browser-panel-pane-1 .form-item input {
+      width: 75%; } }
+
+/**
+ * @file _article-txex-chapter.scss
+ * Chapters
+ */
+.txex-chapter {
+  position: relative;
+  overflow: hidden;
+  background-color: #d5d5d5; }
+  @media (min-width: 31.25em) {
+    .txex-chapter {
+      background-color: transparent; } }
+  .txex-chapter.node-teaser {
+    padding: 0;
+    margin-bottom: 48px; }
+  .txex-chapter .cover-image {
+    position: absolute;
+    z-index: 0;
+    margin: 0;
+    width: 100%;
+    opacity: 0.6;
+    max-height: 30%;
+    overflow: hidden; }
+    @media (min-width: 31.25em) {
+      .txex-chapter .cover-image {
+        max-height: 100%; }
+        .txex-chapter .cover-image:before {
+          position: absolute;
+          display: block;
+          height: 100%;
+          width: 100%;
+          bottom: 0;
+          left: 0;
+          content: "";
+          background-image: url('data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGluZz0idXRmLTgiPz4gPHN2ZyB2ZXJzaW9uPSIxLjEiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyI+PGRlZnM+PGxpbmVhckdyYWRpZW50IGlkPSJncmFkIiBncmFkaWVudFVuaXRzPSJvYmplY3RCb3VuZGluZ0JveCIgeDE9IjAuNSIgeTE9IjAuMCIgeDI9IjAuNSIgeTI9IjEuMCI+PHN0b3Agb2Zmc2V0PSIwJSIgc3RvcC1jb2xvcj0iI2ZmZmZmZiIgc3RvcC1vcGFjaXR5PSIwLjAiLz48c3RvcCBvZmZzZXQ9IjEwMCUiIHN0b3AtY29sb3I9IiNmZmZmZmYiLz48L2xpbmVhckdyYWRpZW50PjwvZGVmcz48cmVjdCB4PSIwIiB5PSIwIiB3aWR0aD0iMTAwJSIgaGVpZ2h0PSIxMDAlIiBmaWxsPSJ1cmwoI2dyYWQpIiAvPjwvc3ZnPiA=');
+          -webkit-background-size: 100%;
+          background-size: 100%;
+          background-image: -webkit-linear-gradient(top, rgba(255, 255, 255, 0) 0%, #ffffff 100%);
+          background-image: -webkit-gradient(linear, left top, left bottom, from(rgba(255, 255, 255, 0)), to(#ffffff));
+          background-image: linear-gradient(to bottom, rgba(255, 255, 255, 0) 0%, #ffffff 100%); } }
+  .txex-chapter header {
+    text-align: center; }
+    .txex-chapter header h3 {
+      margin-bottom: 0; }
+    @media (min-width: 31.25em) {
+      .txex-chapter header {
+        text-align: left; } }
+  .txex-chapter footer {
+    clear: both; }
+    .txex-chapter footer span {
+      color: #1a1b1c;
+      display: block;
+      text-align: center;
+      padding: 8px 0; }
+      @media (min-width: 31.25em) {
+        .txex-chapter footer span {
+          display: inline-block;
+          text-align: left;
+          padding: 0; }
+          .txex-chapter footer span:after {
+            content: '\7c';
+            padding-right: 12px;
+            padding-left: 12px; } }
+      .txex-chapter footer span + span {
+        color: #464647; }
+        .txex-chapter footer span + span + span {
+          color: #7c7c7c; }
+  .txex-chapter .field-txex-chapter-directory-image {
+    max-width: 60%;
+    margin: 0 auto; }
+    @media (min-width: 31.25em) {
+      .txex-chapter .field-txex-chapter-directory-image {
+        width: 36.50794%;
+        float: left;
+        margin-right: -100%;
+        margin-left: 0;
+        clear: none; } }
+  @media (min-width: 31.25em) {
+    .txex-chapter .content {
+      width: 61.90476%;
+      float: right;
+      margin-left: 0;
+      margin-right: 0;
+      clear: none;
+      background-color: rgba(255, 255, 255, 0.5); } }
+  .txex-chapter header {
+    position: relative;
+    padding: 24px 24px 0; }
+    @media (min-width: 31.25em) {
+      .txex-chapter header {
+        width: 61.90476%;
+        float: right;
+        margin-left: 0;
+        margin-right: 0;
+        clear: none;
+        background-color: rgba(255, 255, 255, 0.5); } }
+  .txex-chapter .field-txex-chapter-directory-image,
+  .txex-chapter .content,
+  .txex-chapter footer {
+    position: relative;
+    padding: 12px 24px; }
+
+/**
  * @file _breadcrumbs.scss
  * Breadcrumbs
  */
@@ -2457,7 +2568,8 @@ ul.primary {
 
 .home {
   padding-right: 24px;
-  padding-left: 24px; }
+  padding-left: 24px;
+  padding-top: 48px; }
 
 .guide .component {
   background-color: white;

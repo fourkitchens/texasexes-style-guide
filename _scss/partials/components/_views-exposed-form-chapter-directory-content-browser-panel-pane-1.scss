@@ -1,0 +1,15 @@
+/**
+ * @file _views-exposed-form-chapter-directory-content-browser-panel-pane-1.scss
+ * Search view for chapters
+ */
+
+ #views-exposed-form-chapter-directory-content-browser-panel-pane-1 {
+  .form-item {
+    display: inline;
+    input {
+      @include breakpoint($chapter-medium) {
+        width: 75%;
+      }
+    }
+  }
+}
