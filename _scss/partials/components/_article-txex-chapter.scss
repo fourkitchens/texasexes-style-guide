@@ -6,13 +6,14 @@
 .txex-chapter {
   position: relative;
   overflow: hidden; // clip taller cover images
-  background-color:lighten($gray-lt3, 5%);
+  background-color:lighten($gray-lt3, 10%);
   @include breakpoint($chapter-medium) {
     background-color: transparent;
+    @include box-shadow(0 0 10px rgba($gray-lt2,.8));
   }
   &.node-teaser {
     padding: 0;
-    margin-bottom: $space-doubled;
+    margin: $space-doubled 0;
   }
   .cover-image {
     position: absolute;
@@ -25,30 +26,66 @@
 
     @include breakpoint($chapter-medium) {
       max-height: 100%;
-
+      max-width: 80%;
+      @include opacity(.8);
       &:before {
         position: absolute;
         display: block;
         height:100%;
-        width: 100%;
+        width: 60%;
         bottom: 0;
-        left: 0;
+        right: 0;
         content:"";
-        @include background-image(linear-gradient(top,  rgba(255,255,255,0) 0%,rgba(255,255,255,1) 100%));
+        background-color: $white;
+        @include background-image(linear-gradient(left, rgba(255,255,255,0) 0%,rgba(255,255,255,1) 52%,rgba(255,255,255,1) 100%));
       }
     }
   }
+
+  .field-txex-chapter-directory-image {
+    max-width: 60%;
+    margin: 0 auto;
+    position: relative;
+    padding: $space-half;
+
+    @include breakpoint($chapter-medium) {
+      @include grid-span(5,1);
+    }
+  }
+
   header {
     text-align: center;
+    position: relative;
+
+    @include breakpoint($chapter-medium) {
+      @include grid-span(11,6);
+      text-align: left;
+      padding:$space-half $space 0;
+    }
+
     h3 {
       margin-bottom: 0;
     }
+  }
+
+  .content {
+    padding: $space-half $space;
+
     @include breakpoint($chapter-medium) {
-      text-align: left;
+      @include grid-span(11,6);
+      position: relative;
+      padding: $space-half $space $space-half;
+      font-size: 16px;
     }
   }
+
   footer {
     clear: both;
+    position: relative;
+    padding: $space-half;
+    @include breakpoint($chapter-medium) {
+      background-color: $gray-lt3;
+    }
     span {
       color: $gray;
       display: block;
@@ -58,50 +95,20 @@
         display: inline-block;
         text-align: left;
         padding: 0;
-
-        &:after {
-          content: '\7c';
-          padding-right:$space-half;
-          padding-left:$space-half;
-        }
       }
       + span {
         color: $gray-lt;
+          @include breakpoint($chapter-medium) {
+            &:before {
+              content: '\7c';
+              padding-right:$space-half;
+              padding-left:$space-half;
+            }
+          }
         + span {
           color: $gray-lt2;
         }
       }
     }
   }
-  .field-txex-chapter-directory-image {
-    max-width: 60%;
-    margin: 0 auto;
-
-    @include breakpoint($chapter-medium) {
-      @include grid-span(6,1);
-    }
-  }
-  .content {
-    @include breakpoint($chapter-medium) {
-      @include grid-span(10,7);
-      background-color: rgba($white, .5);
-    }
-  }
-  
-  header {
-    position: relative;
-    padding: $space $space 0;
-
-    @include breakpoint($chapter-medium) {
-      @include grid-span(10,7);
-      background-color: rgba($white, .5);
-    }
-  }
-  .field-txex-chapter-directory-image,
-  .content,
-  footer {
-    position: relative;
-    padding: $space-half $space;
-  }
-
 }

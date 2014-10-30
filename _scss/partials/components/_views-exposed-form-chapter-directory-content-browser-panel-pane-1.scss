@@ -6,10 +6,29 @@
  #views-exposed-form-chapter-directory-content-browser-panel-pane-1 {
   .form-item {
     display: inline;
+    font-size: 0;
+
     input {
+      width: 100%;
+
       @include breakpoint($chapter-medium) {
         width: 75%;
       }
+    }
+  }
+
+  input[type="submit"] {
+    width: auto;
+    margin-top: $space-one-third;
+    margin-bottom: 0;
+
+    @include breakpoint($chapter-medium) {
+      width: 25%;
+      height: 53px;
+      margin-top: 0;
+      border-top-left-radius: 0;
+      border-bottom-left-radius: 0;
+      vertical-align: top;
     }
   }
 }
