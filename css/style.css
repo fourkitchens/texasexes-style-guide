@@ -2214,59 +2214,38 @@ td {
  */
 .txex-chapter {
   position: relative;
-  overflow: hidden;
   background-color: #e2e2e2; }
   @media (min-width: 31.25em) {
     .txex-chapter {
       background-color: transparent;
+      overflow: hidden;
       -webkit-box-shadow: 0 0 10px rgba(124, 124, 124, 0.8);
       box-shadow: 0 0 10px rgba(124, 124, 124, 0.8); } }
   .txex-chapter.node-teaser {
     padding: 0;
     margin: 48px 0; }
   .txex-chapter .cover-image {
-    position: absolute;
-    z-index: 0;
-    margin: 0;
-    width: 100%;
-    opacity: 0.6;
     max-height: 30%;
-    overflow: hidden; }
+    display: block;
+    max-width: 100%; }
     @media (min-width: 31.25em) {
       .txex-chapter .cover-image {
-        max-height: 100%;
-        max-width: 80%;
-        opacity: 0.8; }
-        .txex-chapter .cover-image:before {
-          position: absolute;
-          display: block;
-          height: 100%;
-          width: 60%;
-          bottom: 0;
-          right: 0;
-          content: "";
-          background-color: white;
-          background-image: url('data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGluZz0idXRmLTgiPz4gPHN2ZyB2ZXJzaW9uPSIxLjEiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyI+PGRlZnM+PGxpbmVhckdyYWRpZW50IGlkPSJncmFkIiBncmFkaWVudFVuaXRzPSJvYmplY3RCb3VuZGluZ0JveCIgeDE9IjAuMCIgeTE9IjAuNSIgeDI9IjEuMCIgeTI9IjAuNSI+PHN0b3Agb2Zmc2V0PSIwJSIgc3RvcC1jb2xvcj0iI2ZmZmZmZiIgc3RvcC1vcGFjaXR5PSIwLjAiLz48c3RvcCBvZmZzZXQ9IjUyJSIgc3RvcC1jb2xvcj0iI2ZmZmZmZiIvPjxzdG9wIG9mZnNldD0iMTAwJSIgc3RvcC1jb2xvcj0iI2ZmZmZmZiIvPjwvbGluZWFyR3JhZGllbnQ+PC9kZWZzPjxyZWN0IHg9IjAiIHk9IjAiIHdpZHRoPSIxMDAlIiBoZWlnaHQ9IjEwMCUiIGZpbGw9InVybCgjZ3JhZCkiIC8+PC9zdmc+IA==');
-          -webkit-background-size: 100%;
-          background-size: 100%;
-          background-image: -webkit-linear-gradient(left, rgba(255, 255, 255, 0) 0%, #ffffff 52%, #ffffff 100%);
-          background-image: -webkit-gradient(linear, left top, right top, from(rgba(255, 255, 255, 0)), color-stop(52%, #ffffff), to(#ffffff));
-          background-image: linear-gradient(to right, rgba(255, 255, 255, 0) 0%, #ffffff 52%, #ffffff 100%); } }
-  .txex-chapter .field-txex-chapter-directory-image {
-    max-width: 60%;
-    margin: 0 auto;
-    position: relative;
-    padding: 12px; }
-    @media (min-width: 31.25em) {
-      .txex-chapter .field-txex-chapter-directory-image {
         width: 30.15873%;
         float: left;
         margin-right: -100%;
         margin-left: 0;
-        clear: none; } }
+        clear: none;
+        max-height: 100%;
+        position: relative;
+        overflow: hidden;
+        z-index: 0; }
+        .txex-chapter .cover-image img {
+          width: 200%;
+          max-width: 200%; } }
   .txex-chapter header {
     text-align: center;
-    position: relative; }
+    position: relative;
+    padding-top: 12px; }
     @media (min-width: 31.25em) {
       .txex-chapter header {
         width: 68.25397%;
