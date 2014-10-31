@@ -1,0 +1,9 @@
+/**
+ * @file _advertise.scss
+ * Advertisements
+ */
+.advertise {
+  text-align: center;
+  padding: $space 0;
+  background-color: lighten($gray-lt3, 10%);
+}

@@ -2297,6 +2297,15 @@ td {
           color: #7c7c7c; }
 
 /**
+ * @file _advertise.scss
+ * Advertisements
+ */
+.advertise {
+  text-align: center;
+  padding: 24px 0;
+  background-color: #e2e2e2; }
+
+/**
  * @file _breadcrumbs.scss
  * Breadcrumbs
  */

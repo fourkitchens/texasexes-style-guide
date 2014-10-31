@@ -1871,20 +1871,30 @@
     };
 
 /* Enity Menu */
+
     $('.entities').slick({
+      dots: true,
       infinite: false,
       speed: 300,
-      slidesToShow: 3,
-      slidesToScroll: 3,
+      slidesToShow: 6,
+      slidesToScroll: 0,
       responsive: [
+        {
+          breakpoint: 661,
+          settings: {
+            slidesToShow: 3,
+            slidesToScroll: 3
+          }
+        },
         {
           breakpoint: 400,
           settings: {
             slidesToShow: 2,
-            slidesToScroll: 2,
-          } 
+            slidesToScroll: 2
+          }
         }
       ]
     });
+
 
 }));
