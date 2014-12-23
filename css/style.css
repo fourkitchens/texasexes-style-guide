@@ -2865,6 +2865,9 @@ ul.primary {
   .example-a .blue-a .button.small,
   .example-a .blue-a .button:link.small {
     padding: 8px 24px; }
+.example-a .blue-a .sidebar .button,
+.example-a .blue-a .sidebar .button:link {
+  display: block; }
 .example-a.three-column-page .sidebar.left {
   background-color: #1a1b1c; }
 
@@ -2952,28 +2955,28 @@ ul.primary {
 .example-d .button:link {
   position: relative;
   display: inline-block;
-  background-color: #119ed6;
+  background-color: #cb6015;
   color: white;
   cursor: pointer;
-  border: 3px solid #0f8dbe; }
+  border: 3px solid #b45513; }
   .example-d .button:hover, .example-d .button:focus,
   .example-d .button:link:hover,
   .example-d .button:link:focus {
-    background-color: #0e82b0;
+    background-color: #a64f11;
     color: #d9d9d9;
-    border-color: #22b4ed; }
+    border-color: #e87321; }
   .example-d .button.active,
   .example-d .button:link.active {
     -webkit-box-shadow: rgba(26, 27, 28, 0.4) 0 0 8px inset;
     box-shadow: rgba(26, 27, 28, 0.4) 0 0 8px inset;
-    background-color: #73cff4;
+    background-color: #f0a46f;
     color: #333333;
-    border-color: #14afec; }
+    border-color: #e26b17; }
     .example-d .button.active:hover,
     .example-d .button:link.active:hover {
-      background-color: #73cff4;
+      background-color: #f0a46f;
       color: #333333;
-      border-color: #14afec; }
+      border-color: #e26b17; }
   .example-d .button:focus,
   .example-d .button:link:focus {
     outline-color: #d9d9d9; }
@@ -2985,4 +2988,4 @@ ul.primary {
     padding: 8px 24px; }
 .example-d a,
 .example-d a:link {
-  color: #119ed6; }
+  color: #cb6015; }

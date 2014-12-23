@@ -36,6 +36,12 @@
     .button:link {
       @include button($blue-a, $white);
     }
+    .sidebar {
+      .button,
+      .button:link {
+        display: block;
+      }
+    }
   }
   &.three-column-page {
     .sidebar.left {
@@ -77,11 +83,11 @@
 .example-d {
   .button,
   .button:link {
-    @include button($blue-d, $white);
+    @include button($orange, $white);
   }
 
   a,
   a:link {
-    color: $blue-d;
+    color: $orange;
   }
 }
