@@ -92,7 +92,7 @@
     color: $orange;
   }
 }
-.example-d {
+.example-e {
   .button,
   .button:link {
     @include button($orange, $white);

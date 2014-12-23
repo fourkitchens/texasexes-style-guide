@@ -2993,41 +2993,41 @@ ul.primary {
 .example-d a:link {
   color: #cb6015; }
 
-.example-d .button,
-.example-d .button:link {
+.example-e .button,
+.example-e .button:link {
   position: relative;
   display: inline-block;
   background-color: #cb6015;
   color: white;
   cursor: pointer;
   border: 3px solid #b45513; }
-  .example-d .button:hover, .example-d .button:focus,
-  .example-d .button:link:hover,
-  .example-d .button:link:focus {
+  .example-e .button:hover, .example-e .button:focus,
+  .example-e .button:link:hover,
+  .example-e .button:link:focus {
     background-color: #a64f11;
     color: #d9d9d9;
     border-color: #e87321; }
-  .example-d .button.active,
-  .example-d .button:link.active {
+  .example-e .button.active,
+  .example-e .button:link.active {
     -webkit-box-shadow: rgba(26, 27, 28, 0.4) 0 0 8px inset;
     box-shadow: rgba(26, 27, 28, 0.4) 0 0 8px inset;
     background-color: #f0a46f;
     color: #333333;
     border-color: #e26b17; }
-    .example-d .button.active:hover,
-    .example-d .button:link.active:hover {
+    .example-e .button.active:hover,
+    .example-e .button:link.active:hover {
       background-color: #f0a46f;
       color: #333333;
       border-color: #e26b17; }
-  .example-d .button:focus,
-  .example-d .button:link:focus {
+  .example-e .button:focus,
+  .example-e .button:link:focus {
     outline-color: #d9d9d9; }
-  .example-d .button.large,
-  .example-d .button:link.large {
+  .example-e .button.large,
+  .example-e .button:link.large {
     padding: 12px 24px; }
-  .example-d .button.small,
-  .example-d .button:link.small {
+  .example-e .button.small,
+  .example-e .button:link.small {
     padding: 8px 24px; }
-.example-d a,
-.example-d a:link {
+.example-e a,
+.example-e a:link {
   color: #005f87; }
