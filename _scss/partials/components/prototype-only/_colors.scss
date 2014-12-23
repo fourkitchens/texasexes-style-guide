@@ -6,7 +6,8 @@
 .example-a,
 .example-b,
 .example-c,
-.example-d {
+.example-d,
+.example-e {
   margin-bottom: $space;
   border-bottom: $space-one-third solid $gray-lt2;
   .sidebar {
@@ -89,5 +90,16 @@
   a,
   a:link {
     color: $orange;
+  }
+}
+.example-d {
+  .button,
+  .button:link {
+    @include button($orange, $white);
+  }
+
+  a,
+  a:link {
+    color: $blue-b;
   }
 }
