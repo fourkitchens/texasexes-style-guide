@@ -20,11 +20,11 @@
   &.entities {
     text-transform: uppercase;
     font-size:12px;
-    line-height: 1;  
+    line-height: 1;
     @include breakpoint($entity-larger-text) {
       font-size:16px;
-      line-height: 1.2;  
-      text-transform: none; 
+      line-height: 1.2;
+      text-transform: none;
     }
   }
 }
@@ -36,14 +36,14 @@
     @extend %clearfix;
 
     @include breakpoint($main-menu-full) {
-      float: right;   
-    }    
+      float: right;
+    }
 
     ul { // Second level drop-down
       display: none;
       width: 100%;
       position: absolute;
-      padding: $space;
+      padding: $space-half;
       z-index: 2;
       background-color: $white;
       margin-top: 0;
@@ -51,16 +51,16 @@
       @include box-shadow(0 1px 2px rgba($gray, .5));
 
       @include breakpoint($main-menu-full) {
-        width: 100%;   
-      } 
+        width: 100%;
+      }
       a { // second level icons
-        padding: $space-half;
+        padding: $space-one-third;
         border-bottom: none;
         text-align: left;
         &:before {
           display: none;
         }
-      }      
+      }
     }
   }
   a {
@@ -75,22 +75,22 @@
     }
     @include breakpoint($main-menu-full) {
       border-bottom: $space-one-fourth solid $white;
-    }       
+    }
     &:hover {
       color: $blue-lt;
       @include breakpoint($main-menu-full) {
         border-color: $blue-lt;
-      }   
+      }
     }
     &.active {
       color: $blue;
       background-color: $white;
       @include breakpoint($main-menu-full) {
         border-color: $blue;
-      }         
+      }
       &:hover {
         color: $blue;
-      }      
+      }
     }
   }
   li {

@@ -5,12 +5,12 @@
 #footer {
   background-color: lighten($gray-lt3, 5%);
   width: 100%;
-  padding:$space 0;
+  padding:$space-one-third 0;
   border-top: $space-one-fourth solid $gray-lt3;
   @extend %clearfix;
 
-  @include breakpoint($footer-thirds) { 
-    padding:$space-doubled 0 $space;
+  @include breakpoint($footer-thirds) {
+    padding:$space-half 0;
   }
 
   p {
@@ -28,28 +28,28 @@
   }
 
   .wrap {
-    border-top: $space-one-eighth solid $gray-lt3; 
-    margin-top: $space;
-    padding: $space;
+    border-top: $space-one-eighth solid $gray-lt3;
+    margin-top: $space-half;
+    padding: $space-one-third;
     @extend %clearfix;
-    @include breakpoint($footer-thirds) { 
-      padding: $space 0;
+    @include breakpoint($footer-thirds) {
+      padding: $space-half 0;
     }
   }
   .copyright {
     text-align: center;
-    padding:$space-half 0 $space-one-fourth; 
+    padding:$space-half 0 $space-one-fourth;
 
-    @include breakpoint($footer-thirds) { 
+    @include breakpoint($footer-thirds) {
       @include grid-span(7,1);
       text-align: left;
-      padding: $space-doubled 0 $space $space-half;  
+      padding: $space-doubled 0 $space $space-half;
     }
   }
   .seal {
     @include breakpoint($footer-seal-full) {
       @include grid-span(2,8);
-    } 
+    }
     .seal-image {
       display: block;
       background: transparent image-url('logos/seal-logo.svg') center center no-repeat;
@@ -65,23 +65,23 @@
       @include breakpoint($footer-seal-medium) {
         width: 15%;
         padding-bottom: 15%;
-      }    
+      }
 
       @include breakpoint($footer-seal-full) {
         width: 80%;
         padding-bottom: 80%;
-      }           
+      }
     }
   }
   .contact {
     text-align: center;
     a {
       white-space: nowrap;
-    }  
-    @include breakpoint($footer-thirds) { 
+    }
+    @include breakpoint($footer-thirds) {
       @include grid-span(7,10);
       text-align: right;
-      padding: $space-doubled $space-half $space 0;  
+      padding: $space-doubled $space-half $space 0;
     }
-  }  
+  }
 }

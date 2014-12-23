@@ -1,0 +1,25 @@
+/**
+ * @file _group-txex-event-labels.scss
+ * The event label fields display (chapter, is free, is open, is cancelled, type)
+ */
+.group-txex-event-labels {
+  margin: $space-one-third 0 0;
+  clear: both;
+  font-family: $sans;
+  color: $gray-lt2;
+
+  span {
+    display: inline-block;
+    padding-right: $space-one-third;
+  }
+
+  span + span:before {
+    content: " | ";
+    color: $gray-lt3;
+    padding-right: $space-one-third;
+  }
+
+  + p {
+    margin-top: $space;
+  }
+}

@@ -8,12 +8,15 @@ article {
     @include breakpoint($sidebar-left) {
       padding: $space;
     }
+    p {
+      color: $gray-lt;
+    }
   }
   > ul {
     max-width: 632px; // for controlling ideal character count measure <= 72 characters
   }
   li {
-    margin-bottom: $space-half; 
+    margin-bottom: $space-half;
   }
   .inline {
     display:block;
@@ -44,10 +47,34 @@ article {
   }
 
   .home-page & {
-    @extend %clearfix; // @TODO: Are their contents floated, why is this here?
     padding: $space;
     h3 { // @TODO: These are h2 tags in output. Change this, or change that?
       font-size: 20px;
+    }
+  }
+  .txex-feed-display & {
+    figure {
+      margin-bottom: $space-half;
+      @include breakpoint($homepage-desktop) {
+        @include grid-span(6,1);
+        padding-right: $space-one-third;
+        margin-bottom: 0;
+      }
+    }
+    .content {
+      @include breakpoint($homepage-desktop) {
+        @include grid-span(10,7);
+      }
+    }
+    footer {
+      clear: both;
+      color: $gray-lt2;
+      border-top: $space-one-tenth solid $gray-lt3;
+      padding-top: $space-one-third;
+
+      .timeago {
+        font-style: italic;
+      }
     }
   }
 }

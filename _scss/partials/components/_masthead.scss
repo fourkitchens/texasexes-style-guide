@@ -6,7 +6,8 @@
   text-align: center;
   margin: 0 auto;
   background-color: transparent;
-  padding: $space;
+  padding: $space-doubled $space $space;
+  @extend %clearfix;
 
   @include breakpoint($homepage-tablet) {
     padding: $space $space $space-doubled;
@@ -60,8 +61,6 @@
   // The little text-only convenience links shared between audiences
   // like address updates, login, and chapter
   .convenience-links {
-    // @TODO: There was a display:block in the style guide, but this is a div
-    // so it has that already. Just leaving this here in case @joetower needs it
     color: $gray-lt3;
     padding-top: $space;
     padding-bottom: $space;

@@ -11,6 +11,8 @@
     font-size: 16px;
     border-color: $gray-lt3;
     background-color:lighten($gray-lt3, 8%);
+    vertical-align: bottom;
+    -webkit-appearance: none;
     &:focus {
       background-color: $white;
       border-color: $gray-lt2;
@@ -36,9 +38,10 @@
     width: 20%;
     background-position: center;
     background-size: 22px 22px;
-    vertical-align: top;
+    vertical-align: bottom;
     border-top-left-radius: 0;
     border-bottom-left-radius: 0;
+    -webkit-appearance: none;
     &:hover {
       background-color: $gray-lt3;
     }
@@ -51,10 +54,65 @@
   .top-bar & {
     @extend %clearfix;
     padding: $space-half;
-
+    @include breakpoint($search-small) {
+      display: none;
+      position: absolute;
+      top: 0;
+      left: 0;
+      right: 0;
+      background-color:$gray-lt;
+    }
     @include breakpoint($search-medium) {
       @include grid-span(5,12);
       padding: $space-half 0 0;
+      display: block;
+      position: relative;
+      background-color: transparent;
+    }
+  }
+}
+
+// mobile search toggle
+.top-bar {
+  .search-trigger {
+    display: none;
+    overflow: hidden;
+    @include breakpoint($search-small) {
+      display: block;
+      position: absolute;
+      top: 105px;
+      right: $space;
+      max-width: 24px;
+    }
+    @include breakpoint($search-medium) {
+      display: none;
+    }
+    @include breakpoint($search-toggle) {
+      top: 60px;
+      right: 50%;
+      max-width: 50px;
+      background-color: $gray-lt3;
+      &.active {
+        background-color:$gray-lt;
+      }
+    }
+    .icon-search {
+      background-size: contain;
+      margin: 0 auto;
+      height: 0;
+      padding-bottom: 100%;
+      text-indent: 100%;
+      white-space: nowrap;
+      position: relative;
+      display: block;
+      z-index: 5;
+      background-position: center top;
+      cursor: pointer;
+      @include breakpoint($search-toggle) {
+        margin: 0 30%;
+        padding-bottom: 70%;
+        background-position: center;
+      }
     }
   }
 }

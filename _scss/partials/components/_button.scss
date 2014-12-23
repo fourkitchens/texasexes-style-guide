@@ -6,36 +6,36 @@
 html a.button, // To boost specificity to override rules like ".sidebar a" or other "[area] a" defaults
 button,
 input[type="submit"] {
-  @include button($blue, $white);
+  @include button($orange, $white);
   margin-bottom: $space;
   border-radius: $space-one-sixth;
   padding: $space-one-fourth $space-half;
 
   &.primary {
-    @include button($blue, $white);
+    @include button($orange, $white);
     &.active {
-      @include button($blue, $white);
-    }  
+      @include button($orange, $white);
+    }
   }
   &.secondary {
     @include button($gray-lt, $white);
     &.active {
       @include button($gray-lt2, $white);
-    }      
-  }  
+    }
+  }
   &.search-btn {
-    @include button($gray-lt3, $gray);      
-  }    
+    @include button($gray-lt3, $gray);
+  }
   &.required {
     @include button($red, $white);
     &.active {
       @include button($red, $white);
-    }      
+    }
   }
 }
 input[type="reset"] {
   @include button($gray-lt, $white);
   &.required {
     @include button($red, $white);
-  }    
+  }
 }

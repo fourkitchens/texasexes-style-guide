@@ -1,0 +1,87 @@
+/**
+ * @file _colors.scss
+ * Color exploration for new buttons.
+ */
+
+.example-a,
+.example-b,
+.example-c,
+.example-d {
+  margin-bottom: $space;
+  border-bottom: $space-one-third solid $gray-lt2;
+  .sidebar {
+    .button,
+    .button:link {
+      display: block;
+    }
+  }
+}
+
+.example-a {
+  .button,
+  .button:link {
+    @include button($red-a, $white);
+  }
+
+  a,
+  a:link {
+    color: $red-a;
+  }
+  .blue-a {
+    a,
+    a:link {
+      color: $blue-a;
+    }
+    .button,
+    .button:link {
+      @include button($blue-a, $white);
+    }
+  }
+  &.three-column-page {
+    .sidebar.left {
+      background-color: $gray;
+    }
+  }
+}
+
+.example-b {
+  .button,
+  .button:link {
+    @include button($blue-b, $white);
+  }
+
+  a,
+  a:link {
+    color: $blue-b;
+  }
+}
+
+.example-c {
+  .button,
+  .button:link {
+    @include button($green-c, $white);
+  }
+
+  a,
+  a:link {
+    color: $green-c;
+  }
+
+  &.three-column-page {
+    .sidebar.left {
+      background-color: $gray;
+    }
+  }
+}
+
+.example-d {
+  .button,
+  .button:link {
+    @include button($blue-d, $white);
+  }
+
+  a,
+  a:link {
+    color: $blue-d;
+  }
+}

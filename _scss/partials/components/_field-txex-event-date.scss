@@ -1,0 +1,18 @@
+/**
+ * @file _field-txex-event-date.scss
+ * The date display of an event
+ */
+.field-txex-event-date {
+  line-height: 1.5;
+  font-weight: 500;
+  color: $gray-lt;
+  .date-display-start {
+    font-weight: 700;
+    color: $gray;
+  }
+  .date-display-end {
+    font-weight: 500;
+    color: $gray-lt2;
+  }  
+}
+

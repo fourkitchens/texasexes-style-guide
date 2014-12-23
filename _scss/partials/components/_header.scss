@@ -3,12 +3,12 @@
  */
 
 #header {
-  padding: $space-half 0;
+  padding: $space-one-fourth 0;
   @include box-shadow(0 2px 4px rgba($gray, .5));
   @extend %clearfix;
 
   @include breakpoint($header-padding) {
-    padding: $space 0;
+    padding: $space $space-half;
   }
 
   .logo {

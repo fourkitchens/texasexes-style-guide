@@ -1,0 +1,12 @@
+/**
+ * @file _view-txex-event-listings.scss
+ * Homepage event list view general styles
+ */
+
+.view-txex-event-listings {
+  .view-footer {
+    padding: $space-one-third $space $space;
+    text-align: center;
+    border-top: $space-one-tenth solid $gray-lt3;
+  }
+}

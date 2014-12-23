@@ -1,0 +1,16 @@
+/**
+ * @file _node-txex-ad.scss
+ * Advertisements content type.w
+ */
+.advertise {
+  text-align: center;
+  padding: $space 0;
+  background-color: lighten($gray-lt3, 10%);
+}
+.node-txex-ad {
+  padding: 0;
+  margin: 0;
+  &.node-teaser {
+    padding: 0;
+  }
+}
