@@ -47,6 +47,10 @@
   &.three-column-page {
     .sidebar.left {
       background-color: $gray;
+      #menu-sidenav-collapse {
+        color: $white;
+        background-color: $gray;
+      }
     }
   }
 }
@@ -77,6 +81,10 @@
   &.three-column-page {
     .sidebar.left {
       background-color: $gray;
+      #menu-sidenav-collapse {
+        color: $white;
+        background-color: $gray;
+      }
     }
   }
 }

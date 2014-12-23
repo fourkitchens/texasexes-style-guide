@@ -2873,6 +2873,9 @@ ul.primary {
   display: block; }
 .example-a.three-column-page .sidebar.left {
   background-color: #1a1b1c; }
+  .example-a.three-column-page .sidebar.left #menu-sidenav-collapse {
+    color: white;
+    background-color: #1a1b1c; }
 
 .example-b .button,
 .example-b .button:link {
@@ -2953,6 +2956,9 @@ ul.primary {
   color: #109e38; }
 .example-c.three-column-page .sidebar.left {
   background-color: #1a1b1c; }
+  .example-c.three-column-page .sidebar.left #menu-sidenav-collapse {
+    color: white;
+    background-color: #1a1b1c; }
 
 .example-d .button,
 .example-d .button:link {
