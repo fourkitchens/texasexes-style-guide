@@ -15,6 +15,7 @@
 
   @include breakpoint($homepage-desktop) {
     padding: $space $space $space-tripled;
+    text-shadow:1px 1px 5px rgba($black, .8);
   }
 
   h2 {
@@ -50,7 +51,7 @@
     margin-right: $space-half;
 
     @include breakpoint($homepage-mobile) {
-      padding: $space-one-third $space;
+      padding: $space-one-third $space-half;
       margin: 0;
       + a {
         margin-left: $space-doubled;

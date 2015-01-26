@@ -3,7 +3,7 @@
 //
 // The partial and folder structure for this components should be as follows:
 // _sections.scss
-// 
+//
 //
 ////// This file is full of styles that can be ignored. Style prototypes requires some interesting resets.
 
@@ -56,4 +56,21 @@
       clear: both;
     }
   }
+}
+
+.window {
+  position: relative;
+  overflow: hidden;
+
+  @include breakpoint($cover-photo-full) {
+    height:400px;
+  }
+  @include breakpoint($cover-photo-medium) {
+    height:600px;
+  }
+}
+img {
+  position: relative;
+  margin: 0 auto;
+  width: 100%;
 }

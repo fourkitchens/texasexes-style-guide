@@ -1,16 +1,11 @@
 /**
- * @file _home-page.scss
- * Home page layout work, does not include any styles for components.
- * If you're looking for the home page header stuff, look at masthead.
- */
+* @file _home-page.scss
+* Home page layout work, does not include any styles for components.
+* If you're looking for the home page header stuff, look at masthead.
+*/
 
 .home-page {
   padding: $space 0;
-
-  @include breakpoint($homepage-desktop) {
-    @include background-image(linear-gradient(top,  rgba(0,0,0,0.4) 0%,rgba(0,0,0,1) 10%,rgba(0,0,0,1) 100%));
-    border-top:1px solid rgba($black, .75);
-  }
 
   .container > div {
     @include clearfix(); // Mixin instead of extendable because the admin styles don't have that extendable
@@ -26,7 +21,9 @@
       @include grid-span(6,1);
     }
   }
-
+  .view-empty {
+    padding: $space;
+  }
   .center { // Desktop center, mobile bottom (was "News")
     background-color: lighten($gray-lt3,10%);
     padding-top: $space;
@@ -56,7 +53,7 @@
   }
 
   .right { // Desktop right, mobile center (was "Announcements")
-    background-color: rgba($white, .95);
+    background-color: transparent;
     padding-top: $space;
     @include breakpoint($homepage-tablet) {
       @include grid-span(8,1);

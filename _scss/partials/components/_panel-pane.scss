@@ -1,6 +1,6 @@
 /**
- * @file _panel-pane.scss
- */
+* @file _panel-pane.scss
+*/
 
 .panel-pane, .pane-block {
   @extend %clearfix;
@@ -15,7 +15,7 @@
 
   .pane-title {
     border-bottom: $space-one-twelfth solid lighten($gray-lt2, 25%);
-    padding: $space;
+    padding: $space $space $space-half;
     margin: 0;
 
     #{headings(2,4)} {
