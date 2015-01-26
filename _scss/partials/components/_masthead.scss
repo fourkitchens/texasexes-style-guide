@@ -6,7 +6,8 @@
   text-align: center;
   margin: 0 auto;
   background-color: transparent;
-  padding: $space;
+  padding: $space-doubled $space $space;
+  @extend %clearfix;
 
   @include breakpoint($homepage-tablet) {
     padding: $space $space $space-doubled;
@@ -14,6 +15,7 @@
 
   @include breakpoint($homepage-desktop) {
     padding: $space $space $space-tripled;
+    text-shadow:1px 1px 5px rgba($black, .8);
   }
 
   h2 {
@@ -49,7 +51,7 @@
     margin-right: $space-half;
 
     @include breakpoint($homepage-mobile) {
-      padding: $space-one-third $space;
+      padding: $space-one-third $space-half;
       margin: 0;
       + a {
         margin-left: $space-doubled;
@@ -60,8 +62,6 @@
   // The little text-only convenience links shared between audiences
   // like address updates, login, and chapter
   .convenience-links {
-    // @TODO: There was a display:block in the style guide, but this is a div
-    // so it has that already. Just leaving this here in case @joetower needs it
     color: $gray-lt3;
     padding-top: $space;
     padding-bottom: $space;

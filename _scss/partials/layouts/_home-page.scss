@@ -5,26 +5,34 @@
  */
 
 .home-page {
+  padding: $space 0;
 
   .container > div {
     @include clearfix(); // Mixin instead of extendable because the admin styles don't have that extendable
-    background-color: rgba($white, .88);
   }
 
   .left { // Desktop left, mobile top (was "Events")
+    background-color: lighten($gray-lt3,8%);
     @include breakpoint($homepage-tablet) {
-      @include grid-span(8,1);
+      @include grid-span(8,9);
+      background-color: rgba($white, .95);
     }
     @include breakpoint($homepage-desktop) {
       @include grid-span(6,1);
     }
   }
-
+  .view-empty {
+    padding: $space;
+  }
   .center { // Desktop center, mobile bottom (was "News")
+    background-color: lighten($gray-lt3,10%);
+    padding-top: $space;
     @include breakpoint($homepage-tablet) {
       clear: both;
       float: none;
       width: auto;
+      background-color: rgba($white, .95);
+      padding-top: 0;
     }
     @include breakpoint($homepage-desktop) {
       @include grid-span(6,7);
@@ -45,8 +53,11 @@
   }
 
   .right { // Desktop right, mobile center (was "Announcements")
+    background-color: transparent;
+    padding-top: $space;
     @include breakpoint($homepage-tablet) {
-      @include grid-span(8,9);
+      @include grid-span(8,1);
+      padding-top: 0;
     }
     @include breakpoint($homepage-desktop) {
       @include grid-span(4,13);
@@ -54,6 +65,9 @@
     .node-txex-announce { // make 100% instead of standard 2 column.
       @include breakpoint($sidebar-articles-mobile) {
         width: 100%;
+      }
+      article {
+        border-bottom: $space-one-tenth solid $gray-lt3;
       }
     }
   }

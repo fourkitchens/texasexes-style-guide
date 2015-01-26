@@ -1,11 +1,29 @@
 /**
  * @file _tables.scss
  * Styles for all table elements
+ * @TODO: Make responsive like http://css-tricks.com/responsive-data-tables/
  */
 table {
   display: block;
+  width: 100%;
+  border-collapse: collapse;
 }
-th,
+
+tr:nth-of-type(odd) {
+  background: $gray-lt3;
+}
+th {
+  background:$gray;
+  color: $white;
+  text-transform:uppercase;
+  font-family:$sans;
+}
+td, th {
+  padding: $space-one-fourth;
+  border: 1px solid #ccc;
+  text-align: left;
+}
 td {
-  padding: $space-one-eighth;
+  font-size:14px;
+  color:$gray-lt;
 }

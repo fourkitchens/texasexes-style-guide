@@ -19,6 +19,23 @@
   }
 
   &.home-page-cover-image {
+    .window {
+      position: relative;
+      overflow: hidden;
+
+      @include breakpoint($cover-photo-full) {
+        height:400px;
+      }
+      @include breakpoint($cover-photo-medium) {
+        height:600px;
+      }
+    }
+    img {
+      position: relative;
+      margin: 0 auto;
+      width: 100%;
+    }
+
     @include breakpoint($cover-photo-homepage-hidden) {
       display: none;
     }
@@ -27,19 +44,13 @@
       z-index: -1;
     }
     @include breakpoint($cover-photo-full) {
-      margin-bottom: -24em;
+      margin-bottom: -20em;
       z-index: -1;
     }
     @include breakpoint($cover-photo-medium) {
-      margin-bottom: -40em;
+      margin-bottom: -30em;
     }
 
-    @include breakpoint($cover-photo-huge) {
-      margin-bottom: -50em;
-    }
-    @include breakpoint($cover-photo-extra-large) {
-      margin-bottom: -60em;
-    }
   }
 
 

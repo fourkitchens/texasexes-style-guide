@@ -5,9 +5,18 @@
 .panel-pane, .pane-block {
   @extend %clearfix;
 
+  .home-page & {
+    .pane-title {
+      padding: $space;
+      font-family: $sans49;
+      font-size: 38px;
+    }
+  }
+
   .pane-title {
-    border-bottom: $space-one-sixth solid lighten($gray-lt2, 20%); 
+    border-bottom: $space-one-twelfth solid lighten($gray-lt2, 25%);
     padding: $space $space $space-half;
+    margin: 0;
 
     #{headings(2,4)} {
       margin: 0;
@@ -23,6 +32,6 @@
       ul {
         margin: 0 0 $space-doubled;
       }
-    }    
+    }
   }
 }

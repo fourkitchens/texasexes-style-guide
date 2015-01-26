@@ -1,38 +1,53 @@
 /**
  * @file _node-txex-announce.scss
- * 
+ *
  * Announcement / Call to action styles
  */
 
 .node-txex-announce {
   padding: $space;
+  background-color:rgba($gray-lt, .9);
 
     .field-txex-announce-disp-title { // make sure all announcements get the same styling. (homepage)
-      padding-top: $space;
       font-family: $serif;
       font-weight: 700;
       font-size: 20px;
-      text-transform: none;    
+      text-transform: none;
+      color:$white;
     }
     @include breakpoint($sidebar-articles-mobile) {
       width: 49.5%;
-      display: inline-block;  
-      vertical-align: middle;
+      display: inline-block;
+      vertical-align: top;
     }
   + .node-txex-announce {
-    .field-txex-announce-disp-title {
-      padding-top: 0;
-    }    
-    padding-top: 0;
-    margin-top: $space;
+    @include breakpoint($sidebar-desktop) {
+      margin-top: $space;
+    }
   }
+  &.node-teaser {
+    p {
+      color:$gray-lt3;
+    }
+  }
+  .field-txex-announce-image {
+    img {
+      width: 100%;
+    }
+    @include breakpoint($homepage-desktop) {
+      margin-left: -$space;
+      margin-right: -$space;
+      margin-bottom: $space-half;
+    }
+  }
+
   .button,
   button {
-    font-size: 16px; 
-
+    font-size: 16px;
+    display: block;
+    text-align: center;
+    margin:0 $space;
     @include breakpoint($sidebar-article-buttons-mobile) {
-      display: block;
-      text-align: center;
       margin:0 $space;
     }
   }
